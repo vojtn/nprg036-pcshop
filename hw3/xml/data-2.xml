@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-2.xsd">
+    <name>Karel Novák</name>
+    <email>novakk@email.cz</email>
+    <registrationDate>2023-10-31T15:09:38.6875000-01:00</registrationDate>
+    <privileged>false</privileged>
+    <address>
+    <country>Česká republika</country>
+    <city>Praha</city>
+    <streetLine>Malostranské náměstí 2/25</streetLine>
+    <postCode>118 00</postCode>
+    </address>
+</customer>
