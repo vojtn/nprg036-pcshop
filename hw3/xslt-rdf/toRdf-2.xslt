@@ -3,7 +3,7 @@
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:xs="http://www.w3.org/2001/XMLSchema"
    xmlns:fn="http://www.w3.org/2005/xpath-functions">
-    <xsl:output method="text" encoding="UTF-8" />
+    <xsl:output method="text" encoding="UTF-8" indent="no" />
     <xsl:variable name="prefix">https://example.org/resource/</xsl:variable>
     <xsl:variable name="catalogIRI" select="concat($prefix, 'Customer')"/>
 
@@ -23,19 +23,16 @@
     <xsl:template match="customer">
         dpv:Cust<xsl:value-of select="@id" /> a dpv:Customer ;
             foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
-            foaf:mbox &lt;<xsl:value-of select="email"/>&gt;
+            foaf:mbox &lt;<xsl:value-of select="email"/>&gt; ;
             uiot:registrationDate "<xsl:value-of select="registrationDate"/>"^^xsd:dateTime ;
-            schema:identifier 
-                <xsl:variable name="privileged" select="privileged"/>
-                <xsl:choose>
-                    <xsl:when test="$privileged">
-                        "VIP"
+            schema:identifier <xsl:choose>
+                    <xsl:when test="privileged = 'true'">
+                        <xsl:text>"VIP"</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        "Normal?"
+                        <xsl:text>"Standard"</xsl:text>
                     </xsl:otherwise>
-                </xsl:choose>
-            @<xsl:value-of select="name/@xml:lang"/> .
+                </xsl:choose>@<xsl:value-of select="name/@xml:lang"/> .
     </xsl:template>
 
 </xsl:stylesheet>
