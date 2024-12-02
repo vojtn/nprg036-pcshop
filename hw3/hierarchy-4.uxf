@@ -1,0 +1,44 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>322</x><y>168</y><w>84</w><h>42</h></coordinates><panel_attributes>Warehouse
+--
+- capacity
+- contact [0..n]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>385</x><y>273</y><w>70</w><h>70</h></coordinates><panel_attributes>Product
+--
+- price
+- name
+- sale
+- VAT</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>385</x><y>399</y><w>77</w><h>56</h></coordinates><panel_attributes>Brand
+--
+- name
+- companyEmail
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>245</x><y>273</y><w>112</w><h>63</h></coordinates><panel_attributes>Address
+--
+- country
+- city
+- streetLine
+- postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>301</x><y>203</y><w>77</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+m2=
+m1=1..1
+located at</panel_attributes><additional_attributes>10;100;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>413</x><y>336</y><w>42</w><h>77</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+m2=
+m1=0..1
+brand</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>672</x><y>273</y><w>70</w><h>70</h></coordinates><panel_attributes>Product
+--
+- price
+- name
+- sale
+- VAT</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>672</x><y>399</y><w>77</w><h>56</h></coordinates><panel_attributes>Brand
+--
+- name
+- companyEmail
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>511</x><y>273</y><w>112</w><h>63</h></coordinates><panel_attributes>Address
+--
+- country
+- city
+- streetLine
+- postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>336</y><w>42</w><h>77</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;
+m2=0..n
+m1=
+brand</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>371</x><y>203</y><w>77</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+m1=0..n
+m2=
+stored in</panel_attributes><additional_attributes>70;100;10;10</additional_attributes></element></diagram>

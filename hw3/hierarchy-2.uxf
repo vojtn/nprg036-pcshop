@@ -1,0 +1,15 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>304</x><y>175</y><w>84</w><h>70</h></coordinates><panel_attributes>Customer
+--
+- name
+- email
+- registrationDate
+- privileged</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>343</y><w>112</w><h>63</h></coordinates><panel_attributes>Address
+--
+- country
+- city
+- streetLine
+- postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>332</x><y>238</y><w>49</w><h>119</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+
+m1=1..1
+m2=
+address</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element></diagram>
