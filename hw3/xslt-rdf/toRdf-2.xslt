@@ -43,6 +43,8 @@
             vcard:locality "<xsl:value-of select="city"/>"@<xsl:value-of select="city/@xml:lang" /> ;
             vcard:street-address "<xsl:value-of select="streetLine"/>"@<xsl:value-of select="streetLine/@xml:lang" /> ;
             vcard:postal-code "<xsl:value-of select="postCode"/>"@<xsl:value-of select="postCode/@xml:lang" /> ;
+    
+        dpv:Cust<xsl:value-of select="position()" /> schema:location vcard:Addr<xsl:value-of select="position()" /> .
     </xsl:template>
 
 </xsl:stylesheet>
