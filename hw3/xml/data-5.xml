@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
-    <country>Česká republika</country>
-    <city>Praha</city>
-    <streetLine>Malostranské náměstí 2/25</streetLine>
-    <postCode>118 00</postCode>
-</address>   
+<brands>
+    <brand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
+        <name>logitech</name>
+        <companyEmail>support@logitech.com</companyEmail>
+        <product>
+            <price>50</price>
+            <name>Logitech MX Keys</name>
+            <sale>0</sale>
+            <VAT>21</VAT>
+        </product>
+    </brand>
+    <brand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
+        <name>AMD</name>
+        <companyEmail>support@amd.com</companyEmail>
+        <product>
+            <price>100</price>
+            <name>AMD Ryzen 5 7600</name>
+            <sale>20</sale>
+            <VAT>21</VAT>
+        </product>
+        <product>
+            <price>150</price>
+            <name>AMD Ryzen 7 5700X3D</name>
+            <sale>20</sale>
+            <VAT>21</VAT>
+        </product>
+    </brand>
+</brands>

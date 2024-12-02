@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="address">
+<xs:element name="brands">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="country" type="xs:string"/>
-                <xs:element name="city" type="xs:string" />
-                <xs:element name="streetLine" type="xs:string"/>
-                <xs:element name="postCode" type="xs:string"/>
-            </xs:sequence>     
+                <xs:element name="brand">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="companyEmail" type="xs:string"/>
+                            <xs:element name="product" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="price" type="xs:integer"/>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="sale" type="xs:string"/>
+                                        <xs:element name="VAT" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 </xs:schema>
