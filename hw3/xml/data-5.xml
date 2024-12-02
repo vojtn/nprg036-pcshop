@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<adress xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
+<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
     <country>Česká republika</country>
     <city>Praha</city>
     <streetLine>Malostranské náměstí 2/25</streetLine>
     <postCode>118 00</postCode>
-</adress>   
+</address>   
