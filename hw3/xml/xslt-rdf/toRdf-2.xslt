@@ -24,7 +24,7 @@
     <xsl:template match="customer">
         dpv:Cust<xsl:value-of select="position()" /> a dpv:Customer ;
             foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
-            foaf:mbox &lt;<xsl:value-of select="email"/>&gt; ;
+            foaf:mbox &lt;mailto:<xsl:value-of select="email"/>&gt; ;
             uiot:registrationDate "<xsl:value-of select="registrationDate"/>"^^xsd:dateTime ;
             schema:identifier <xsl:choose>
                     <xsl:when test="privileged = 'true'">
@@ -44,7 +44,7 @@
             vcard:street-address "<xsl:value-of select="streetLine"/>"@<xsl:value-of select="streetLine/@xml:lang" /> ;
             vcard:postal-code "<xsl:value-of select="postCode"/>"@<xsl:value-of select="postCode/@xml:lang" /> ;
     
-        dpv:Cust<xsl:value-of select="position()" /> schema:location vcard:Addr<xsl:value-of select="position()" /> .
+        dpv:Cust<xsl:value-of select="position()" /> schema:address vcard:Addr<xsl:value-of select="position()" /> .
     </xsl:template>
 
 </xsl:stylesheet>
