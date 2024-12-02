@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<warehouses>
+    <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+        <capacity>9</capacity>
+        <contact>warehousesupport1@ppcshop.cz</contact>
+        <!-- TODO: fill address -->
+        <address>
+            <country xml:lang="cs"></country>
+            <city xml:lang="cs"></city>
+            <streetLine xml:lang="cs"></streetLine>
+            <postCode xml:lang="cs"></postCode>
+        </address>
+         <product>
+            <price>50</price>
+            <name>Logitech MX Keys</name>
+            <sale>0</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>logitech</name>
+                <companyEmail>support@logitech.com</companyEmail>
+            </brand>
+        </product>
+    </warehouse>
+        <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+        <capacity>9</capacity>
+        <contact>warehousesupport2@ppcshop.cz</contact>
+        <!-- TODO: fill adresses -->
+        <address>
+            <country xml:lang="cs"></country>
+            <city xml:lang="cs"></city>
+            <streetLine xml:lang="cs"></streetLine>
+            <postCode xml:lang="cs"></postCode>
+        </address>
+        <product>
+            <price>100</price>
+            <name>AMD Ryzen 5 7600</name>
+            <sale>20</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>AMD</name>
+                <companyEmail>support@amd.com</companyEmail>
+            </brand>
+        </product>
+    </warehouse>
+        <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+        <capacity>9</capacity>
+        <contact>warehousesupport3@ppcshop.cz</contact>
+        <!-- TODO: fill adresses -->
+        <address>
+            <country xml:lang="cs"></country>
+            <city xml:lang="cs"></city>
+            <streetLine xml:lang="cs"></streetLine>
+            <postCode xml:lang="cs"></postCode>
+        </address>
+        <product>
+            <price>150</price>
+            <name>AMD Ryzen 7 5700X3D</name>
+            <sale>20</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>AMD</name>
+                <companyEmail>support@amd.com</companyEmail>
+            </brand>
+        </product>
+    </warehouse>
+</warehouses>
