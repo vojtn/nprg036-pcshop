@@ -6,8 +6,8 @@
     <privileged>false</privileged>
     <address>
         <country xml:lang="cs">Česká republika</country>
-        <city>Praha</city>
-        <streetLine>Malostranské náměstí 2/25</streetLine>
-        <postCode>118 00</postCode>
+        <city xml:lang="cs">Praha</city>
+        <streetLine xml:lang="cs">Malostranské náměstí 2/25</streetLine>
+        <postCode xml:lang="cs">118 00</postCode>
     </address>
 </customer>
