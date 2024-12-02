@@ -17,11 +17,12 @@
         @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
         <xsl:apply-templates select="//customer"/>
+        <xsl:apply-templates select="//customer/address"/>
     </xsl:template>
 
     <!-- Template to transform Customer -->
     <xsl:template match="customer">
-        dpv:Cust<xsl:value-of select="@id" /> a dpv:Customer ;
+        dpv:Cust<xsl:value-of select="position()" /> a dpv:Customer ;
             foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
             foaf:mbox &lt;<xsl:value-of select="email"/>&gt; ;
             uiot:registrationDate "<xsl:value-of select="registrationDate"/>"^^xsd:dateTime ;
@@ -33,6 +34,15 @@
                         <xsl:text>"Standard"</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>@<xsl:value-of select="name/@xml:lang"/> .
+    </xsl:template>
+
+    <!-- Template to transform Address -->
+    <xsl:template match="customer/address">
+        vcard:Addr<xsl:value-of select="position()" /> a vcard:Address ;
+            vcard:country-name "<xsl:value-of select="country"/>"@<xsl:value-of select="country/@xml:lang" /> ;
+            vcard:locality "<xsl:value-of select="city"/>"@<xsl:value-of select="city/@xml:lang" /> ;
+            vcard:street-address "<xsl:value-of select="streetLine"/>"@<xsl:value-of select="streetLine/@xml:lang" /> ;
+            vcard:postal-code "<xsl:value-of select="postCode"/>"@<xsl:value-of select="postCode/@xml:lang" /> ;
     </xsl:template>
 
 </xsl:stylesheet>
