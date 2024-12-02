@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<customer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-2.xsd">
+<customer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd">
     <name xml:lang="cs">Karel Novák</name>
     <email>novakk@email.cz</email>
     <registrationDate>2023-10-31T15:09:38.6875000-01:00</registrationDate>
