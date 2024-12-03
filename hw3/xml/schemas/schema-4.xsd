@@ -5,7 +5,7 @@
     <xs:include schemaLocation="schema-1.xsd"/>
     <xs:element name="warehouses">
         <xs:complexType>
-            <xs:sequence>
+            <xs:sequence maxOccurs="unbounded">
                 <xs:element name="warehouse" type="warehouseType"/>
             </xs:sequence>
         </xs:complexType>

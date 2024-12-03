@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<warehouses>
-    <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<warehouses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+    <warehouse id="km4c:Warehouse1" >
         <capacity>9</capacity>
         <contact>warehousesupport1@ppcshop.cz</contact>
         <address id="vcard:Addr2">
@@ -12,17 +12,16 @@
         </address>
         <product id="schema:Product3">
             <price>150</price>
-            <name>AMD Ryzen 7 5700X3D</name>
+            <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
             <sale>20</sale>
             <VAT>21</VAT>
             <brand id="schema:Brand2">
-                <name>AMD</name>
+                <name xml:lang="en">AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
     </warehouse>
-    <warehouse id="km4c:Warehouse2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+    <warehouse id="km4c:Warehouse2">
         <capacity>9</capacity>
         <contact>warehousesupport2@ppcshop.cz</contact>
         <address id="vcard:Addr3">
@@ -33,17 +32,16 @@
         </address>
         <product id="schema:Product2">
             <price>100</price>
-            <name>AMD Ryzen 5 7600</name>
+            <name xml:lang="en">AMD Ryzen 5 7600</name>
             <sale>20</sale>
             <VAT>21</VAT>
             <brand id="schema:Brand2">
-                <name>AMD</name>
+                <name xml:lang="en">AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
     </warehouse>
-    <warehouse id="km4c:Warehouse3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+    <warehouse id="km4c:Warehouse3">
         <capacity>9</capacity>
         <contact>warehousesupport3@ppcshop.cz</contact>
         <address id="vcard:Addr3">
@@ -54,11 +52,11 @@
         </address>
         <product id="schema:Product3">
             <price>150</price>
-            <name>AMD Ryzen 7 5700X3D</name>
+            <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
             <sale>20</sale>
             <VAT>21</VAT>
             <brand id="schema:Brand2">
-                <name>AMD</name>
+                <name xml:lang="en">AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>

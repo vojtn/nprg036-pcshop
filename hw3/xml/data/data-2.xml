@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<customer id="dpv:Cust1">
-    <name>Jožko Mrkvička</name>
+<customer id="dpv:Cust1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd" >
+    <name xml:lang="en">Jozko Mrkvicka</name>
     <email>jozko@gmail.com</email>
     <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
-    <privileged>true</privileged>
+    <identifier xml:lang="en">VIP</identifier>
     <address id="vcard:Addr1">
         <country xml:lang="en">Hungary</country>
         <city xml:lang="en">Komarom</city>

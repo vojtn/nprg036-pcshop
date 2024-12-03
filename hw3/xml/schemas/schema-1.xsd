@@ -128,7 +128,15 @@
     <!-- Employee -->
     <xs:complexType name="employeeType">
         <xs:sequence>
-            <xs:element name="name" />
+            <xs:element name="name">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute ref="xml:lang" use="optional" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="email" />
             <xs:element name="startingDate"></xs:element>
             <xs:element name="address" type="addressType" />

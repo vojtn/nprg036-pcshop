@@ -2,14 +2,14 @@
 <employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../schemas/schema-3.xsd">
     <employee id="schema:Emp1">
-        <name>Dano Drevo</name>
+        <name xml:lang="en">Dano Drevo</name>
         <email>gabor@szekeshfehervar.sk</email>
         <startingDate>17-2-2014</startingDate>
         <address id="vcard:Addr2">
-            <country>Slovakia</country>
-            <city>Nitra</city>
-            <streetLine>Dunajska 14</streetLine>
-            <postCode>49411</postCode>
+            <country xml:lang="en">Slovakia</country>
+            <city xml:lang="en">Nitra</city>
+            <streetLine xml:lang="en">Dunajska 14</streetLine>
+            <postCode xml:lang="en">49411</postCode>
         </address>
         <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
@@ -23,11 +23,11 @@
             </address>
             <product id="schema:Product3">
                 <price>150</price>
-                <name>AMD Ryzen 7 5700X3D</name>
+                <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
                 <sale>20</sale>
                 <VAT>21</VAT>
                 <brand id="schema:Brand2">
-                    <name>AMD</name>
+                    <name xml:lang="en">AMD</name>
                     <companyEmail>support@amd.com</companyEmail>
                 </brand>
             </product>
@@ -44,11 +44,11 @@
             </address>
             <product id="schema:Product2">
                 <price>100</price>
-                <name>AMD Ryzen 5 7600</name>
+                <name xml:lang="en">AMD Ryzen 5 7600</name>
                 <sale>20</sale>
                 <VAT>21</VAT>
                 <brand id="schema:Brand2">
-                    <name>AMD</name>
+                    <name xml:lang="en">AMD</name>
                     <companyEmail>support@amd.com</companyEmail>
                 </brand>
             </product>
@@ -65,11 +65,11 @@
             </address>
             <product id="schema:Product3">
                 <price>150</price>
-                <name>AMD Ryzen 7 5700X3D</name>
+                <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
                 <sale>20</sale>
                 <VAT>21</VAT>
                 <brand id="schema:Brand2">
-                    <name>AMD</name>
+                    <name xml:lang="en">AMD</name>
                     <companyEmail>support@amd.com</companyEmail>
                 </brand>
             </product>
