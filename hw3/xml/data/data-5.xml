@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<brands>
-    <brand id="schema:Brand1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
+<brands xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-5.xsd">
+    <brand id="schema:Brand1"  >
         <name>logitech</name>
         <companyEmail>support@logitech.com</companyEmail>
-        <product>
+        <product id="schema:Product1">
             <price>50</price>
             <name>Logitech MX Keys</name>
             <sale>0</sale>
@@ -13,13 +13,13 @@
     <brand id="schema:Brand2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
         <name>AMD</name>
         <companyEmail>support@amd.com</companyEmail>
-        <product>
+        <product id="schema:Product2">
             <price>100</price>
             <name>AMD Ryzen 5 7600</name>
             <sale>20</sale>
             <VAT>21</VAT>
         </product>
-        <product>
+        <product id="schema:Product3">
             <price>150</price>
             <name>AMD Ryzen 7 5700X3D</name>
             <sale>20</sale>
