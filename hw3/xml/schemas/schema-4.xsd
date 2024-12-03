@@ -2,79 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+    <xs:include schemaLocation="schema-1.xsd"/>
     <xs:element name="warehouses">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="warehouse">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="capacity" type="xs:integer"/>
-                            <xs:sequence>
-                                <xs:element name="contact" type="xs:string"/>
-                            </xs:sequence>
-                                <xs:element name="address">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="country">
-                                                <xs:complexType>
-                                                    <xs:simpleContent>
-                                                        <xs:extension base="xs:string">
-                                                            <xs:attribute ref="xml:lang" use="optional" />
-                                                        </xs:extension>
-                                                    </xs:simpleContent>
-                                                </xs:complexType>
-                                            </xs:element>
-                                            <xs:element name="city">
-                                                <xs:complexType>
-                                                    <xs:simpleContent>
-                                                        <xs:extension base="xs:string">
-                                                            <xs:attribute ref="xml:lang" use="optional" />
-                                                        </xs:extension>
-                                                    </xs:simpleContent>
-                                                </xs:complexType>
-                                            </xs:element>
-                                            <xs:element name="streetLine">
-                                                <xs:complexType>
-                                                    <xs:simpleContent>
-                                                        <xs:extension base="xs:string">
-                                                            <xs:attribute ref="xml:lang" use="optional" />
-                                                        </xs:extension>
-                                                    </xs:simpleContent>
-                                                </xs:complexType>
-                                            </xs:element>
-                                            <xs:element name="postCode">
-                                                <xs:complexType>
-                                                    <xs:simpleContent>
-                                                        <xs:extension base="xs:string">
-                                                            <xs:attribute ref="xml:lang" use="optional" />
-                                                        </xs:extension>
-                                                    </xs:simpleContent>
-                                                </xs:complexType>
-                                            </xs:element>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                                <xs:element name="product" minOccurs="0">
-                                    <xs:complexType>
-                                        <xs:sequence>
-                                            <xs:element name="price" type="xs:integer"/>
-                                            <xs:element name="name" type="xs:string"/>
-                                            <xs:element name="sale" type="xs:string"/>
-                                            <xs:element name="VAT" type="xs:integer"/>
-                                            <xs:element name="brand" minOccurs="0" maxOccurs="1">
-                                                <xs:complexType>
-                                                    <xs:sequence>
-                                                        <xs:element name="name" type="xs:string"/>
-                                                        <xs:element name="companyEmail" type="xs:string"/>
-                                                    </xs:sequence>
-                                                </xs:complexType>
-                                            </xs:element>
-                                        </xs:sequence>
-                                    </xs:complexType>
-                                </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element name="warehouse" type="warehouseType"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

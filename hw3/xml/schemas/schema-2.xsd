@@ -2,64 +2,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
-    <xs:element name="customer">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name">
-                    <xs:complexType>
-                        <xs:simpleContent>
-                            <xs:extension base="xs:string">
-                                <xs:attribute ref="xml:lang" use="optional" />
-                            </xs:extension>
-                        </xs:simpleContent>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="email" type="xs:string"></xs:element>
-                <xs:element name="registrationDate" type="xs:dateTime"></xs:element>
-                <xs:element name="privileged" type="xs:boolean"></xs:element>
-                <xs:element name="address">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="country">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute ref="xml:lang" use="optional" />
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                            <xs:element name="city">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute ref="xml:lang" use="optional" />
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                            <xs:element name="streetLine">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute ref="xml:lang" use="optional" />
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                            <xs:element name="postCode">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute ref="xml:lang" use="optional" />
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xs:include schemaLocation="schema-1.xsd"/>
+    <xs:element name="customer" type="customerType"/>
 </xs:schema>

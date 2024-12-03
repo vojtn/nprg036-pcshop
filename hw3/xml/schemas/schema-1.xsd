@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
 
@@ -43,6 +44,7 @@
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
 
     <!-- Brand -->
@@ -51,6 +53,7 @@
             <xs:element name="name" type="xs:string" />
             <xs:element name="companyEmail" type="xs:string" />
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
 
     <!-- Customer -->
@@ -70,6 +73,7 @@
             <xs:element name="privileged" type="xs:boolean"></xs:element>
             <xs:element name="address" type="addressType" />
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
 
     <!-- Product -->
@@ -81,6 +85,7 @@
             <xs:element name="VAT" type="xs:integer" />
             <xs:element name="brand" type="brandType" minOccurs="0" maxOccurs="1" />
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
 
     <!-- Warehouse -->
@@ -93,6 +98,7 @@
             <xs:element name="address" type="addressType" />
             <xs:element name="product" type="productType" minOccurs="0" />
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
 
     <!-- Employee -->
@@ -104,6 +110,7 @@
             <xs:element name="address" type="addressType" />
             <xs:element name="warehouse" type="warehouseType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
 
     <!-- Order -->
@@ -116,6 +123,7 @@
             <xs:element name="address" type="addressType" />
             <xs:element name="employee" type="employeeType" />
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
 
     <xs:element name="orders">
