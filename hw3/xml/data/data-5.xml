@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <brands>
-    <brand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
+    <brand id="schema:Brand1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
         <name>logitech</name>
         <companyEmail>support@logitech.com</companyEmail>
         <product>
@@ -10,7 +10,7 @@
             <VAT>21</VAT>
         </product>
     </brand>
-    <brand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
+    <brand id="schema:Brand2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-5.xsd">
         <name>AMD</name>
         <companyEmail>support@amd.com</companyEmail>
         <product>
