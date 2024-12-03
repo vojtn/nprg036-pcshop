@@ -21,8 +21,8 @@
         @prefix seasto: &lt;https://w3id.org/seas/&gt; .
         @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; . &#10;
     </xsl:template>
-    
-    <xsl:template match="/">
+
+    <xsl:template name="mainTemplate">
         <xsl:call-template name="prefixes"/>
         
         <!-- Not the best way to do it, but we wanted to keep the original ordering of items -->
@@ -53,6 +53,10 @@
         <xsl:for-each-group select="//product" group-by="@id">
             <xsl:apply-templates select="."/>
         </xsl:for-each-group>
+    </xsl:template>
+    
+    <xsl:template match="/">
+        <xsl:call-template name="mainTemplate"/>
     </xsl:template>
     
     <!-- Template to transform Customer -->
