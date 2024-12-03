@@ -14,7 +14,7 @@
     "seasto": "https://w3id.org/seas/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "items": [
+    "@graph": [
     {
         "@id": "dpv:Cust1",
         "@type": "dpv:Customer",
@@ -153,63 +153,6 @@
         "seasto:valueAddedTax": 21,
         "schema:brand": "schema:Brand2",
         "schema:location": "km4c:Warehouse3"
-    }
-    ],
-    "@graph": [
-    {
-        "@id": "dpv:Cust1",
-        "schema:referencesOrder": ["schema:Ord1", "schema:Ord2", "schema:Ord3"],
-        "schema:address": "vcard:Addr1"
-    },
-    {
-        "@id": "schema:Emp1",
-        "schema:location": ["km4c:Warehouse1", "km4c:Warehouse2", "km4c:Warehouse3"],
-        "schema:address": "vcard:Addr2"
-    },
-    {
-        "@id": "schema:Ord1",
-        "schema:orderedItem": ["schema:Product1", "schema:Product2"],
-        "schema:billingAddress": "vcard:Addr1",
-        "iol:isAssignedTo": "schema:Emp1"
-    },
-    {
-        "@id": "schema:Ord2",
-        "schema:orderedItem": ["schema:Product2", "schema:Product3"],
-        "schema:billingAddress": "vcard:Addr1",
-        "iol:isAssignedTo": "schema:Emp1"
-    },
-    {
-        "@id": "schema:Ord3",
-        "schema:orderedItem": ["schema:Product1"],
-        "schema:billingAddress": "vcard:Addr1",
-        "iol:isAssignedTo": "schema:Emp1"
-    },
-    {
-        "@id": "schema:Product1",
-        "schema:brand": "schema:Brand1",
-        "schema:location": "km4c:Warehouse1"
-    },
-    {
-        "@id": "schema:Product2",
-        "schema:brand": "schema:Brand2",
-        "schema:location": "km4c:Warehouse2"
-    },
-    {
-        "@id": "schema:Product3",
-        "schema:brand": "schema:Brand2",
-        "schema:location": "km4c:Warehouse3"
-    },
-    {
-        "@id": "km4c:Warehouse1",
-        "schema:location": "vcard:Addr2"
-    },
-    {
-        "@id": "km4c:Warehouse2",
-        "schema:location": "vcard:Addr3"
-    },
-    {
-        "@id": "km4c:Warehouse3",
-        "schema:location": "vcard:Addr3"
     }
     ]
 }
