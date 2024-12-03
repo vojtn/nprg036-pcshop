@@ -10,10 +10,10 @@
             <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
             <privileged>true</privileged>
             <address id="vcard:Addr1">
-                <country xml:lang="cs">Česká republika</country>
-                <city xml:lang="cs">Praha</city>
-                <streetLine>Pátkova 2136/3</streetLine>
-                <postCode>182 00</postCode>
+                <country xml:lang="en">Hungary</country>
+                <city xml:lang="en">Komarom</city>
+                <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+                <postCode xml:lang="en">16900</postCode>
             </address>
         </customer>
         <product id="schema:Product1">
@@ -39,8 +39,8 @@
         <address id="vcard:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
-            <streetLine>Cajkovskeho 2</streetLine>
-            <postCode>16900</postCode>
+            <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+            <postCode xml:lang="en">16900</postCode>
         </address>
         <employee id="schema:Emp1">
             <name>Dano Drevo</name>
@@ -55,7 +55,7 @@
             <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
-                <contact>warehousesupport3@ppcshop.cz</contact>
+                <contact>warehousesupport1@ppcshop.cz</contact>
                 <address id="vcard:Addr2">
                     <country xml:lang="en">Slovakia</country>
                     <city xml:lang="en">Nitra</city>
@@ -126,10 +126,10 @@
             <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
             <privileged>true</privileged>
             <address id="vcard:Addr1">
-                <country xml:lang="cs">Česká republika</country>
-                <city xml:lang="cs">Praha</city>
-                <streetLine>Pátkova 2136/3</streetLine>
-                <postCode>182 00</postCode>
+                <country xml:lang="en">Hungary</country>
+                <city xml:lang="en">Komarom</city>
+                <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+                <postCode xml:lang="en">16900</postCode>
             </address>
         </customer>
         <product id="schema:Product2">
@@ -155,8 +155,8 @@
         <address id="vcard:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
-            <streetLine>Cajkovskeho 2</streetLine>
-            <postCode>16900</postCode>
+            <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+            <postCode xml:lang="en">16900</postCode>
         </address>
         <employee id="schema:Emp1">
             <name>Dano Drevo</name>
@@ -171,7 +171,7 @@
             <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
-                <contact>warehousesupport3@ppcshop.cz</contact>
+                <contact>warehousesupport1@ppcshop.cz</contact>
                 <address id="vcard:Addr2">
                     <country xml:lang="en">Slovakia</country>
                     <city xml:lang="en">Nitra</city>
@@ -242,10 +242,10 @@
             <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
             <privileged>true</privileged>
             <address id="vcard:Addr1">
-                <country xml:lang="cs">Česká republika</country>
-                <city xml:lang="cs">Praha</city>
-                <streetLine>Pátkova 2136/3</streetLine>
-                <postCode>182 00</postCode>
+                <country xml:lang="en">Hungary</country>
+                <city xml:lang="en">Komarom</city>
+                <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+                <postCode xml:lang="en">16900</postCode>
             </address>
         </customer>
         <product id="schema:Product1">
@@ -261,8 +261,8 @@
         <address id="vcard:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
-            <streetLine>Cajkovskeho 2</streetLine>
-            <postCode>16900</postCode>
+            <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+            <postCode xml:lang="en">16900</postCode>
         </address>
         <employee id="schema:Emp1">
             <name>Dano Drevo</name>
@@ -277,7 +277,7 @@
             <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
-                <contact>warehousesupport3@ppcshop.cz</contact>
+                <contact>warehousesupport1@ppcshop.cz</contact>
                 <address id="vcard:Addr2">
                     <country xml:lang="en">Slovakia</country>
                     <city xml:lang="en">Nitra</city>
