@@ -6,7 +6,7 @@
     <xsl:output method="text" encoding="UTF-8" indent="no" />
 
     <!-- Prefix definition -->
-    <xsl:template match="/">
+    <xsl:template name="prefixes">
         @base &lt;http://example.org/&gt; .
         @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
         @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -20,6 +20,10 @@
         @prefix oo: &lt;http://purl.org/openorg/&gt; .
         @prefix seasto: &lt;https://w3id.org/seas/&gt; .
         @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+    </xsl:template>
+    
+    <xsl:template match="/">
+        <xsl:call-template name="prefixes"/>
 
         <xsl:apply-templates select="//employee"/>
         <xsl:apply-templates select="//address"/>

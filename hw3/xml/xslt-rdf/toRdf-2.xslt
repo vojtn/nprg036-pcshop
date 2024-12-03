@@ -8,12 +8,7 @@
 
     <!-- Prefix definition -->
     <xsl:template match="/">
-        @prefix dpv: &lt;https://w3c.github.io/dpv/2.0/&gt; .
-        @prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
-        @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
-        @prefix uiot: &lt;http://www.w3id.org/urban-iot/core#&gt; .
-        @prefix schema: &lt;http://schema.org/&gt; .
-        @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+        <xsl:call-template name="prefixes"/>
 
         <xsl:apply-templates select="//customer"/>
         <xsl:apply-templates select="//address"/>
