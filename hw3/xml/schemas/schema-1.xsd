@@ -50,7 +50,15 @@
     <!-- Brand -->
     <xs:complexType name="brandType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string" />
+            <xs:element name="name">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute ref="xml:lang" use="optional" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="companyEmail" type="xs:string" />
         </xs:sequence>
         <xs:attribute name="id" type="xs:string" use="required"/>
@@ -70,7 +78,15 @@
             </xs:element>
             <xs:element name="email" type="xs:string"></xs:element>
             <xs:element name="registrationDate" type="xs:dateTime"></xs:element>
-            <xs:element name="privileged" type="xs:boolean"></xs:element>
+            <xs:element name="identifier">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute ref="xml:lang" use="optional" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="address" type="addressType" />
         </xs:sequence>
         <xs:attribute name="id" type="xs:string" use="required"/>
@@ -80,7 +96,15 @@
     <xs:complexType name="productType">
         <xs:sequence>
             <xs:element name="price" type="xs:integer" />
-            <xs:element name="name" type="xs:string" />
+            <xs:element name="name">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute ref="xml:lang" use="optional" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="sale" type="xs:string" />
             <xs:element name="VAT" type="xs:integer" />
             <xs:element name="brand" type="brandType" minOccurs="0" maxOccurs="1" />
@@ -96,7 +120,7 @@
                 <xs:element name="contact" type="xs:string" />
             </xs:sequence>
             <xs:element name="address" type="addressType" />
-            <xs:element name="product" type="productType" minOccurs="0" />
+            <xs:element name="product" type="productType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
         <xs:attribute name="id" type="xs:string" use="required"/>
     </xs:complexType>
