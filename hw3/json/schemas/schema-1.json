@@ -10,7 +10,6 @@
         }
         }
     },
-    "required": ["orders"],
     "$defs": {
         "order": {
         "type": "object",

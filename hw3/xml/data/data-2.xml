@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<customer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd">
-    <name xml:lang="cs">Karel Novák</name>
-    <email>novakk@email.cz</email>
-    <registrationDate>2023-10-31T15:09:38.6875000-01:00</registrationDate>
-    <privileged>false</privileged>
-    <address>
-        <country xml:lang="cs">Česká republika</country>
-        <city xml:lang="cs">Praha</city>
-        <streetLine xml:lang="cs">Malostranské náměstí 2/25</streetLine>
-        <postCode xml:lang="cs">118 00</postCode>
+<customer id="dpv:Cust1">
+    <name>Jožko Mrkvička</name>
+    <email>jozko@gmail.com</email>
+    <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+    <privileged>true</privileged>
+    <address id="vcard:Addr1">
+        <country xml:lang="en">Hungary</country>
+        <city xml:lang="en">Komarom</city>
+        <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+        <postCode xml:lang="en">16900</postCode>
     </address>
 </customer>
