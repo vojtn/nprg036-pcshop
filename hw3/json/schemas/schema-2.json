@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Customer Schema",
+    "type": "object",
+    "properties": {
+        "customers": {
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/customer"
+            }
+        }
+    },
+    "$defs": {
+        "customer": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "$ref": "#/$defs/langString"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "registrationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "privileged": {
+                    "type": "boolean"
+                },
+                "address": {
+                    "$ref": "#/$defs/address"
+                }
+            },
+            "required": ["name", "email", "registrationDate", "privileged", "address"]
+        },
+        "address": {
+            "type": "object",
+            "properties": {
+                "country": {
+                    "$ref": "#/$defs/langString"
+                },
+                "city": {
+                    "$ref": "#/$defs/langString"
+                },
+                "streetLine": {
+                    "$ref": "#/$defs/langString"
+                },
+                "postCode": {
+                    "$ref": "#/$defs/langString"
+                }
+            },
+            "required": ["country", "city", "streetLine", "postCode"]
+        },
+        "langString": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "lang": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z]{2,}$"
+            }
+        },
+        "required": ["value"],
+        "additionalProperties": false
+        }
+    }
+}   
