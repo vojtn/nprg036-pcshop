@@ -30,6 +30,7 @@
         <xsl:apply-templates select="//warehouse"/>
         <xsl:apply-templates select="//product"/>
         <xsl:apply-templates select="//brand"/>
+        <xsl:apply-templates select="//order"/>
     </xsl:template>
 
     <!-- Template to transform Customer -->
@@ -86,6 +87,13 @@
         schema:Brand<xsl:value-of select="position()" /> a schema:Brand ;
             schema:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
             schema:email &lt;mailto:<xsl:value-of select="companyEmail"/>&gt; .
+    </xsl:template>
+
+    <!-- Template to transform Order -->
+    <xsl:template match="order" mode="#default">
+        schema:Ord<xsl:value-of select="position()" /> a schema:Order ;
+            schema:orderNumber <xsl:value-of select="orderNumber"/> ;
+            schema:price <xsl:value-of select="totalPrice"/> .
     </xsl:template>
 
 </xsl:stylesheet>
