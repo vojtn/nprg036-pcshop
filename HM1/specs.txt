@@ -1,0 +1,206 @@
+Specification:
+
+This domain model represents ordering system for a Computer Shop.
+
+Class: Order
+    This class represents a shopping Order.
+
+    Attributes:
+        - orderNumber
+            Type: Number
+            Description: Number of the order.
+            Example: 217043
+        - totalPrice
+            Type: Currency
+            Description: Final price of the order.
+            Example: 69,00€
+
+    Associations:
+        - association: contains:
+            - Association: Product
+            - Type: Product
+            - Name: Product
+            - Description: Products in a specific Order.
+
+        - association: billing address
+            - Association: Address
+            - Type: Address
+            - Name: Order billing address.
+            - Description: Represents real world address.
+
+Class: Person
+This class represents a person, either a customer or an employee
+
+    Attributes:
+        - name
+            Type: String
+            Description: Name of the Person
+            Example: John Doe
+        - e-mail
+            Type: Email
+            Description: Email of the Person
+            Example: johndoe@yahoo.com
+        - phone
+            Type: Mobile Number
+            Description: Preferred mobile number of the Person
+            Example: +421 666 111 222
+        - age
+            Type: Number
+            Description: Age of the Person
+            Example: 20
+
+    Associations:
+        - association: home address
+            - Association: Address
+            - Type: Address
+            - Name: Personal Home Address
+            - Description: Home address of the Person
+
+Class: Employee 
+This class represents an employee deriving from Person
+
+    Attributes: 
+        - position
+            Type: String
+            Description: Position of the Employee
+            Example: Manager
+        - startingDate
+            Type: Date
+            Description: Starting date of the Employee
+            Example: 01.01.2020
+        - salary
+            Type: Currency
+            Description: Salary of the Employee
+            Example: 1000,00€
+    
+    Associations:
+        - association: handles
+            - Association: Order
+            - Type: Order
+            - Name: Order
+            - Description: Orders handled by the Employee 
+        - association: works at
+            - Association: Warehouse
+            - Type: Warehouse
+            - Name: Warehouse
+            - Description: Warehouse where the Employee works
+
+Class: Customer
+This class represents a customer deriving from Person
+
+    Attributes:
+        - registrationDate
+            Type: Date
+            Description: Registration date of the Customer
+            Example: 01.01.2020
+        - privileged
+            Type: Boolean 
+            Description: Privileged status of the Customer
+            Example: true
+
+    Associations:
+        - association: ordered
+            - Association: Order
+            - Type: Order
+            - Name: Order
+            - Description: Products ordered by the Customer
+
+Class: Warehouse
+This class represents a warehouse of the computer e-shop, main purpose of the warehouse is to store products and send them to customers.
+
+    Attributes:
+        - capacity
+            Type: Number
+            Description: The overall warehouse capacity of the products
+            Example: 2341
+        - e-mail
+            Type: E-mail
+            Description: Contact email address of the warehouse
+            Example: smichovwarehouse@bestpcshop.com
+        - phone
+            Type: Number
+            Description: Contact phone of the warehouse
+            Example: +420737192891
+    
+    Associations:
+        - association: located at
+            - Association: address
+            - Type: Address
+            - Name: Located at address
+            - Description: The address where is the warehouse located
+
+Class: Address
+This class represent address information to identify precise location.
+
+    Attributes:
+        - country
+            Type: String
+            Description: The name of the country
+            Example: The Czech republic
+        - city
+            Type: String
+            Description: The name of the city
+            Example: Prague
+        - street
+            Type: String
+            Description: The name of the street
+            Example: Malostranské náměstí
+        - houseNumber
+            Type: String	
+            Description: The building identification number
+            Example: 2/25
+        - postcode
+            Type: Number
+            Description: Postcode identification number
+            Example: 11800
+
+Class: Product
+This class represents a product in a shop
+
+    Attributes:
+        - price
+            Type: Currency
+            Description: price of the product
+            Example: 18.88$
+        - name
+            Type: String
+            Description: Name of the product
+            Example: Kingston KF432C16BBK2/32
+        - sale
+            Type: Number
+            Description: percentage which should be removed from the final price
+            Example: 20
+        - type
+            Type: String
+            Description: Type for a closer specification of the product
+            Example: CPU
+        - VAT
+            Type: Number
+            Description: percentage representing a tax for the product
+            Example: 23
+
+    Associations:
+        - association: brand
+            - Association: Brand
+            - Type: Brand
+            - Name: Brand
+            - Description: brand of the product 
+
+        - association: stored in
+            - Association: Warehouse
+            - Type: Warehouse
+            - Name: Warehouse
+            - Description: Where is the product stored
+
+Class: Brand
+This class represents a brand of which are some of the products
+
+    Attributes:
+        - name
+            Type: String
+            Description: Name of the brand
+            Example: Kingston
+        - companyEmail
+            Type: E-mail
+            Description: contact e-mail for business conversation
+            Example:  queries@computershare.com

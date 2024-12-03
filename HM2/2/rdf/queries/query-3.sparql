@@ -1,0 +1,22 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix schema: <http://schema.org/>
+prefix dpv: <https://w3c.github.io/dpv/2.0/>
+prefix iol: <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl>
+prefix vcard: <http://www.w3.org/2006/vcard/ns>
+prefix km4c: <http://www.disit.org/km4city/schema>
+prefix uiot: <http://www.w3id.org/urban-iot/core>
+prefix oo: <http://purl.org/openorg/>
+prefix seasto: <https://w3id.org/seas/>
+
+
+# returns a warehouse with the most amount of products stored along with the count of products
+SELECT ?warehouse (COUNT(?product) AS ?productCount)
+WHERE {
+    ?product a schema:Product ;
+            schema:location ?warehouse .
+}
+GROUP BY ?warehouse
+ORDER BY DESC(?productCount)
+LIMIT 1
