@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" 
-   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-   xmlns:fn="http://www.w3.org/2005/xpath-functions">
-    <xsl:output method="text" encoding="UTF-8" indent="no" />
-
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:fn="http://www.w3.org/2005/xpath-functions">
+    <xsl:output method="text" encoding="UTF-8" indent="yes" />
+    
     <!-- Prefix definition -->
     <xsl:template name="prefixes">
         @base &lt;http://example.org/&gt; .
@@ -19,81 +19,96 @@
         @prefix uiot: &lt;http://www.w3id.org/urban-iot/core#&gt; .
         @prefix oo: &lt;http://purl.org/openorg/&gt; .
         @prefix seasto: &lt;https://w3id.org/seas/&gt; .
-        @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+        @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; . &#10;
     </xsl:template>
     
     <xsl:template match="/">
         <xsl:call-template name="prefixes"/>
-
-        <xsl:apply-templates select="//employee"/>
-        <xsl:apply-templates select="//address"/>
-        <xsl:apply-templates select="//warehouse"/>
-        <xsl:apply-templates select="//product"/>
-        <xsl:apply-templates select="//brand"/>
-        <xsl:apply-templates select="//order"/>
+        
+        <!-- Not the best way to do it, but we wanted to keep the original ordering of items -->
+        <xsl:for-each-group select="//customer" group-by="@id">
+            <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
+        
+        <xsl:for-each-group select="//employee" group-by="@id">
+            <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
+        
+        <xsl:for-each-group select="//brand" group-by="@id">
+            <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
+        
+        <xsl:for-each-group select="//address" group-by="@id">
+            <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
+        
+        <xsl:for-each-group select="//order" group-by="@id">
+            <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
+        
+        <xsl:for-each-group select="//warehouse" group-by="@id">
+            <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
+        
+        <xsl:for-each-group select="//product" group-by="@id">
+            <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
     </xsl:template>
-
+    
     <!-- Template to transform Customer -->
     <xsl:template match="customer">
-        dpv:Cust<xsl:value-of select="position()" /> a dpv:Customer ;
-            foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
-            foaf:mbox &lt;mailto:<xsl:value-of select="email"/>&gt; ;
-            uiot:registrationDate "<xsl:value-of select="registrationDate"/>"^^xsd:dateTime ;
-            schema:identifier <xsl:choose>
-                    <xsl:when test="privileged = 'true'">
-                        <xsl:text>"VIP"</xsl:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:text>"Standard"</xsl:text>
-                    </xsl:otherwise>
-                </xsl:choose>@<xsl:value-of select="name/@xml:lang"/> .
+        <xsl:value-of select="@id" /> a dpv:Customer ;
+        foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
+        foaf:mbox &lt;mailto:<xsl:value-of select="email"/>&gt; ;
+        uiot:registrationDate "<xsl:value-of select="registrationDate"/>"^^xsd:dateTime ;
+        schema:identifier "<xsl:value-of select="identifier"/>"@<xsl:value-of select="name/@xml:lang"/> .&#10;
     </xsl:template>
-
+    
     <!-- Template to transform Employee -->
     <xsl:template match="employee">
-        schema:Empl<xsl:value-of select="position()" /> a schema:EmployeeRole ;
-            foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
-            foaf:mbox &lt;mailto:<xsl:value-of select="email"/>&gt; ;
-            schema:startDate "<xsl:value-of select="startingDate"/>"^^xsd:dateTime ;
+        <xsl:value-of select="@id" /> a schema:EmployeeRole ;
+        foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
+        foaf:mbox &lt;mailto:<xsl:value-of select="email"/>&gt; ;
+        schema:startDate "<xsl:value-of select="startingDate"/>"^^xsd:dateTime ;&#10;
     </xsl:template>
-
+    
     <!-- Template to transform Address -->
     <xsl:template match="address">
-        vcard:Addr<xsl:value-of select="position()" /> a vcard:Address ;
-            vcard:country-name "<xsl:value-of select="country"/>"@<xsl:value-of select="country/@xml:lang" /> ;
-            vcard:locality "<xsl:value-of select="city"/>"@<xsl:value-of select="city/@xml:lang" /> ;
-            vcard:street-address "<xsl:value-of select="streetLine"/>"@<xsl:value-of select="streetLine/@xml:lang" /> ;
-            vcard:postal-code "<xsl:value-of select="postCode"/>"@<xsl:value-of select="postCode/@xml:lang" /> ;
+        <xsl:value-of select="@id" /> a vcard:Address ;
+        vcard:country-name "<xsl:value-of select="country"/>"@<xsl:value-of select="country/@xml:lang" /> ;
+        vcard:locality "<xsl:value-of select="city"/>"@<xsl:value-of select="city/@xml:lang" /> ;
+        vcard:street-address "<xsl:value-of select="streetLine"/>"@<xsl:value-of select="streetLine/@xml:lang" /> ;
+        vcard:postal-code "<xsl:value-of select="postCode"/>"@<xsl:value-of select="postCode/@xml:lang" /> ;&#10;
     </xsl:template>
-
+    
     <!-- Template to transform Warehouse -->
     <xsl:template match="warehouse" mode="#default">
-        km4c:Warehouse<xsl:value-of select="position()" /> a km4c:Warehouse_and_storage ;
-            oo:capacity <xsl:value-of select="capacity"/> ;
-            foaf:mbox [ rdf:_1 &lt;mailto:<xsl:value-of select="contact"/>&gt; ] .
+        <xsl:value-of select="@id" /> a km4c:Warehouse_and_storage ;
+        oo:capacity <xsl:value-of select="capacity"/> ;
+        foaf:mbox [ rdf:_1 &lt;mailto:<xsl:value-of select="contact"/>&gt; ] .&#10;
     </xsl:template>
-
+    
     <!-- Template to transform Product -->
     <xsl:template match="product" mode="#default">
-        schema:Product<xsl:value-of select="position()" /> a schema:Product ;
-            schema:price <xsl:value-of select="price"/> ;
-            schema:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
-            schema:discount <xsl:value-of select="sale"/> ;
-            seasto:valueAddedTax <xsl:value-of select="VAT"/> .
+        <xsl:value-of select="@id" /> a schema:Product ;
+        schema:price <xsl:value-of select="price"/> ;
+        schema:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
+        schema:discount <xsl:value-of select="sale"/> ;
+        seasto:valueAddedTax <xsl:value-of select="VAT"/> .&#10;
     </xsl:template>
-
+    
     <!-- Template to transform Brand -->
     <xsl:template match="brand" mode="#default">
-        schema:Brand<xsl:value-of select="position()" /> a schema:Brand ;
-            schema:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
-            schema:email &lt;mailto:<xsl:value-of select="companyEmail"/>&gt; .
+        <xsl:value-of select="@id" /> a schema:Brand ;
+        schema:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
+        schema:email &lt;mailto:<xsl:value-of select="companyEmail"/>&gt; .&#10;
     </xsl:template>
-
+    
     <!-- Template to transform Order -->
     <xsl:template match="order" mode="#default">
-        schema:Ord<xsl:value-of select="position()" /> a schema:Order ;
-            schema:orderNumber <xsl:value-of select="orderNumber"/> ;
-            schema:price <xsl:value-of select="totalPrice"/> .
+        <xsl:value-of select="@id" /> a schema:Order ;
+        schema:orderNumber <xsl:value-of select="orderNumber"/> ;
+        schema:price <xsl:value-of select="totalPrice"/> .&#10;
     </xsl:template>
-
+    
 </xsl:stylesheet>
