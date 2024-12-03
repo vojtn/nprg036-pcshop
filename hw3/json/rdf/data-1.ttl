@@ -1,0 +1,114 @@
+PREFIX dpv:    <https://w3c.github.io/dpv/2.0/>
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+PREFIX iol:    <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#>
+PREFIX km4c:   <http://www.disit.org/km4city/schema#>
+PREFIX oo:     <http://purl.org/openorg/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX seasto: <https://w3id.org/seas/>
+PREFIX uiot:   <http://www.w3id.org/urban-iot/core#>
+PREFIX vcard:  <http://www.w3.org/2006/vcard/ns#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+dpv:Cust1  rdf:type             dpv:Customer;
+        schema:address          vcard:Addr1;
+        schema:identifier       "VIP"@en;
+        schema:referencesOrder  schema:Ord3 , schema:Ord2 , schema:Ord1;
+        uiot:registrationDate   "1998-04-10T00:00:00Z"^^xsd:dateTime;
+        foaf:mbox               "mailto:jozko@gmail.com";
+        foaf:name               "Jožko Mrkvička"@en .
+
+vcard:Addr3  rdf:type         vcard:Address;
+        vcard:country-name    "Czech republic"@en;
+        vcard:locality        "Praha"@en;
+        vcard:postal-code     "16200"@en;
+        vcard:street-address  "Za zahradou 2"@en .
+
+vcard:Addr2  rdf:type         vcard:Address;
+        vcard:country-name    "Slovakia"@en;
+        vcard:locality        "Nitra"@en;
+        vcard:postal-code     "49411"@en;
+        vcard:street-address  "Dunajska 14"@en .
+
+vcard:Addr1  rdf:type         vcard:Address;
+        vcard:country-name    "Hungary"@en;
+        vcard:locality        "Komarom"@en;
+        vcard:postal-code     "16900"@en;
+        vcard:street-address  "Cajkovskeho 2"@en .
+
+km4c:Warehouse3  rdf:type  km4c:Warehouse_and_storage;
+        oo:capacity      9;
+        schema:location  vcard:Addr3;
+        foaf:mbox        "mailto:warehousesupport3@ppcshop.cz" , "mailto:dwad@ppcshop.cz" .
+
+km4c:Warehouse2  rdf:type  km4c:Warehouse_and_storage;
+        oo:capacity      9;
+        schema:location  vcard:Addr3 .
+
+km4c:Warehouse1  rdf:type  km4c:Warehouse_and_storage;
+        oo:capacity      9;
+        schema:location  vcard:Addr2;
+        foaf:mbox        "mailto:warehousesupport1@ppcshop.cz" .
+
+schema:Product3  rdf:type     schema:Product;
+        schema:brand          schema:Brand2;
+        schema:discount       20;
+        schema:location       km4c:Warehouse3;
+        schema:name           "AMD Ryzen 7 5700X3D"@en;
+        schema:price          150;
+        seasto:valueAddedTax  21 .
+
+schema:Product2  rdf:type     schema:Product;
+        schema:brand          schema:Brand2;
+        schema:discount       20;
+        schema:location       km4c:Warehouse2;
+        schema:name           "AMD Ryzen 5 7600"@en;
+        schema:price          100;
+        seasto:valueAddedTax  21 .
+
+schema:Product1  rdf:type     schema:Product;
+        schema:brand          schema:Brand1;
+        schema:discount       0;
+        schema:location       km4c:Warehouse1;
+        schema:name           "Logitech MX Keys"@en;
+        schema:price          50;
+        seasto:valueAddedTax  21 .
+
+schema:Ord3  rdf:type          schema:Order;
+        schema:billingAddress  vcard:Addr1;
+        schema:orderNumber     2;
+        schema:orderedItem     schema:Product1;
+        schema:price           50 .
+
+schema:Ord2  rdf:type          schema:Order;
+        schema:billingAddress  vcard:Addr1;
+        schema:orderNumber     1;
+        schema:orderedItem     schema:Product3 , schema:Product2;
+        schema:price           210 .
+
+schema:Ord1  rdf:type          schema:Order;
+        schema:billingAddress  vcard:Addr1;
+        schema:orderNumber     0;
+        schema:orderedItem     schema:Product2 , schema:Product1;
+        schema:price           130 .
+
+schema:Emp1  rdf:type     schema:EmployeeRole;
+        schema:address    vcard:Addr2;
+        schema:location   "km4c:Warehouse3" , "km4c:Warehouse2" , "km4c:Warehouse1";
+        schema:startDate  "2014-02-17T00:00:00Z"^^xsd:dateTime;
+        iol:isAssignedTo  schema:Ord3 , schema:Ord2 , schema:Ord1;
+        foaf:mbox         "mailto:gabor@szekeshfehervar.sk";
+        foaf:name         "Dano Drevo"@en .
+
+schema:Brand3  rdf:type  schema:Brand;
+        schema:email  "mailto:support@tsmc.com";
+        schema:name   "TSMC"@en .
+
+schema:Brand2  rdf:type  schema:Brand;
+        schema:email  "mailto:support@amd.com";
+        schema:name   "AMD"@en .
+
+schema:Brand1  rdf:type  schema:Brand;
+        schema:email  "mailto:support@logitech.com";
+        schema:name   "Logitech"@en .
