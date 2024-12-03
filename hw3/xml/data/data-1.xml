@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-1.xsd">
+    <order>
+        <orderNumber>0</orderNumber>
+        <totalPrice>130</totalPrice>
+        <customer>
+            <name>Jožko Mrkvička</name>
+            <email>jozko@gmail.com</email>
+            <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+            <privileged>true</privileged>
+            <address>
+                <country xml:lang="cs">Česká republika</country>
+                <city xml:lang="cs">Praha</city>
+                <streetLine>Pátkova 2136/3</streetLine>
+                <postCode>182 00</postCode>
+            </address>
+        </customer>
+        <product>
+            <price>50</price>
+            <name>Logitech MX Keys</name>
+            <sale>0</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>logitech</name>
+                <companyEmail>support@logitech.com</companyEmail>
+            </brand>
+        </product>
+        <product>
+            <price>100</price>
+            <name>AMD Ryzen 5 7600</name>
+            <sale>20</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>AMD</name>
+                <companyEmail>support@amd.com</companyEmail>
+            </brand>
+        </product>
+        <address>
+            <country xml:lang="en">Hungary</country>
+            <city xml:lang="en">Komarom</city>
+            <streetLine>Cajkovskeho 2</streetLine>
+            <postCode>16900</postCode>
+        </address>
+        <employee>
+            <name>Dano Drevo</name>
+            <email>gabor@szekeshfehervar.sk</email>
+            <startingDate>17-2-2014</startingDate>
+            <address>
+                <country>Slovakia</country>
+                <city>Nitra</city>
+                <streetLine>Dunajska 14</streetLine>
+                <postCode>49411</postCode>
+            </address>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport3@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>150</price>
+                    <name>AMD Ryzen 7 5700X3D</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport2@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>100</price>
+                    <name>AMD Ryzen 5 7600</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport3@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>150</price>
+                    <name>AMD Ryzen 7 5700X3D</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+        </employee>
+    </order>
+    <order>
+        <orderNumber>1</orderNumber>
+        <totalPrice>210</totalPrice>
+        <customer>
+            <name>Jožko Mrkvička</name>
+            <email>jozko@gmail.com</email>
+            <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+            <privileged>true</privileged>
+            <address>
+                <country xml:lang="cs">Česká republika</country>
+                <city xml:lang="cs">Praha</city>
+                <streetLine>Pátkova 2136/3</streetLine>
+                <postCode>182 00</postCode>
+            </address>
+        </customer>
+        <product>
+            <price>100</price>
+            <name>AMD Ryzen 5 7600</name>
+            <sale>20</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>AMD</name>
+                <companyEmail>support@amd.com</companyEmail>
+            </brand>
+        </product>
+                <product>
+            <price>150</price>
+            <name>AMD Ryzen 7 5700X3D</name>
+            <sale>20</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>AMD</name>
+                <companyEmail>support@amd.com</companyEmail>
+            </brand>
+        </product>
+        <address>
+            <country xml:lang="en">Hungary</country>
+            <city xml:lang="en">Komarom</city>
+            <streetLine>Cajkovskeho 2</streetLine>
+            <postCode>16900</postCode>
+        </address>
+        <employee>
+            <name>Dano Drevo</name>
+            <email>gabor@szekeshfehervar.sk</email>
+            <startingDate>17-2-2014</startingDate>
+            <address>
+                <country>Slovakia</country>
+                <city>Nitra</city>
+                <streetLine>Dunajska 14</streetLine>
+                <postCode>49411</postCode>
+            </address>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport3@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>150</price>
+                    <name>AMD Ryzen 7 5700X3D</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport2@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>100</price>
+                    <name>AMD Ryzen 5 7600</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport3@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>150</price>
+                    <name>AMD Ryzen 7 5700X3D</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+        </employee>
+    </order>
+    <order>
+        <orderNumber>2</orderNumber>
+        <totalPrice>50</totalPrice>
+        <customer>
+            <name>Jožko Mrkvička</name>
+            <email>jozko@gmail.com</email>
+            <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+            <privileged>true</privileged>
+            <address>
+                <country xml:lang="cs">Česká republika</country>
+                <city xml:lang="cs">Praha</city>
+                <streetLine>Pátkova 2136/3</streetLine>
+                <postCode>182 00</postCode>
+            </address>
+        </customer>
+        <product>
+            <price>50</price>
+            <name>Logitech MX Keys</name>
+            <sale>0</sale>
+            <VAT>21</VAT>
+            <brand>
+                <name>logitech</name>
+                <companyEmail>support@logitech.com</companyEmail>
+            </brand>
+        </product>
+        <address>
+            <country xml:lang="en">Hungary</country>
+            <city xml:lang="en">Komarom</city>
+            <streetLine>Cajkovskeho 2</streetLine>
+            <postCode>16900</postCode>
+        </address>
+        <employee>
+            <name>Dano Drevo</name>
+            <email>gabor@szekeshfehervar.sk</email>
+            <startingDate>17-2-2014</startingDate>
+            <address>
+                <country>Slovakia</country>
+                <city>Nitra</city>
+                <streetLine>Dunajska 14</streetLine>
+                <postCode>49411</postCode>
+            </address>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport3@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>150</price>
+                    <name>AMD Ryzen 7 5700X3D</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport2@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>100</price>
+                    <name>AMD Ryzen 5 7600</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+                <capacity>9</capacity>
+                <contact>warehousesupport3@ppcshop.cz</contact>
+                <!-- TODO: fill adresses -->
+                <address>
+                    <country xml:lang="cs"></country>
+                    <city xml:lang="cs"></city>
+                    <streetLine xml:lang="cs"></streetLine>
+                    <postCode xml:lang="cs"></postCode>
+                </address>
+                <product>
+                    <price>150</price>
+                    <name>AMD Ryzen 7 5700X3D</name>
+                    <sale>20</sale>
+                    <VAT>21</VAT>
+                    <brand>
+                        <name>AMD</name>
+                        <companyEmail>support@amd.com</companyEmail>
+                    </brand>
+                </product>
+            </warehouse>
+        </employee>
+    </order>
+</orders>

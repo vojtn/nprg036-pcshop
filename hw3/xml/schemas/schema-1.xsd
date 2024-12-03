@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+        <xs:element name="orders">
+            <xs:complexType>
+                <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="order">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="orderNumber" type="xs:integer"></xs:element>
+                                <xs:element name="totalPrice" type="xs:integer"></xs:element>
+                                <xs:element name="customer">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="name">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                            <xs:attribute ref="xml:lang" use="optional" />
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="email" type="xs:string"></xs:element>
+                                            <xs:element name="registrationDate" type="xs:dateTime"></xs:element>
+                                            <xs:element name="privileged" type="xs:boolean"></xs:element>
+                                            <xs:element name="address">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="country">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="city">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="streetLine">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="postCode">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="product" minOccurs="1" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="price" type="xs:integer"/>
+                                            <xs:element name="name" type="xs:string"/>
+                                            <xs:element name="sale" type="xs:string"/>
+                                            <xs:element name="VAT" type="xs:integer"/>
+                                            <xs:element name="brand" minOccurs="0" maxOccurs="1">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="name" type="xs:string"/>
+                                                        <xs:element name="companyEmail" type="xs:string"/>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="address">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="country">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                            <xs:attribute ref="xml:lang" use="optional" />
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="city">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                            <xs:attribute ref="xml:lang" use="optional" />
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="streetLine">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                            <xs:attribute ref="xml:lang" use="optional" />
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="postCode">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                            <xs:attribute ref="xml:lang" use="optional" />
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="employee">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="name"/>
+                                            <xs:element name="email"/>
+                                            <xs:element name="startingDate"></xs:element>
+                                            <xs:element name="address">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="country">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="city">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="streetLine">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="postCode">
+                                                            <xs:complexType>
+                                                                <xs:simpleContent>
+                                                                    <xs:extension base="xs:string">
+                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                    </xs:extension>
+                                                                </xs:simpleContent>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="warehouse" minOccurs="0" maxOccurs="unbounded">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="capacity" type="xs:integer"/>
+                                                        <xs:sequence>
+                                                            <xs:element name="contact" type="xs:string"/>
+                                                        </xs:sequence>
+                                                            <xs:element name="address">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="country">
+                                                                            <xs:complexType>
+                                                                                <xs:simpleContent>
+                                                                                    <xs:extension base="xs:string">
+                                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                                    </xs:extension>
+                                                                                </xs:simpleContent>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                        <xs:element name="city">
+                                                                            <xs:complexType>
+                                                                                <xs:simpleContent>
+                                                                                    <xs:extension base="xs:string">
+                                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                                    </xs:extension>
+                                                                                </xs:simpleContent>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                        <xs:element name="streetLine">
+                                                                            <xs:complexType>
+                                                                                <xs:simpleContent>
+                                                                                    <xs:extension base="xs:string">
+                                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                                    </xs:extension>
+                                                                                </xs:simpleContent>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                        <xs:element name="postCode">
+                                                                            <xs:complexType>
+                                                                                <xs:simpleContent>
+                                                                                    <xs:extension base="xs:string">
+                                                                                        <xs:attribute ref="xml:lang" use="optional" />
+                                                                                    </xs:extension>
+                                                                                </xs:simpleContent>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                            <xs:element name="product" minOccurs="0">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="price" type="xs:integer"/>
+                                                                        <xs:element name="name" type="xs:string"/>
+                                                                        <xs:element name="sale" type="xs:string"/>
+                                                                        <xs:element name="VAT" type="xs:integer"/>
+                                                                        <xs:element name="brand" minOccurs="0" maxOccurs="1">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="name" type="xs:string"/>
+                                                                                    <xs:element name="companyEmail" type="xs:string"/>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+</xs:schema>
