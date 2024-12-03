@@ -1,114 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-1.xsd">
-    <order>
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../schemas/schema-1.xsd">
+    <order id="schema:Ord1">
         <orderNumber>0</orderNumber>
         <totalPrice>130</totalPrice>
-        <customer>
+        <customer id="dpv:Cust1">
             <name>Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
             <privileged>true</privileged>
-            <address>
+            <address id="vcard:Addr1">
                 <country xml:lang="cs">Česká republika</country>
                 <city xml:lang="cs">Praha</city>
                 <streetLine>Pátkova 2136/3</streetLine>
                 <postCode>182 00</postCode>
             </address>
         </customer>
-        <product>
+        <product id="schema:Product1">
             <price>50</price>
             <name>Logitech MX Keys</name>
             <sale>0</sale>
             <VAT>21</VAT>
-            <brand>
+            <brand id="schema:Brand1">
                 <name>logitech</name>
                 <companyEmail>support@logitech.com</companyEmail>
             </brand>
         </product>
-        <product>
+        <product id="schema:Product2">
             <price>100</price>
             <name>AMD Ryzen 5 7600</name>
             <sale>20</sale>
             <VAT>21</VAT>
-            <brand>
+            <brand id="schema:Brand2">
                 <name>AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
-        <address>
+        <address id="vcard:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
             <streetLine>Cajkovskeho 2</streetLine>
             <postCode>16900</postCode>
         </address>
-        <employee>
+        <employee id="schema:Emp1">
             <name>Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
             <startingDate>17-2-2014</startingDate>
-            <address>
+            <address id="vcard:Addr2">
                 <country>Slovakia</country>
                 <city>Nitra</city>
                 <streetLine>Dunajska 14</streetLine>
                 <postCode>49411</postCode>
             </address>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr2">
+                    <country xml:lang="en">Slovakia</country>
+                    <city xml:lang="en">Nitra</city>
+                    <streetLine xml:lang="en">Dunajska 14</streetLine>
+                    <postCode xml:lang="en">49411</postCode>
                 </address>
-                <product>
+                <product id="schema:Product3">
                     <price>150</price>
                     <name>AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr3">
+                    <country xml:lang="en">Czech republic</country>
+                    <city xml:lang="en">Praha</city>
+                    <streetLine xml:lang="en">Za zahradou 2</streetLine>
+                    <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product>
+                <product id="schema:Product2">
                     <price>100</price>
                     <name>AMD Ryzen 5 7600</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr3">
+                    <country xml:lang="en">Czech republic</country>
+                    <city xml:lang="en">Praha</city>
+                    <streetLine xml:lang="en">Za zahradou 2</streetLine>
+                    <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product>
+                <product id="schema:Product3">
                     <price>150</price>
                     <name>AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
@@ -116,115 +117,115 @@
             </warehouse>
         </employee>
     </order>
-    <order>
+    <order id="schema:Ord2">
         <orderNumber>1</orderNumber>
         <totalPrice>210</totalPrice>
-        <customer>
+        <customer id="dpv:Cust1">
             <name>Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
             <privileged>true</privileged>
-            <address>
+            <address id="vcard:Addr1">
                 <country xml:lang="cs">Česká republika</country>
                 <city xml:lang="cs">Praha</city>
                 <streetLine>Pátkova 2136/3</streetLine>
                 <postCode>182 00</postCode>
             </address>
         </customer>
-        <product>
+        <product id="schema:Product2">
             <price>100</price>
             <name>AMD Ryzen 5 7600</name>
             <sale>20</sale>
             <VAT>21</VAT>
-            <brand>
+            <brand id="schema:Brand2">
                 <name>AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
-                <product>
+        <product id="schema:Product3">
             <price>150</price>
             <name>AMD Ryzen 7 5700X3D</name>
             <sale>20</sale>
             <VAT>21</VAT>
-            <brand>
+            <brand id="schema:Brand2">
                 <name>AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
-        <address>
+        <address id="vcard:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
             <streetLine>Cajkovskeho 2</streetLine>
             <postCode>16900</postCode>
         </address>
-        <employee>
+        <employee id="schema:Emp1">
             <name>Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
             <startingDate>17-2-2014</startingDate>
-            <address>
+            <address id="vcard:Addr2">
                 <country>Slovakia</country>
                 <city>Nitra</city>
                 <streetLine>Dunajska 14</streetLine>
                 <postCode>49411</postCode>
             </address>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr2">
+                    <country xml:lang="en">Slovakia</country>
+                    <city xml:lang="en">Nitra</city>
+                    <streetLine xml:lang="en">Dunajska 14</streetLine>
+                    <postCode xml:lang="en">49411</postCode>
                 </address>
-                <product>
+                <product id="schema:Product3">
                     <price>150</price>
                     <name>AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr3">
+                    <country xml:lang="en">Czech republic</country>
+                    <city xml:lang="en">Praha</city>
+                    <streetLine xml:lang="en">Za zahradou 2</streetLine>
+                    <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product>
+                <product id="schema:Product2">
                     <price>100</price>
                     <name>AMD Ryzen 5 7600</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr3">
+                    <country xml:lang="en">Czech republic</country>
+                    <city xml:lang="en">Praha</city>
+                    <streetLine xml:lang="en">Za zahradou 2</streetLine>
+                    <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product>
+                <product id="schema:Product3">
                     <price>150</price>
                     <name>AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
@@ -232,105 +233,105 @@
             </warehouse>
         </employee>
     </order>
-    <order>
+    <order id="schema:Ord3">
         <orderNumber>2</orderNumber>
         <totalPrice>50</totalPrice>
-        <customer>
+        <customer id="dpv:Cust1">
             <name>Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
             <privileged>true</privileged>
-            <address>
+            <address id="vcard:Addr1">
                 <country xml:lang="cs">Česká republika</country>
                 <city xml:lang="cs">Praha</city>
                 <streetLine>Pátkova 2136/3</streetLine>
                 <postCode>182 00</postCode>
             </address>
         </customer>
-        <product>
+        <product id="schema:Product1">
             <price>50</price>
             <name>Logitech MX Keys</name>
             <sale>0</sale>
             <VAT>21</VAT>
-            <brand>
+            <brand id="schema:Brand1">
                 <name>logitech</name>
                 <companyEmail>support@logitech.com</companyEmail>
             </brand>
         </product>
-        <address>
+        <address id="vcard:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
             <streetLine>Cajkovskeho 2</streetLine>
             <postCode>16900</postCode>
         </address>
-        <employee>
+        <employee id="schema:Emp1">
             <name>Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
             <startingDate>17-2-2014</startingDate>
-            <address>
+            <address id="vcard:Addr2">
                 <country>Slovakia</country>
                 <city>Nitra</city>
                 <streetLine>Dunajska 14</streetLine>
                 <postCode>49411</postCode>
             </address>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr2">
+                    <country xml:lang="en">Slovakia</country>
+                    <city xml:lang="en">Nitra</city>
+                    <streetLine xml:lang="en">Dunajska 14</streetLine>
+                    <postCode xml:lang="en">49411</postCode>
                 </address>
-                <product>
+                <product id="schema:Product3">
                     <price>150</price>
                     <name>AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr3">
+                    <country xml:lang="en">Czech republic</country>
+                    <city xml:lang="en">Praha</city>
+                    <streetLine xml:lang="en">Za zahradou 2</streetLine>
+                    <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product>
+                <product id="schema:Product2">
                     <price>100</price>
                     <name>AMD Ryzen 5 7600</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <!-- TODO: fill adresses -->
-                <address>
-                    <country xml:lang="cs"></country>
-                    <city xml:lang="cs"></city>
-                    <streetLine xml:lang="cs"></streetLine>
-                    <postCode xml:lang="cs"></postCode>
+                <address id="vcard:Addr3">
+                    <country xml:lang="en">Czech republic</country>
+                    <city xml:lang="en">Praha</city>
+                    <streetLine xml:lang="en">Za zahradou 2</streetLine>
+                    <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product>
+                <product id="schema:Product3">
                     <price>150</price>
                     <name>AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand>
+                    <brand id="schema:Brand2">
                         <name>AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
