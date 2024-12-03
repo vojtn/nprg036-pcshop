@@ -16,26 +16,6 @@
     },
     "@graph": [
     {
-        "@id": "dpv:Cust1",
-        "@type": "dpv:Customer",
-        "foaf:name": { "@value": "Jožko Mrkvička", "@language": "en" },
-        "foaf:mbox": "mailto:jozko@gmail.com",
-        "uiot:registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
-        "schema:identifier": { "@value": "VIP", "@language": "en" },
-        "schema:referencesOrder": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"},{"@id" :  "schema:Ord3"}],
-        "schema:address": {"@id" : "vcard:Addr1"}
-    },
-    {
-        "@id": "schema:Emp1",
-        "@type": "schema:EmployeeRole",
-        "foaf:name": { "@value": "Dano Drevo", "@language": "en" },
-        "foaf:mbox": "mailto:gabor@szekeshfehervar.sk",
-        "schema:startDate": { "@value": "2014-02-17T00:00:00Z", "@type": "xsd:dateTime" },
-        "schema:location": ["km4c:Warehouse1", "km4c:Warehouse2", "km4c:Warehouse3"],
-        "iol:isAssignedTo": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"}, {"@id" : "schema:Ord3"}],
-        "schema:address": {"@id" : "vcard:Addr2"}
-    },
-    {
         "@id": "schema:Brand1",
         "@type": "schema:Brand",
         "schema:name": { "@value": "Logitech", "@language": "en" },
@@ -76,30 +56,6 @@
         "vcard:locality": { "@value": "Praha", "@language": "en" },
         "vcard:street-address": { "@value": "Za zahradou 2", "@language": "en" },
         "vcard:postal-code": { "@value": "16200", "@language": "en" }
-    },
-    {
-        "@id": "schema:Ord1",
-        "@type": "schema:Order",
-        "schema:orderNumber": 0,
-        "schema:price": 130,
-        "schema:orderedItem": [{"@id" : "schema:Product1"}, {"@id" : "schema:Product2"}],
-        "schema:billingAddress": {"@id" : "vcard:Addr1"}
-    },
-    {
-        "@id": "schema:Ord2",
-        "@type": "schema:Order",
-        "schema:orderNumber": 1,
-        "schema:price": 210,
-        "schema:orderedItem": [{"@id" : "schema:Product2"}, {"@id" : "schema:Product3"}],
-        "schema:billingAddress": {"@id" : "vcard:Addr1"}
-    },
-    {
-        "@id": "schema:Ord3",
-        "@type": "schema:Order",
-        "schema:orderNumber": 2,
-        "schema:price": 50,
-        "schema:orderedItem": {"@id" : "schema:Product1"},
-        "schema:billingAddress": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "km4c:Warehouse1",

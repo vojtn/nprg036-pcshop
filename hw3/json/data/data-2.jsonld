@@ -1,0 +1,52 @@
+{
+    "@context": {
+    "@base": "http://example.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "http://schema.org/",
+    "dpv": "https://w3c.github.io/dpv/2.0/",
+    "iol": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "km4c": "http://www.disit.org/km4city/schema#",
+    "uiot": "http://www.w3id.org/urban-iot/core#",
+    "oo": "http://purl.org/openorg/",
+    "seasto": "https://w3id.org/seas/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+    {
+        "@id": "dpv:Cust1",
+        "@type": "dpv:Customer",
+        "foaf:name": { "@value": "Jožko Mrkvička", "@language": "en" },
+        "foaf:mbox": "mailto:jozko@gmail.com",
+        "uiot:registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
+        "schema:identifier": { "@value": "VIP", "@language": "en" },
+        "schema:address": {"@id" : "vcard:Addr1"}
+    },
+    {
+        "@id": "vcard:Addr1",
+        "@type": "vcard:Address",
+        "vcard:country-name": { "@value": "Hungary", "@language": "en" },
+        "vcard:locality": { "@value": "Komarom", "@language": "en" },
+        "vcard:street-address": { "@value": "Cajkovskeho 2", "@language": "en" },
+        "vcard:postal-code": { "@value": "16900", "@language": "en" }
+    },
+    {
+        "@id": "vcard:Addr2",
+        "@type": "vcard:Address",
+        "vcard:country-name": { "@value": "Slovakia", "@language": "en" },
+        "vcard:locality": { "@value": "Nitra", "@language": "en" },
+        "vcard:street-address": { "@value": "Dunajska 14", "@language": "en" },
+        "vcard:postal-code": { "@value": "49411", "@language": "en" }
+    },
+    {
+        "@id": "vcard:Addr3",
+        "@type": "vcard:Address",
+        "vcard:country-name": { "@value": "Czech republic", "@language": "en" },
+        "vcard:locality": { "@value": "Praha", "@language": "en" },
+        "vcard:street-address": { "@value": "Za zahradou 2", "@language": "en" },
+        "vcard:postal-code": { "@value": "16200", "@language": "en" }
+    }
+    ]
+}

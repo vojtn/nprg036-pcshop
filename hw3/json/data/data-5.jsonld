@@ -1,0 +1,64 @@
+{
+    "@context": {
+    "@base": "http://example.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "http://schema.org/",
+    "dpv": "https://w3c.github.io/dpv/2.0/",
+    "iol": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "km4c": "http://www.disit.org/km4city/schema#",
+    "uiot": "http://www.w3id.org/urban-iot/core#",
+    "oo": "http://purl.org/openorg/",
+    "seasto": "https://w3id.org/seas/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+    {
+        "@id": "schema:Brand1",
+        "@type": "schema:Brand",
+        "schema:name": { "@value": "Logitech", "@language": "en" },
+        "schema:email": "mailto:support@logitech.com"
+    },
+    {
+        "@id": "schema:Brand2",
+        "@type": "schema:Brand",
+        "schema:name": { "@value": "AMD", "@language": "en" },
+        "schema:email": "mailto:support@amd.com"
+    },
+    {
+        "@id": "schema:Brand3",
+        "@type": "schema:Brand",
+        "schema:name": { "@value": "TSMC", "@language": "en" },
+        "schema:email": "mailto:support@tsmc.com"
+    },
+    {
+        "@id": "schema:Product1",
+        "@type": "schema:Product",
+        "schema:price": 50,
+        "schema:name": { "@value": "Logitech MX Keys", "@language": "en" },
+        "schema:discount": 0,
+        "seasto:valueAddedTax": 21,
+        "schema:brand": {"@id" : "schema:Brand1"}
+    },
+    {
+        "@id": "schema:Product2",
+        "@type": "schema:Product",
+        "schema:price": 100,
+        "schema:name": { "@value": "AMD Ryzen 5 7600", "@language": "en" },
+        "schema:discount": 20,
+        "seasto:valueAddedTax": 21,
+        "schema:brand": {"@id" : "schema:Brand2"}
+    },
+    {
+        "@id": "schema:Product3",
+        "@type": "schema:Product",
+        "schema:price": 150,
+        "schema:name": { "@value": "AMD Ryzen 7 5700X3D", "@language": "en" },
+        "schema:discount": 20,
+        "seasto:valueAddedTax": 21,
+        "schema:brand": {"@id" : "schema:Brand2"}
+    }
+    ]
+}
