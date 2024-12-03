@@ -21,7 +21,7 @@
         @prefix seasto: &lt;https://w3id.org/seas/&gt; .
         @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; . &#10;
     </xsl:template>
-
+    
     <xsl:template name="mainTemplate">
         <xsl:call-template name="prefixes"/>
         
@@ -52,6 +52,27 @@
         
         <xsl:for-each-group select="//product" group-by="@id">
             <xsl:apply-templates select="."/>
+        </xsl:for-each-group>
+        <xsl:call-template name="relations"/>
+    </xsl:template>
+    
+    <xsl:template name="relations">
+        <xsl:for-each-group select="//order" group-by="@id">
+            <xsl:apply-templates select="./customer" mode="relation"/>
+        </xsl:for-each-group>
+        
+        <xsl:for-each-group select="//employee" group-by="@id">
+            <xsl:apply-templates select="./warehouse" mode="relation"/>
+        </xsl:for-each-group>
+
+        <xsl:for-each-group select="//order" group-by="@id">
+            <xsl:apply-templates select="./product" mode="relation"/>
+            <xsl:apply-templates select="./address" mode="relation"/>
+            <xsl:apply-templates select="./employee" mode="relation"/>
+        </xsl:for-each-group>
+
+        <xsl:for-each-group select="//product" group-by="@id">
+            <xsl:apply-templates select="./brand" mode="relation"/>
         </xsl:for-each-group>
     </xsl:template>
     
@@ -114,5 +135,36 @@
         schema:orderNumber <xsl:value-of select="orderNumber"/> ;
         schema:price <xsl:value-of select="totalPrice"/> .&#10;
     </xsl:template>
+    
+    <!-- Template to transform Customer - Order relation -->
+    <xsl:template match="customer" mode="relation">
+        <xsl:value-of select="@id"/> schema:referencesOrder <xsl:value-of select="../@id"/> .&#10;
+    </xsl:template>
+
+    <!-- Template to transform Employee - Warehouse relation -->
+    <xsl:template match="warehouse" mode="relation">
+        <xsl:value-of select="../@id"/> schema:location <xsl:value-of select="@id"/> .&#10;
+    </xsl:template>
+
+    <!-- Template to transform Order - Product relation -->
+    <xsl:template match="product" mode="relation">
+        <xsl:value-of select="../@id"/> schema:orderedItem <xsl:value-of select="@id"/> .&#10;
+    </xsl:template>
+
+    <!-- Template to transform Product - Brand relation -->
+    <xsl:template match="brand" mode="relation">
+        <xsl:value-of select="../@id"/> schema:brand <xsl:value-of select="@id"/> .&#10;
+    </xsl:template>
+
+    <!-- Template to transform Order - Address relation -->
+    <xsl:template match="address" mode="relation">
+        <xsl:value-of select="../@id"/> schema:billingAddress <xsl:value-of select="@id"/> .&#10;
+    </xsl:template>
+
+    <!-- Template to transform Order - Employee relation -->
+    <xsl:template match="employee" mode="relation">
+        <xsl:value-of select="../@id"/> iol:isAssignedTo <xsl:value-of select="@id"/> .&#10;
+    </xsl:template>
+
     
 </xsl:stylesheet>

@@ -10,4 +10,8 @@
         <xsl:call-template name="mainTemplate"/>
     </xsl:template>
     
+    <xsl:template match="brand/product" mode="#default">
+        <xsl:value-of select="../@id"/> schema:brand <xsl:value-of select="@id"/>.
+    </xsl:template>
+
 </xsl:stylesheet>
