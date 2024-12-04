@@ -1,0 +1,28 @@
+
+        @base <http://example.org/> .
+        @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+        @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix schema: <http://schema.org/> .
+        @prefix dpv: <https://w3c.github.io/dpv/2.0/> .
+        @prefix iol: <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#> .
+        @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+        @prefix km4c: <http://www.disit.org/km4city/schema#> .
+        @prefix uiot: <http://www.w3id.org/urban-iot/core#> .
+        @prefix oo: <http://purl.org/openorg/> .
+        @prefix seasto: <https://w3id.org/seas/> .
+        @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+    dpv:Cust1 a dpv:Customer ;
+        foaf:name "Jozko Mrkvicka"@en ;
+        foaf:mbox <mailto:jozko@gmail.com> ;
+        uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime ;
+        schema:identifier "VIP"@en .
+
+    vcard:Addr1 a vcard:Address ;
+        vcard:country-name "Hungary"@en ;
+        vcard:locality "Komarom"@en ;
+        vcard:street-address "Cajkovskeho 2"@en ;
+        vcard:postal-code "16900"@en ;
+
+    

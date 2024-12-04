@@ -1,0 +1,31 @@
+
+        @base <http://example.org/> .
+        @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+        @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix schema: <http://schema.org/> .
+        @prefix dpv: <https://w3c.github.io/dpv/2.0/> .
+        @prefix iol: <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#> .
+        @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+        @prefix km4c: <http://www.disit.org/km4city/schema#> .
+        @prefix uiot: <http://www.w3id.org/urban-iot/core#> .
+        @prefix oo: <http://purl.org/openorg/> .
+        @prefix seasto: <https://w3id.org/seas/> .
+        @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+    schema:Brand1 a schema:Brand ;
+        schema:name "Logitech"@en ;
+        schema:email <mailto:support@logitech.com> .
+
+    schema:Brand2 a schema:Brand ;
+        schema:name "AMD"@en ;
+        schema:email <mailto:support@amd.com> .
+
+    schema:Brand3 a schema:Brand ;
+        schema:name "TSMC"@en ;
+        schema:email <mailto:mailto:support@tsmc.com> .
+
+    schema:Brand1 schema:brand schema:Product1.
+    schema:Brand2 schema:brand schema:Product2.
+    schema:Brand2 schema:brand schema:Product3.
+    

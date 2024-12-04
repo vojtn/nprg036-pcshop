@@ -1,0 +1,71 @@
+
+        @base <http://example.org/> .
+        @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+        @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix schema: <http://schema.org/> .
+        @prefix dpv: <https://w3c.github.io/dpv/2.0/> .
+        @prefix iol: <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#> .
+        @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+        @prefix km4c: <http://www.disit.org/km4city/schema#> .
+        @prefix uiot: <http://www.w3id.org/urban-iot/core#> .
+        @prefix oo: <http://purl.org/openorg/> .
+        @prefix seasto: <https://w3id.org/seas/> .
+        @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+    schema:Emp1 a schema:EmployeeRole ;
+        foaf:name "Dano Drevo"@en ;
+        foaf:mbox <mailto:gabor@szekeshfehervar.sk> ;
+        schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime ;
+
+    schema:Brand2 a schema:Brand ;
+        schema:name "AMD"@en ;
+        schema:email <mailto:support@amd.com> .
+
+    vcard:Addr2 a vcard:Address ;
+        vcard:country-name "Slovakia"@en ;
+        vcard:locality "Nitra"@en ;
+        vcard:street-address "Dunajska 14"@en ;
+        vcard:postal-code "49411"@en ;
+
+    vcard:Addr3 a vcard:Address ;
+        vcard:country-name "Czech republic"@en ;
+        vcard:locality "Praha"@en ;
+        vcard:street-address "Za zahradou 2"@en ;
+        vcard:postal-code "16200"@en ;
+
+    km4c:Warehouse1 a km4c:Warehouse_and_storage ;
+        oo:capacity 9 ;
+        foaf:mbox [ rdf:_1 <mailto:warehousesupport1@ppcshop.cz> ] .
+
+    km4c:Warehouse2 a km4c:Warehouse_and_storage ;
+        oo:capacity 9 ;
+        foaf:mbox [ rdf:_1 <mailto:warehousesupport2@ppcshop.cz> ] .
+
+    km4c:Warehouse3 a km4c:Warehouse_and_storage ;
+        oo:capacity 9 ;
+        foaf:mbox [ rdf:_1 <mailto:warehousesupport3@ppcshop.cz> ] .
+
+    schema:Product3 a schema:Product ;
+        schema:price 150 ;
+        schema:name "AMD Ryzen 7 5700X3D"@en ;
+        schema:discount 20 ;
+        seasto:valueAddedTax 21 .
+
+    schema:Product2 a schema:Product ;
+        schema:price 100 ;
+        schema:name "AMD Ryzen 5 7600"@en ;
+        schema:discount 20 ;
+        seasto:valueAddedTax 21 .
+
+    schema:Emp1 schema:location km4c:Warehouse1 .
+
+    schema:Emp1 schema:location km4c:Warehouse2 .
+
+    schema:Emp1 schema:location km4c:Warehouse3 .
+
+    schema:Product3 schema:brand schema:Brand2 .
+
+    schema:Product2 schema:brand schema:Brand2 .
+
+    
