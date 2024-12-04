@@ -1,4 +1,3 @@
-//find all brands and how many products they have
 .["@graph"] as $graph |
   $graph |
   map(select(.["@type"] == "schema:Brand")) |
