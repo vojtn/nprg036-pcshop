@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Brand Schema",
+    "type": "object",
+    "properties": {
+        "orders": {
+        "type": "array",
+        "items": {
+            "$ref": "#/$defs/brand"
+        }
+        }
+    },
+    "$defs": {
+        "brand": {
+        "type": "object",
+        "properties": {
+            "name": {
+            "type": "string"
+            },
+            "companyEmail": {
+            "type": "string",
+            "format": "email"
+            },
+            "product": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "$ref": "#/$defs/product"
+            }
+            }
+        },
+        "required": ["name", "companyEmail"]    
+        },
+        "product": {
+        "type": "object",
+        "properties": {
+            "price": {
+            "type": "integer"
+            },
+            "name": {
+            "type": "string"
+            },
+            "sale": {
+            "type": "string"
+            },
+            "VAT": {
+            "type": "integer"
+            }
+        },
+        "required": ["price", "name", "sale", "VAT"]
+        }
+    }
+}

@@ -1,71 +1,16 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Orders Schema",
+    "title": "Employee Schema",
     "type": "object",
     "properties": {
         "orders": {
         "type": "array",
         "items": {
-            "$ref": "#/$defs/order"
+            "$ref": "#/$defs/employee"
         }
         }
     },
     "$defs": {
-        "order": {
-        "type": "object",
-        "properties": {
-            "orderNumber": {
-            "type": "integer"
-            },
-            "totalPrice": {
-            "type": "integer"
-            },
-            "customer": {
-            "$ref": "#/$defs/customer"
-            },
-            "product": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "$ref": "#/$defs/product"
-            }
-            },
-            "address": {
-            "$ref": "#/$defs/address"
-            },
-            "employee": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "$ref": "#/$defs/employee"
-            }
-            }
-        },
-        "required": ["orderNumber", "totalPrice", "customer", "product", "address", "employee"]
-        },
-        "customer": {
-        "type": "object",
-        "properties": {
-            "name": {
-            "$ref": "#/$defs/langString"
-            },
-            "email": {
-            "type": "string",
-            "format": "email"
-            },
-            "registrationDate": {
-            "type": "string",
-            "format": "date-time"
-            },
-            "privileged": {
-            "type": "boolean"
-            },
-            "address": {
-            "$ref": "#/$defs/address"
-            }
-        },
-        "required": ["name", "email", "registrationDate", "privileged", "address"]
-        },
         "employee": {
         "type": "object",
         "properties": {
@@ -106,7 +51,6 @@
             },
             "product": {
             "type": "array",
-            "minItems": 0,
             "items": {
                 "$ref": "#/$defs/product"
             }
@@ -147,7 +91,7 @@
             "format": "email"
             }
         },
-        "required": ["name", "companyEmail"]
+        "required": ["name", "companyEmail"]    
         },
         "address": {
         "type": "object",
