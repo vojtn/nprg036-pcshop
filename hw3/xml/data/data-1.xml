@@ -7,7 +7,7 @@
         <customer id="dpv:Cust1">
             <name xml:lang="en">Jozko Mrkvicka</name>
             <email>jozko@gmail.com</email>
-            <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+            <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
             <address id="vcard:Addr1">
                 <country xml:lang="en">Hungary</country>
@@ -22,7 +22,7 @@
             <sale>0</sale>
             <VAT>21</VAT>
             <brand id="schema:Brand1">
-                <name xml:lang="en">logitech</name>
+                <name xml:lang="en">Logitech</name>
                 <companyEmail>support@logitech.com</companyEmail>
             </brand>
         </product>
@@ -45,15 +45,14 @@
         <employee id="schema:Emp1">
             <name xml:lang="en">Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
-            <startingDate>17-2-2014</startingDate>
+            <startingDate>2014-02-17T00:00:00Z</startingDate>
             <address id="vcard:Addr2">
                 <country xml:lang="en">Slovakia</country>
                 <city xml:lang="en">Nitra</city>
                 <streetLine xml:lang="en">Dunajska 14</streetLine>
                 <postCode xml:lang="en">49411</postCode>
             </address>
-            <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse1">
                 <capacity>9</capacity>
                 <contact>warehousesupport1@ppcshop.cz</contact>
                 <address id="vcard:Addr2">
@@ -73,8 +72,7 @@
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse2">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
                 <address id="vcard:Addr3">
@@ -94,8 +92,7 @@
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse3">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
                 <address id="vcard:Addr3">
@@ -123,7 +120,7 @@
         <customer id="dpv:Cust1">
             <name xml:lang="en">Jozko Mrkvicka</name>
             <email>jozko@gmail.com</email>
-            <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+            <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
             <address id="vcard:Addr1">
                 <country xml:lang="en">Hungary</country>
@@ -161,15 +158,14 @@
         <employee id="schema:Emp1">
             <name xml:lang="en">Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
-            <startingDate>17-2-2014</startingDate>
+            <startingDate>2014-02-17T00:00:00Z</startingDate>
             <address id="vcard:Addr2">
                 <country xml:lang="en">Slovakia</country>
                 <city xml:lang="en">Nitra</city>
                 <streetLine xml:lang="en">Dunajska 14</streetLine>
                 <postCode xml:lang="en">49411</postCode>
             </address>
-            <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse1">
                 <capacity>9</capacity>
                 <contact>warehousesupport1@ppcshop.cz</contact>
                 <address id="vcard:Addr2">
@@ -189,8 +185,7 @@
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse2">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
                 <address id="vcard:Addr3">
@@ -210,8 +205,7 @@
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse3">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
                 <address id="vcard:Addr3">
@@ -239,7 +233,7 @@
         <customer id="dpv:Cust1">
             <name xml:lang="en">Jozko Mrkvicka</name>
             <email>jozko@gmail.com</email>
-            <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+            <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
             <address id="vcard:Addr1">
                 <country xml:lang="en">Hungary</country>
@@ -254,7 +248,7 @@
             <sale>0</sale>
             <VAT>21</VAT>
             <brand id="schema:Brand1">
-                <name>logitech</name>
+                <name xml:lang="en">Logitech</name>
                 <companyEmail>support@logitech.com</companyEmail>
             </brand>
         </product>
@@ -267,15 +261,14 @@
         <employee id="schema:Emp1">
             <name xml:lang="en">Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
-            <startingDate>17-2-2014</startingDate>
+            <startingDate>2014-02-17T00:00:00Z</startingDate>
             <address id="vcard:Addr2">
                 <country xml:lang="en">Slovakia</country>
                 <city xml:lang="en">Nitra</city>
                 <streetLine xml:lang="en">Dunajska 14</streetLine>
                 <postCode xml:lang="en">49411</postCode>
             </address>
-            <warehouse id="km4c:Warehouse1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse1">
                 <capacity>9</capacity>
                 <contact>warehousesupport1@ppcshop.cz</contact>
                 <address id="vcard:Addr2">
@@ -295,8 +288,7 @@
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse2">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
                 <address id="vcard:Addr3">
@@ -316,8 +308,7 @@
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:noNamespaceSchemaLocation="../schemas/schema-4.xsd">
+            <warehouse id="km4c:Warehouse3">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
                 <address id="vcard:Addr3">

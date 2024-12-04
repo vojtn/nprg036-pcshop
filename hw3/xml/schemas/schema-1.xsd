@@ -138,7 +138,7 @@
                 </xs:complexType>
             </xs:element>
             <xs:element name="email" />
-            <xs:element name="startingDate"></xs:element>
+            <xs:element name="startingDate" type="xs:dateTime"></xs:element>
             <xs:element name="address" type="addressType" />
             <xs:element name="warehouse" type="warehouseType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>

@@ -3,7 +3,7 @@
     xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd" >
     <name xml:lang="en">Jozko Mrkvicka</name>
     <email>jozko@gmail.com</email>
-    <registrationDate>1998-10-04T15:09:38.6875000-01:00</registrationDate>
+    <registrationDate>1998-04-10T00:00:00Z</registrationDate>
     <identifier xml:lang="en">VIP</identifier>
     <address id="vcard:Addr1">
         <country xml:lang="en">Hungary</country>
