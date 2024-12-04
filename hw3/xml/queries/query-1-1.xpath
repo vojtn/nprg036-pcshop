@@ -1,0 +1,2 @@
+(: OrderNumber and totalPrice of orders, which contains product more expensive than 90 eur :)
+//order/product[price > 90]/parent::node()/(orderNumber | totalPrice)

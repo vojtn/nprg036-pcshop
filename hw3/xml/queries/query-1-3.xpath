@@ -1,0 +1,2 @@
+(: Names of customers, which were registrated after 1.1.1990 :)
+distinct-values(//order/customer[xs:dateTime(registrationDate) > xs:dateTime("1990-01-01T00:00:00Z")]/name)

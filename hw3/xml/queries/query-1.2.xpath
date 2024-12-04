@@ -1,2 +1,0 @@
-<!-- Total price of all odrder made by customer Jozko Mrkvicka -->
-sum(//order[customer/name='Jozko Mrkvicka']/totalPrice)

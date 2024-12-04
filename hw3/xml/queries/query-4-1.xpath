@@ -1,0 +1,2 @@
+(: Countries and postcodes of warehouses, which has a product from brand AMD in stock :)
+//warehouses/warehouse[product/brand/name = "AMD"]/address/(country | postCode)

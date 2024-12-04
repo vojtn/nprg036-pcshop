@@ -1,2 +1,0 @@
-<!-- Names of product, which are in order which total price is greater than 150 eur  -->
-//order[totalPrice > 150]/product/name
