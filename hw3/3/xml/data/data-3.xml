@@ -20,14 +20,14 @@
                 <streetLine xml:lang="en">Dunajska 14</streetLine>
                 <postCode xml:lang="en">49411</postCode>
             </address>
-            <product id="schema:Product3">
-                <price>150</price>
-                <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
-                <sale>20</sale>
+            <product id="schema:Product1">
+                <price>50</price>
+                <name xml:lang="en">Logitech MX Keys</name>
+                <sale>0</sale>
                 <VAT>21</VAT>
-                <brand id="schema:Brand2">
-                    <name xml:lang="en">AMD</name>
-                    <companyEmail>support@amd.com</companyEmail>
+                <brand id="schema:Brand1">
+                    <name xml:lang="en">Logitech</name>
+                    <companyEmail>support@logitech.com</companyEmail>
                 </brand>
             </product>
         </warehouse>
