@@ -73,6 +73,12 @@
 
         <xsl:for-each-group select="//product" group-by="@id">
             <xsl:apply-templates select="./brand" mode="relation"/>
+            <xsl:apply-templates select="./warehouse" mode="relation"/>
+        </xsl:for-each-group>
+
+        <xsl:for-each-group select="//warehouse" group-by="@id">
+            <xsl:apply-templates select="./product" mode="relationWarehouse"/>
+            <xsl:apply-templates select="./address" mode="relationWarehouse"/>
         </xsl:for-each-group>
     </xsl:template>
     
@@ -146,6 +152,11 @@
         <xsl:value-of select="../@id"/> schema:location <xsl:value-of select="@id"/> . &#10;
     </xsl:template>
 
+    <!-- Template to transform Product - Warehouse relation -->
+    <xsl:template match="product" mode="relationWarehouse">
+        <xsl:value-of select="@id"/> schema:location <xsl:value-of select="../@id"/> . &#10;
+    </xsl:template>
+
     <!-- Template to transform Order - Product relation -->
     <xsl:template match="product" mode="relation">
         <xsl:value-of select="../@id"/> schema:orderedItem <xsl:value-of select="@id"/> . &#10;
@@ -159,6 +170,11 @@
     <!-- Template to transform Order - Address relation -->
     <xsl:template match="address" mode="relation">
         <xsl:value-of select="../@id"/> schema:billingAddress <xsl:value-of select="@id"/> . &#10;
+    </xsl:template>
+
+    <!-- Template to transform Warehouse - Address relation -->
+    <xsl:template match="address" mode="relationWarehouse">
+        <xsl:value-of select="../@id"/> schema:location <xsl:value-of select="@id"/> . &#10;
     </xsl:template>
 
     <!-- Template to transform Order - Employee relation -->
