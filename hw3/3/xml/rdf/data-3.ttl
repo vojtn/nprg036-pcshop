@@ -18,6 +18,10 @@
         foaf:mbox <mailto:gabor@szekeshfehervar.sk> ;
         schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime . 
 
+    schema:Brand1 a schema:Brand ;
+        schema:name "Logitech"@en ;
+        schema:email <mailto:support@logitech.com> . 
+
     schema:Brand2 a schema:Brand ;
         schema:name "AMD"@en ;
         schema:email <mailto:support@amd.com> . 
@@ -46,15 +50,21 @@
         oo:capacity 9 ;
         foaf:mbox [ rdf:_1 <mailto:warehousesupport3@ppcshop.cz> ] . 
 
-    schema:Product3 a schema:Product ;
-        schema:price 150 ;
-        schema:name "AMD Ryzen 7 5700X3D"@en ;
-        schema:discount 20 ;
+    schema:Product1 a schema:Product ;
+        schema:price 50 ;
+        schema:name "Logitech MX Keys"@en ;
+        schema:discount 0 ;
         seasto:valueAddedTax 21 . 
 
     schema:Product2 a schema:Product ;
         schema:price 100 ;
         schema:name "AMD Ryzen 5 7600"@en ;
+        schema:discount 20 ;
+        seasto:valueAddedTax 21 . 
+
+    schema:Product3 a schema:Product ;
+        schema:price 150 ;
+        schema:name "AMD Ryzen 7 5700X3D"@en ;
         schema:discount 20 ;
         seasto:valueAddedTax 21 . 
 
@@ -64,8 +74,22 @@
 
     schema:Emp1 schema:location km4c:Warehouse3 . 
 
-    schema:Product3 schema:brand schema:Brand2 . 
+    schema:Product1 schema:brand schema:Brand1 . 
 
     schema:Product2 schema:brand schema:Brand2 . 
+
+    schema:Product3 schema:brand schema:Brand2 . 
+
+    schema:Product1 schema:location km4c:Warehouse1 . 
+
+    km4c:Warehouse1 schema:location vcard:Addr2 . 
+
+    schema:Product2 schema:location km4c:Warehouse2 . 
+
+    km4c:Warehouse2 schema:location vcard:Addr3 . 
+
+    schema:Product3 schema:location km4c:Warehouse3 . 
+
+    km4c:Warehouse3 schema:location vcard:Addr3 . 
 
     

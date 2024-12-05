@@ -132,4 +132,16 @@
 
     schema:Product3 schema:brand schema:Brand2 . 
 
+    schema:Product1 schema:location km4c:Warehouse1 . 
+
+    km4c:Warehouse1 schema:location vcard:Addr2 . 
+
+    schema:Product2 schema:location km4c:Warehouse2 . 
+
+    km4c:Warehouse2 schema:location vcard:Addr3 . 
+
+    schema:Product3 schema:location km4c:Warehouse3 . 
+
+    km4c:Warehouse3 schema:location vcard:Addr3 . 
+
     
