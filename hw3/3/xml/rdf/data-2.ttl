@@ -17,12 +17,12 @@
         foaf:name "Jozko Mrkvicka"@en ;
         foaf:mbox <mailto:jozko@gmail.com> ;
         uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime ;
-        schema:identifier "VIP"@en .
+        schema:identifier "VIP"@en . 
 
     vcard:Addr1 a vcard:Address ;
         vcard:country-name "Hungary"@en ;
         vcard:locality "Komarom"@en ;
         vcard:street-address "Cajkovskeho 2"@en ;
-        vcard:postal-code "16900"@en ;
+        vcard:postal-code "16900"@en . 
 
     

@@ -15,15 +15,15 @@
 
     schema:Brand1 a schema:Brand ;
         schema:name "Logitech"@en ;
-        schema:email <mailto:support@logitech.com> .
+        schema:email <mailto:support@logitech.com> . 
 
     schema:Brand2 a schema:Brand ;
         schema:name "AMD"@en ;
-        schema:email <mailto:support@amd.com> .
+        schema:email <mailto:support@amd.com> . 
 
     schema:Brand3 a schema:Brand ;
         schema:name "TSMC"@en ;
-        schema:email <mailto:mailto:support@tsmc.com> .
+        schema:email <mailto:mailto:support@tsmc.com> . 
 
     schema:Brand1 schema:brand schema:Product1.
     schema:Brand2 schema:brand schema:Product2.
