@@ -1,25 +1,43 @@
 {
     "@context": {
-    "@base": "http://example.org/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "schema": "http://schema.org/",
-    "dpv": "https://w3c.github.io/dpv/2.0/",
-    "iol": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#",
-    "vcard": "http://www.w3.org/2006/vcard/ns#",
-    "km4c": "http://www.disit.org/km4city/schema#",
-    "uiot": "http://www.w3id.org/urban-iot/core#",
-    "oo": "http://purl.org/openorg/",
-    "seasto": "https://w3id.org/seas/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "@base": "http://example.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "http://schema.org/",
+        "dpv": "https://w3c.github.io/dpv/2.0/",
+        "iol": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "km4c": "http://www.disit.org/km4city/schema#",
+        "uiot": "http://www.w3id.org/urban-iot/core#",
+        "oo": "http://purl.org/openorg/",
+        "seasto": "https://w3id.org/seas/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+        "location" : {"@id" : "schema:location"},
+        "startDate": {"@id": "schema:startDate"},
+        "email_f": {"@id": "foaf:mbox"},
+        "email_sch": {"@id" : "schema:email"},
+        "price": {"@id": "schema:price"},
+        "orderedItem": {"@id": "schema:orderedItem"},
+        "countryName": {"@id": "vcard:country-name"},
+        "locality": {"@id": "vcard:locality"},
+        "streetAddress": {"@id": "vcard:street-address"},
+        "postalCode": {"@id": "vcard:postal-code"},
+        "capacity": {"@id": "oo:capacity"},
+        "VAT": {"@id": "seasto:valueAddedTax"},
+        "name_sch": {"@id" : "schema:name"},
+        "name_f": {"@id" : "foaf:name"}
+
+
+
     },
     "@graph": [
     {
         "@id": "dpv:Cust1",
         "@type": "dpv:Customer",
-        "foaf:name": { "@value": "Jožko Mrkvička", "@language": "en" },
-        "foaf:mbox": { "@id": "mailto:jozko@gmail.com" },
+        "name_f": { "@value": "Jožko Mrkvička", "@language": "en" },
+        "email_f": { "@id": "mailto:jozko@gmail.com" },
         "uiot:registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
         "schema:identifier": { "@value": "VIP", "@language": "en" },
         "schema:referencesOrder": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"},{"@id" :  "schema:Ord3"}],
@@ -28,131 +46,131 @@
     {
         "@id": "schema:Emp1",
         "@type": "schema:EmployeeRole",
-        "foaf:name": { "@value": "Dano Drevo", "@language": "en" },
-        "foaf:mbox": { "@id": "mailto:gabor@szekeshfehervar.sk"},
-        "schema:startDate": { "@value": "2014-02-17T00:00:00Z", "@type": "xsd:dateTime" },
-        "schema:location": ["km4c:Warehouse1", "km4c:Warehouse2", "km4c:Warehouse3"],
+        "name_f": { "@value": "Dano Drevo", "@language": "en" },
+        "email_f": { "@id": "mailto:gabor@szekeshfehervar.sk"},
+        "startDate": { "@value": "2014-02-17T00:00:00Z", "@type": "xsd:dateTime" },
+        "location": ["km4c:Warehouse1", "km4c:Warehouse2", "km4c:Warehouse3"],
         "iol:isAssignedTo": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"}, {"@id" : "schema:Ord3"}],
         "schema:address": {"@id" : "vcard:Addr2"}
     },
     {
         "@id": "schema:Brand1",
         "@type": "schema:Brand",
-        "schema:name": { "@value": "Logitech", "@language": "en" },
-        "schema:email": { "@id": "mailto:support@logitech.com"}
+        "name_sch": { "@value": "Logitech", "@language": "en" },
+        "email_sch": { "@id": "mailto:support@logitech.com"}
     },
     {
         "@id": "schema:Brand2",
         "@type": "schema:Brand",
-        "schema:name": { "@value": "AMD", "@language": "en" },
-        "schema:email": { "@id": "mailto:support@amd.com"}
+        "name_sch": { "@value": "AMD", "@language": "en" },
+        "email_sch": { "@id": "mailto:support@amd.com"}
     },
     {
         "@id": "schema:Brand3",
         "@type": "schema:Brand",
-        "schema:name": { "@value": "TSMC", "@language": "en" },
-        "schema:email": { "@id": "mailto:support@tsmc.com"}
+        "name_sch": { "@value": "TSMC", "@language": "en" },
+        "email_sch": { "@id": "mailto:support@tsmc.com"}
     },
     {
         "@id": "vcard:Addr1",
         "@type": "vcard:Address",
-        "vcard:country-name": { "@value": "Hungary", "@language": "en" },
-        "vcard:locality": { "@value": "Komarom", "@language": "en" },
-        "vcard:street-address": { "@value": "Cajkovskeho 2", "@language": "en" },
-        "vcard:postal-code": { "@value": "16900", "@language": "en" }
+        "countryName": { "@value": "Hungary", "@language": "en" },
+        "locality": { "@value": "Komarom", "@language": "en" },
+        "streetAddress": { "@value": "Cajkovskeho 2", "@language": "en" },
+        "postalCode": { "@value": "16900", "@language": "en" }
     },
     {
         "@id": "vcard:Addr2",
         "@type": "vcard:Address",
-        "vcard:country-name": { "@value": "Slovakia", "@language": "en" },
-        "vcard:locality": { "@value": "Nitra", "@language": "en" },
-        "vcard:street-address": { "@value": "Dunajska 14", "@language": "en" },
-        "vcard:postal-code": { "@value": "49411", "@language": "en" }
+        "countryName": { "@value": "Slovakia", "@language": "en" },
+        "locality": { "@value": "Nitra", "@language": "en" },
+        "streetAddress": { "@value": "Dunajska 14", "@language": "en" },
+        "postalCode": { "@value": "49411", "@language": "en" }
     },
     {
         "@id": "vcard:Addr3",
         "@type": "vcard:Address",
-        "vcard:country-name": { "@value": "Czech republic", "@language": "en" },
-        "vcard:locality": { "@value": "Praha", "@language": "en" },
-        "vcard:street-address": { "@value": "Za zahradou 2", "@language": "en" },
-        "vcard:postal-code": { "@value": "16200", "@language": "en" }
+        "countryName": { "@value": "Czech republic", "@language": "en" },
+        "locality": { "@value": "Praha", "@language": "en" },
+        "streetAddress": { "@value": "Za zahradou 2", "@language": "en" },
+        "postalCode": { "@value": "16200", "@language": "en" }
     },
     {
         "@id": "schema:Ord1",
         "@type": "schema:Order",
         "schema:orderNumber": 0,
-        "schema:price": 130,
-        "schema:orderedItem": [{"@id" : "schema:Product1"}, {"@id" : "schema:Product2"}],
+        "price": 130,
+        "orderedItem": [{"@id" : "schema:Product1"}, {"@id" : "schema:Product2"}],
         "schema:billingAddress": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "schema:Ord2",
         "@type": "schema:Order",
         "schema:orderNumber": 1,
-        "schema:price": 210,
-        "schema:orderedItem": [{"@id" : "schema:Product2"}, {"@id" : "schema:Product3"}],
+        "price": 210,
+        "orderedItem": [{"@id" : "schema:Product2"}, {"@id" : "schema:Product3"}],
         "schema:billingAddress": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "schema:Ord3",
         "@type": "schema:Order",
         "schema:orderNumber": 2,
-        "schema:price": 50,
-        "schema:orderedItem": {"@id" : "schema:Product1"},
+        "price": 50,
+        "orderedItem": {"@id" : "schema:Product1"},
         "schema:billingAddress": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "km4c:Warehouse1",
         "@type": "km4c:Warehouse_and_storage",
-        "oo:capacity": 9,
-        "foaf:mbox": { "@id": "mailto:warehousesupport1@ppcshop.cz"},
-        "schema:location": {"@id" : "vcard:Addr2"}
+        "capacity": 9,
+        "email_f": { "@id": "mailto:warehousesupport1@ppcshop.cz"},
+        "location": {"@id" : "vcard:Addr2"}
     },
     {
         "@id": "km4c:Warehouse2",
         "@type": "km4c:Warehouse_and_storage",
-        "oo:capacity": 9,
-        "schema:location": {"@id" : "vcard:Addr3"}
+        "capacity": 9,
+        "location": {"@id" : "vcard:Addr3"}
     },
     {
         "@id": "km4c:Warehouse3",
         "@type": "km4c:Warehouse_and_storage",
-        "oo:capacity": 9,
-        "foaf:mbox": [
+        "capacity": 9,
+        "email_f": [
         { "@id": "mailto:dwad@ppcshop.cz"},
         { "@id": "mailto:warehousesupport3@ppcshop.cz"}
         ],
-        "schema:location": {"@id" : "vcard:Addr3"}
+        "location": {"@id" : "vcard:Addr3"}
     },
     {
         "@id": "schema:Product1",
         "@type": "schema:Product",
-        "schema:price": 50,
-        "schema:name": { "@value": "Logitech MX Keys", "@language": "en" },
+        "price": 50,
+        "name_sch": { "@value": "Logitech MX Keys", "@language": "en" },
         "schema:discount": 0,
-        "seasto:valueAddedTax": 21,
+        "VAT": 21,
         "schema:brand": {"@id" : "schema:Brand1"},
-        "schema:location": {"@id" : "km4c:Warehouse1"}
+        "location": {"@id" : "km4c:Warehouse1"}
     },
     {
         "@id": "schema:Product2",
         "@type": "schema:Product",
-        "schema:price": 100,
-        "schema:name": { "@value": "AMD Ryzen 5 7600", "@language": "en" },
+        "price": 100,
+        "name_sch": { "@value": "AMD Ryzen 5 7600", "@language": "en" },
         "schema:discount": 20,
-        "seasto:valueAddedTax": 21,
+        "VAT": 21,
         "schema:brand": {"@id" : "schema:Brand2"},
-        "schema:location": {"@id" : "km4c:Warehouse2"}
+        "location": {"@id" : "km4c:Warehouse2"}
     },
     {
         "@id": "schema:Product3",
         "@type": "schema:Product",
-        "schema:price": 150,
-        "schema:name": { "@value": "AMD Ryzen 7 5700X3D", "@language": "en" },
+        "price": 150,
+        "name_sch": { "@value": "AMD Ryzen 7 5700X3D", "@language": "en" },
         "schema:discount": 20,
-        "seasto:valueAddedTax": 21,
+        "VAT": 21,
         "schema:brand": {"@id" : "schema:Brand2"},
-        "schema:location": {"@id" : "km4c:Warehouse3"}
+        "location": {"@id" : "km4c:Warehouse3"}
     }
     ]
 }
