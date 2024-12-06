@@ -14,7 +14,7 @@
         @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
     dpv:Cust1 a dpv:Customer ;
-        foaf:name "Jozko Mrkvicka"@en ;
+        foaf:name "Jožko Mrkvička"@en ;
         foaf:mbox <mailto:jozko@gmail.com> ;
         uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime ;
         schema:identifier "VIP"@en . 
@@ -64,15 +64,15 @@
 
     km4c:Warehouse1 a km4c:Warehouse_and_storage ;
         oo:capacity 9 ;
-        foaf:mbox [ rdf:_1 <mailto:warehousesupport1@ppcshop.cz> ] . 
+        foaf:mbox <mailto:warehousesupport1@ppcshop.cz> . 
 
     km4c:Warehouse2 a km4c:Warehouse_and_storage ;
         oo:capacity 9 ;
-        foaf:mbox [ rdf:_1 <mailto:warehousesupport2@ppcshop.cz> ] . 
+        foaf:mbox <mailto:warehousesupport2@ppcshop.cz> . 
 
     km4c:Warehouse3 a km4c:Warehouse_and_storage ;
         oo:capacity 9 ;
-        foaf:mbox [ rdf:_1 <mailto:warehousesupport3@ppcshop.cz> ] . 
+        foaf:mbox <mailto:warehousesupport3@ppcshop.cz> . 
 
     schema:Product1 a schema:Product ;
         schema:price 50 ;
