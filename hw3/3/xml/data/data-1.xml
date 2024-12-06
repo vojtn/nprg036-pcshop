@@ -5,7 +5,7 @@
         <orderNumber>0</orderNumber>
         <totalPrice>130</totalPrice>
         <customer id="dpv:Cust1">
-            <name xml:lang="en">Jozko Mrkvicka</name>
+            <name xml:lang="en">Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
@@ -118,7 +118,7 @@
         <orderNumber>1</orderNumber>
         <totalPrice>210</totalPrice>
         <customer id="dpv:Cust1">
-            <name xml:lang="en">Jozko Mrkvicka</name>
+            <name xml:lang="en">Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
@@ -231,7 +231,7 @@
         <orderNumber>2</orderNumber>
         <totalPrice>50</totalPrice>
         <customer id="dpv:Cust1">
-            <name xml:lang="en">Jozko Mrkvicka</name>
+            <name xml:lang="en">Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>

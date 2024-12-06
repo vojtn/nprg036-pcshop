@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <customer id="dpv:Cust1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd" >
-    <name xml:lang="en">Jozko Mrkvicka</name>
+    <name xml:lang="en">Jožko Mrkvička</name>
     <email>jozko@gmail.com</email>
     <registrationDate>1998-04-10T00:00:00Z</registrationDate>
     <identifier xml:lang="en">VIP</identifier>
