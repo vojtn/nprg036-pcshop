@@ -19,7 +19,7 @@
         "@id": "schema:Brand1",
         "@type": "schema:Brand",
         "schema:name": { "@value": "Logitech", "@language": "en" },
-        "schema:email": "mailto:support@logitech.com",
+        "schema:email": { "@id": "mailto:support@logitech.com"},
         "schema:Product": [
             {"@id": "schema:Product1"}
         ]
@@ -28,7 +28,7 @@
         "@id": "schema:Brand2",
         "@type": "schema:Brand",
         "schema:name": { "@value": "AMD", "@language": "en" },
-        "schema:email": "mailto:support@amd.com",
+        "schema:email": { "@id": "mailto:support@amd.com"},
         "schema:Product": [ 
             {"@id": "schema:Product2"},
             {"@id": "schema:Product3"}
@@ -38,7 +38,7 @@
         "@id": "schema:Brand3",
         "@type": "schema:Brand",
         "schema:name": { "@value": "TSMC", "@language": "en" },
-        "schema:email": "mailto:support@tsmc.com",
+        "schema:email": { "@id": "mailto:support@tsmc.com"},
         "schema:Product": []
     },
     {

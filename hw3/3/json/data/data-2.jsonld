@@ -19,7 +19,7 @@
         "@id": "dpv:Cust1",
         "@type": "dpv:Customer",
         "foaf:name": { "@value": "Jožko Mrkvička", "@language": "en" },
-        "foaf:mbox": "mailto:jozko@gmail.com",
+        "foaf:mbox": { "@id": "mailto:jozko@gmail.com"},
         "uiot:registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
         "schema:identifier": { "@value": "VIP", "@language": "en" },
         "schema:address": {"@id" : "vcard:Addr1"}

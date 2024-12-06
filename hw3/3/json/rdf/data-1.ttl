@@ -16,7 +16,7 @@ dpv:Cust1  rdf:type             dpv:Customer;
         schema:identifier       "VIP"@en;
         schema:referencesOrder  schema:Ord3 , schema:Ord2 , schema:Ord1;
         uiot:registrationDate   "1998-04-10T00:00:00Z"^^xsd:dateTime;
-        foaf:mbox               "mailto:jozko@gmail.com";
+        foaf:mbox               <mailto:jozko@gmail.com>;
         foaf:name               "Jožko Mrkvička"@en .
 
 vcard:Addr3  rdf:type         vcard:Address;
@@ -40,7 +40,7 @@ vcard:Addr1  rdf:type         vcard:Address;
 km4c:Warehouse3  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
         schema:location  vcard:Addr3;
-        foaf:mbox        "mailto:warehousesupport3@ppcshop.cz" , "mailto:dwad@ppcshop.cz" .
+        foaf:mbox        <mailto:warehousesupport3@ppcshop.cz> , <mailto:dwad@ppcshop.cz> .
 
 km4c:Warehouse2  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
@@ -49,7 +49,7 @@ km4c:Warehouse2  rdf:type  km4c:Warehouse_and_storage;
 km4c:Warehouse1  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
         schema:location  vcard:Addr2;
-        foaf:mbox        "mailto:warehousesupport1@ppcshop.cz" .
+        foaf:mbox        <mailto:warehousesupport1@ppcshop.cz> .
 
 schema:Product3  rdf:type     schema:Product;
         schema:brand          schema:Brand2;
@@ -98,17 +98,17 @@ schema:Emp1  rdf:type     schema:EmployeeRole;
         schema:location   "km4c:Warehouse3" , "km4c:Warehouse2" , "km4c:Warehouse1";
         schema:startDate  "2014-02-17T00:00:00Z"^^xsd:dateTime;
         iol:isAssignedTo  schema:Ord3 , schema:Ord2 , schema:Ord1;
-        foaf:mbox         "mailto:gabor@szekeshfehervar.sk";
+        foaf:mbox         <mailto:gabor@szekeshfehervar.sk>;
         foaf:name         "Dano Drevo"@en .
 
 schema:Brand3  rdf:type  schema:Brand;
-        schema:email  "mailto:support@tsmc.com";
+        schema:email  <mailto:support@tsmc.com>;
         schema:name   "TSMC"@en .
 
 schema:Brand2  rdf:type  schema:Brand;
-        schema:email  "mailto:support@amd.com";
+        schema:email  <mailto:support@amd.com>;
         schema:name   "AMD"@en .
 
 schema:Brand1  rdf:type  schema:Brand;
-        schema:email  "mailto:support@logitech.com";
+        schema:email  <mailto:support@logitech.com>;
         schema:name   "Logitech"@en .

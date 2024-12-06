@@ -19,7 +19,7 @@
         "@id": "schema:Emp1",
         "@type": "schema:EmployeeRole",
         "foaf:name": { "@value": "Dano Drevo", "@language": "en" },
-        "foaf:mbox": "mailto:gabor@szekeshfehervar.sk",
+        "foaf:mbox": { "@id": "mailto:gabor@szekeshfehervar.sk"},
         "schema:startDate": { "@value": "2014-02-17T00:00:00Z", "@type": "xsd:dateTime" },
         "schema:location": ["km4c:Warehouse1", "km4c:Warehouse2", "km4c:Warehouse3"],
         "schema:address": {"@id" : "vcard:Addr2"}
@@ -28,19 +28,19 @@
         "@id": "schema:Brand1",
         "@type": "schema:Brand",
         "schema:name": { "@value": "Logitech", "@language": "en" },
-        "schema:email": "mailto:support@logitech.com"
+        "schema:email": { "@id": "mailto:support@logitech.com"}
     },
     {
         "@id": "schema:Brand2",
         "@type": "schema:Brand",
         "schema:name": { "@value": "AMD", "@language": "en" },
-        "schema:email": "mailto:support@amd.com"
+        "schema:email": { "@id": "mailto:support@amd.com"}
     },
     {
         "@id": "schema:Brand3",
         "@type": "schema:Brand",
         "schema:name": { "@value": "TSMC", "@language": "en" },
-        "schema:email": "mailto:support@tsmc.com"
+        "schema:email": { "@id": "mailto:support@tsmc.com"}
     },
     {
         "@id": "vcard:Addr1",
@@ -70,7 +70,7 @@
         "@id": "km4c:Warehouse1",
         "@type": "km4c:Warehouse_and_storage",
         "oo:capacity": 9,
-        "foaf:mbox": "mailto:warehousesupport1@ppcshop.cz",
+        "foaf:mbox": { "@id": "mailto:warehousesupport1@ppcshop.cz"},
         "schema:location": {"@id" : "vcard:Addr2"}
     },
     {
@@ -84,8 +84,8 @@
         "@type": "km4c:Warehouse_and_storage",
         "oo:capacity": 9,
         "foaf:mbox": [
-        "mailto:dwad@ppcshop.cz",
-        "mailto:warehousesupport3@ppcshop.cz"
+        { "@id": "mailto:dwad@ppcshop.cz"},
+        { "@id": "mailto:warehousesupport3@ppcshop.cz"}
         ],
         "schema:location": {"@id" : "vcard:Addr3"}
     },
