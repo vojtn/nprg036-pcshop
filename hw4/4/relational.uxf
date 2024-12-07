@@ -7,7 +7,7 @@
 - country
 - city
 - streetLine
-- postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1068</x><y>108</y><w>144</w><h>180</h></coordinates><panel_attributes>Customer
+- postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1068</x><y>108</y><w>144</w><h>204</h></coordinates><panel_attributes>Customer
 --
 - id [PK]
 - name
@@ -17,7 +17,7 @@
 - country
 - city
 - streetLine
-- postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>624</y><w>144</w><h>144</h></coordinates><panel_attributes>Warehouse
+- postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>624</y><w>144</w><h>168</h></coordinates><panel_attributes>Warehouse
 --
 - id [PK]
 - capacity
