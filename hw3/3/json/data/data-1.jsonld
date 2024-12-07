@@ -27,10 +27,17 @@
         "capacity": {"@id": "oo:capacity"},
         "VAT": {"@id": "seasto:valueAddedTax"},
         "name_sch": {"@id" : "schema:name"},
-        "name_f": {"@id" : "foaf:name"}
-
-
-
+        "name_f": {"@id" : "foaf:name"},
+        "registrationDate": {"@id" : "uiot:registrationDate"},
+        "identifier": {"@id" : "schema:identifier"},
+        "referencesOrder": {"@id" : "schema:referencesOrder"},
+        "address": {"@id" : "schema:address"},
+        "isAssignedTo": {"@id" : "iol:isAssignedTo"},
+        "orderNumber": {"@id" : "schema:orderNumber"},
+        "billingAddress": {"@id" : "schema:billingAddress"},
+        "discount": {"@id" : "schema:discount"},
+        "brand": {"@id" : "schema:brand"}
+    
     },
     "@graph": [
     {
@@ -38,10 +45,10 @@
         "@type": "dpv:Customer",
         "name_f": { "@value": "Jožko Mrkvička", "@language": "en" },
         "email_f": { "@id": "mailto:jozko@gmail.com" },
-        "uiot:registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
-        "schema:identifier": { "@value": "VIP", "@language": "en" },
-        "schema:referencesOrder": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"},{"@id" :  "schema:Ord3"}],
-        "schema:address": {"@id" : "vcard:Addr1"}
+        "registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
+        "identifier": { "@value": "VIP", "@language": "en" },
+        "referencesOrder": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"},{"@id" :  "schema:Ord3"}],
+        "address": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "schema:Emp1",
@@ -50,8 +57,8 @@
         "email_f": { "@id": "mailto:gabor@szekeshfehervar.sk"},
         "startDate": { "@value": "2014-02-17T00:00:00Z", "@type": "xsd:dateTime" },
         "location": ["km4c:Warehouse1", "km4c:Warehouse2", "km4c:Warehouse3"],
-        "iol:isAssignedTo": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"}, {"@id" : "schema:Ord3"}],
-        "schema:address": {"@id" : "vcard:Addr2"}
+        "isAssignedTo": [{"@id" : "schema:Ord1"}, {"@id" : "schema:Ord2"}, {"@id" : "schema:Ord3"}],
+        "address": {"@id" : "vcard:Addr2"}
     },
     {
         "@id": "schema:Brand1",
@@ -98,26 +105,26 @@
     {
         "@id": "schema:Ord1",
         "@type": "schema:Order",
-        "schema:orderNumber": 0,
+        "orderNumber": 0,
         "price": 130,
         "orderedItem": [{"@id" : "schema:Product1"}, {"@id" : "schema:Product2"}],
-        "schema:billingAddress": {"@id" : "vcard:Addr1"}
+        "billingAddress": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "schema:Ord2",
         "@type": "schema:Order",
-        "schema:orderNumber": 1,
+        "orderNumber": 1,
         "price": 210,
         "orderedItem": [{"@id" : "schema:Product2"}, {"@id" : "schema:Product3"}],
-        "schema:billingAddress": {"@id" : "vcard:Addr1"}
+        "billingAddress": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "schema:Ord3",
         "@type": "schema:Order",
-        "schema:orderNumber": 2,
+        "orderNumber": 2,
         "price": 50,
         "orderedItem": {"@id" : "schema:Product1"},
-        "schema:billingAddress": {"@id" : "vcard:Addr1"}
+        "billingAddress": {"@id" : "vcard:Addr1"}
     },
     {
         "@id": "km4c:Warehouse1",
@@ -147,9 +154,9 @@
         "@type": "schema:Product",
         "price": 50,
         "name_sch": { "@value": "Logitech MX Keys", "@language": "en" },
-        "schema:discount": 0,
+        "discount": 0,
         "VAT": 21,
-        "schema:brand": {"@id" : "schema:Brand1"},
+        "brand": {"@id" : "schema:Brand1"},
         "location": {"@id" : "km4c:Warehouse1"}
     },
     {
@@ -157,9 +164,9 @@
         "@type": "schema:Product",
         "price": 100,
         "name_sch": { "@value": "AMD Ryzen 5 7600", "@language": "en" },
-        "schema:discount": 20,
+        "discount": 20,
         "VAT": 21,
-        "schema:brand": {"@id" : "schema:Brand2"},
+        "brand": {"@id" : "schema:Brand2"},
         "location": {"@id" : "km4c:Warehouse2"}
     },
     {
@@ -167,9 +174,9 @@
         "@type": "schema:Product",
         "price": 150,
         "name_sch": { "@value": "AMD Ryzen 7 5700X3D", "@language": "en" },
-        "schema:discount": 20,
+        "discount": 20,
         "VAT": 21,
-        "schema:brand": {"@id" : "schema:Brand2"},
+        "brand": {"@id" : "schema:Brand2"},
         "location": {"@id" : "km4c:Warehouse3"}
     }
     ]
