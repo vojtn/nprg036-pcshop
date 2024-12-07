@@ -1,0 +1,53 @@
+{
+    "@id": "https://example.org/pcshop/data-5.csv-metadata.json",
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Table",
+    "url": "data-5.csv",
+    "tableSchema" : {
+        "@type": "Schema",
+        "aboutUrl": "{+uri}",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "orderNumber",
+                "titles": "orderNumber",
+                "dc:description": "Order foreign key",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "productId",
+                "titles": "productId",
+                "dc:description": "Product foreign key",
+                "datatype": "integer",
+                "required": true
+            }
+        ],
+        "primaryKey": [
+            "orderNumber",
+            "productId"
+        ],
+        "foreignKeys": [
+            {
+                "columnReference": "orderNumber",
+                "reference": {
+                    "resource": "data-5.csv",
+                    "columnReference": "orderNumber"
+                }
+            },
+            {
+                "columnReference": "productId",
+                "reference": {
+                    "resource": "data-5.csv",
+                    "columnReference": "id"
+                }
+            }
+        ]
+    }
+}

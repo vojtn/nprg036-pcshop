@@ -1,0 +1,75 @@
+{
+    "@id": "https://example.org/pcshop/data-6.csv-metadata.json",
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Table",
+    "url": "data-6.csv",
+    "tableSchema" : {
+        "@type": "Schema",
+        "aboutUrl": "{+uri}",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "id",
+                "titles": "id",
+                "dc:description": "Product primary key",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "price",
+                "titles": "price",
+                "dc:description": "Product price",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "name",
+                "titles": "name",
+                "dc:description": "Product name",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "sale",
+                "titles": "sale",
+                "dc:description": "Product sale value",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "VAT",
+                "titles": "VAT",
+                "dc:description": "Product value-added tax",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "brandId",
+                "titles": "brandId",
+                "dc:description": "Brand foreign key",
+                "datatype": "integer",
+                "required": true
+            }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+            {
+                "columnReference": "brandId",
+                "reference": {
+                    "resource": "data-6.csv",
+                    "columnReference": "id"
+                }
+            }
+        ]
+    }
+}
