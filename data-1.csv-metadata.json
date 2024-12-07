@@ -1,0 +1,83 @@
+{
+    "@id": "https://example.org/pcshop/data-1.csv-metadata.json",
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Table",
+    "url": "data-1.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "aboutUrl": "{+uri}",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "orderNumber",
+                "titles": "orderNumber",
+                "dc:description": "Order primary key",
+                "required": true,
+                "datatype": "integer"
+            },
+            {
+                "@type": "Column",
+                "name": "totalPrice",
+                "titles": "totalPrice",
+                "dc:description": "Total price of the order",
+                "required": true,
+                "datatype": "integer"
+            },
+            {
+                "@type": "Column",
+                "name": "country",
+                "titles": "country",
+                "dc:description": "The country from the address",
+                "required": true,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "city",
+                "titles": "city",
+                "dc:description": "The city from the address",
+                "required": true,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "streetLine",
+                "titles": "streetLine",
+                "dc:description": "The address street line",
+                "required": true,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "postCode",
+                "titles": "postCode",
+                "dc:description": "The address post code",
+                "required": true,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "customerId",
+                "titles": "customerId",
+                "dc:description": "Customer foreign key",
+                "required": true,
+                "datatype": "integer"
+            }         
+        ],
+        "primaryKey": "orderNumber",
+        "foreignKey" : [
+            {
+                "columnReference" : "customerId",
+                "reference" : {
+                    "resource" : "data-2.csv",
+                    "columnReference" : "id"
+                }
+            }
+        ]
+    }
+}
