@@ -17,7 +17,7 @@
             "orderNumber": {
             "type": "integer"
             },
-            "totalPrice": {
+            "price": {
             "type": "integer"
             },
             "customer": {
