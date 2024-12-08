@@ -1,0 +1,74 @@
+{
+    "@id": "https://example.org/pcshop/data-9.csv-metadata.json",
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Table",
+    "url": "data-9.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "aboutUrl": "{+uri}",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "id",
+                "titles": "id",
+                "dc:description": "Warehouse primary key",
+                "required": true,
+                "datatype": "integer"
+            },
+            {
+                "@type": "Column",
+                "name": "capacity",
+                "titles": "capacity",
+                "dc:description": "Total capacity of the warehouse",
+                "required": true,
+                "datatype": "integer"
+            },
+            {
+                "@type": "Column",
+                "name": "contact",
+                "titles": "contact",
+                "dc:description": "Contacts of the warehouse",
+                "required": false,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "country",
+                "titles": "country",
+                "dc:description": "The country from the address",
+                "required": true,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "city",
+                "titles": "city",
+                "dc:description": "The city from the address",
+                "required": true,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "streetLine",
+                "titles": "streetLine",
+                "dc:description": "The address street line",
+                "required": true,
+                "datatype": "string"
+            },
+            {
+                "@type": "Column",
+                "name": "postCode",
+                "titles": "postCode",
+                "dc:description": "The address post code",
+                "required": true,
+                "datatype": "string"
+            }         
+        ],
+        "primaryKey": "id"
+    }
+}

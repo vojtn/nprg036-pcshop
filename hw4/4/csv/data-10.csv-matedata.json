@@ -1,0 +1,54 @@
+{
+    "@id": "https://example.org/pcshop/data-8.csv-metadata.json",
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Table",
+    "url": "data-8.csv",
+    "tableSchema" : {
+        "@type": "Schema",
+        "aboutUrl": "{+uri}",
+        "columns": [
+            
+            {
+                "@type": "Column",
+                "name": "EmployeeId",
+                "titles": "EmployeeId",
+                "dc:description": "Employee foreign key",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "warehouseId",
+                "titles": "warehouseId",
+                "dc:description": "Warehouse foreign key",
+                "datatype": "integer",
+                "required": true
+            }
+        ],
+        "primaryKey": [
+            "EmployeeId",
+            "warehouseId"
+        ],
+        "foreignKeys": [
+            {
+                "columnReference": "warehouseId",
+                "reference": {
+                    "resource": "data-9.csv",
+                    "columnReference": "id"
+                }
+            },
+            {
+                "columnReference": "EmployeeId",
+                "reference": {
+                    "resource": "data-3.csv",
+                    "columnReference": "id"
+                }
+            }
+        ]
+    }
+}
