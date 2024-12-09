@@ -1,0 +1,45 @@
+{
+    "@id": "https://example.org/pcshop/data-11.csv-metadata.json",
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Table",
+    "url": "data-11.csv",
+    "tableSchema" : {
+        "@type": "Schema",
+        "aboutUrl": "{+uri}",
+        "columns": [    
+            {
+                "@type": "Column",
+                "name": "id",
+                "titles": "id",
+                "dc:description": "Contact primary key ",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "warehouse_id",
+                "titles": "warehouse_id",
+                "dc:description": "Warehouse foreign key",
+                "datatype": "integer",
+                "required": true
+            }
+        ],
+        "primaryKey": [
+            "id"
+        ],
+        "foreignKeys": [
+            {
+                "columnReference": "warehouseId",
+                "reference": {
+                    "resource": "data-9.csv",
+                    "columnReference": "id"
+                }
+            }
+        ]
+    }
+}
