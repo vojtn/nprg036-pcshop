@@ -45,7 +45,7 @@
                 "columnReference": "orderId",
                 "reference": {
                     "resource": "data-1.csv",
-                    "columnReference": "orderNumber"
+                    "columnReference": "id"
                 }
             }
         ]

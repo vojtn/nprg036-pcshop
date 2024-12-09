@@ -14,8 +14,8 @@
         "columns": [
             {
                 "@type": "Column",
-                "name": "orderNumber",
-                "titles": "orderNumber",
+                "name": "orderId",
+                "titles": "orderId",
                 "dc:description": "Order foreign key",
                 "datatype": "integer",
                 "required": true
@@ -30,21 +30,21 @@
             }
         ],
         "primaryKey": [
-            "orderNumber",
+            "orderId",
             "productId"
         ],
         "foreignKeys": [
             {
-                "columnReference": "orderNumber",
+                "columnReference": "orderId",
                 "reference": {
-                    "resource": "data-5.csv",
-                    "columnReference": "orderNumber"
+                    "resource": "data-1.csv",
+                    "columnReference": "id"
                 }
             },
             {
                 "columnReference": "productId",
                 "reference": {
-                    "resource": "data-5.csv",
+                    "resource": "data-6.csv",
                     "columnReference": "id"
                 }
             }

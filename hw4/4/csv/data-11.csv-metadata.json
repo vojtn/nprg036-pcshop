@@ -11,7 +11,7 @@
     "tableSchema" : {
         "@type": "Schema",
         "aboutUrl": "{+uri}",
-        "columns": [    
+        "columns": [
             {
                 "@type": "Column",
                 "name": "id",
@@ -22,8 +22,8 @@
             },
             {
                 "@type": "Column",
-                "name": "warehouse_id",
-                "titles": "warehouse_id",
+                "name": "warehouseId",
+                "titles": "warehouseId",
                 "dc:description": "Warehouse foreign key",
                 "datatype": "integer",
                 "required": true

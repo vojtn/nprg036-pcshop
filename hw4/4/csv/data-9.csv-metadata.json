@@ -30,14 +30,6 @@
             },
             {
                 "@type": "Column",
-                "name": "contact",
-                "titles": "contact",
-                "dc:description": "Contacts of the warehouse",
-                "required": false,
-                "datatype": "string"
-            },
-            {
-                "@type": "Column",
                 "name": "country",
                 "titles": "country",
                 "dc:description": "The country from the address",

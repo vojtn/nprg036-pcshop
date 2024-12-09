@@ -14,9 +14,17 @@
         "columns": [
             {
                 "@type": "Column",
+                "name": "id",
+                "titles": "id",
+                "dc:description": "Order primary key",
+                "required": true,
+                "datatype": "integer"
+            },
+            {
+                "@type": "Column",
                 "name": "orderNumber",
                 "titles": "orderNumber",
-                "dc:description": "Order primary key",
+                "dc:description": "Identifier for tracking order state",
                 "required": true,
                 "datatype": "integer"
             },
@@ -69,7 +77,7 @@
                 "datatype": "integer"
             }         
         ],
-        "primaryKey": "orderNumber",
+        "primaryKey": "id",
         "foreignKeys" : [
             {
                 "columnReference" : "customerId",

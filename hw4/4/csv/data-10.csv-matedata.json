@@ -1,5 +1,5 @@
 {
-    "@id": "https://example.org/pcshop/data-8.csv-metadata.json",
+    "@id": "https://example.org/pcshop/data-10.csv-metadata.json",
     "@context": [
         "http://www.w3.org/ns/csvw",
         {
@@ -7,7 +7,7 @@
         }
     ],
     "@type": "Table",
-    "url": "data-8.csv",
+    "url": "data-10.csv",
     "tableSchema" : {
         "@type": "Schema",
         "aboutUrl": "{+uri}",
@@ -15,8 +15,8 @@
             
             {
                 "@type": "Column",
-                "name": "EmployeeId",
-                "titles": "EmployeeId",
+                "name": "employeeId",
+                "titles": "employeeId",
                 "dc:description": "Employee foreign key",
                 "datatype": "integer",
                 "required": true
@@ -31,7 +31,7 @@
             }
         ],
         "primaryKey": [
-            "EmployeeId",
+            "employeeId",
             "warehouseId"
         ],
         "foreignKeys": [
@@ -43,7 +43,7 @@
                 }
             },
             {
-                "columnReference": "EmployeeId",
+                "columnReference": "employeeId",
                 "reference": {
                     "resource": "data-3.csv",
                     "columnReference": "id"
