@@ -1,17 +1,20 @@
 {
-    "@id": "http://example.org/pcshop/csv-metadata.json",
     "@context": [
         "http://www.w3.org/ns/csvw",
         {
             "@language": "en"
         }
     ],
+    "@type": "TableGroup",
+    "@id": "http://example.org/pcshop/csv-metadata.json",
+    "dc:description": "PC Shop Database",
     "tables": [
         {
             "@type": "Table",
             "url": "data-1.csv",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "schema:Ord{orderNumber}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -19,7 +22,9 @@
                         "titles": "id",
                         "dc:description": "Order primary key",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://schema.org/Order"
                     },
                     {
                         "@type": "Column",
@@ -27,7 +32,8 @@
                         "titles": "orderNumber",
                         "dc:description": "Identifier for tracking order state",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "propertyUrl": "schema:orderNumber"
                     },
                     {
                         "@type": "Column",
@@ -35,7 +41,8 @@
                         "titles": "totalPrice",
                         "dc:description": "Total price of the order",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "propertyUrl": "schema:price"
                     },
                     {
                         "@type": "Column",
@@ -43,7 +50,8 @@
                         "titles": "country",
                         "dc:description": "The country from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:country-name"
                     },
                     {
                         "@type": "Column",
@@ -51,7 +59,8 @@
                         "titles": "city",
                         "dc:description": "The city from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:locality"
                     },
                     {
                         "@type": "Column",
@@ -59,7 +68,8 @@
                         "titles": "streetLine",
                         "dc:description": "The address street line",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:street-address"
                     },
                     {
                         "@type": "Column",
@@ -67,7 +77,8 @@
                         "titles": "postCode",
                         "dc:description": "The address post code",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:postal-code"
                     },
                     {
                         "@type": "Column",
@@ -75,7 +86,8 @@
                         "titles": "customerId",
                         "dc:description": "Customer foreign key",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": "id",
