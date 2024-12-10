@@ -14,8 +14,18 @@
             "url": "data-1.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "schema:Ord{orderNumber}",
+                "aboutUrl": "{+uri}",
                 "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Order URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:Order"
+                    },                    
                     {
                         "@type": "Column",
                         "name": "id",
@@ -23,8 +33,7 @@
                         "dc:description": "Order primary key",
                         "required": true,
                         "datatype": "integer",
-                        "propertyUrl": "rdf:type",
-                        "valueUrl": "http://schema.org/Order"
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -114,7 +123,8 @@
                         "titles": "id",
                         "dc:description": "Customer primary key",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -122,7 +132,8 @@
                         "titles": "name",
                         "dc:description": "Customer name",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "foaf:name"
                     },
                     {
                         "@type": "Column",
@@ -130,7 +141,8 @@
                         "titles": "email",
                         "dc:description": "Customer e-mail",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "foaf:mbox"
                     },
                     {
                         "@type": "Column",
@@ -138,7 +150,8 @@
                         "titles": "registrationDate",
                         "dc:description": "Registration date of the Customer",
                         "required": true,
-                        "datatype": "date"
+                        "datatype": "date",
+                        "propertyUrl": "uiot:registrationDate"
                     },
                     {
                         "@type": "Column",
@@ -146,7 +159,8 @@
                         "titles": "privileged",
                         "dc:description": "Privileged status of the Customer",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "schema:identifier"
                     },
                     {
                         "@type": "Column",
@@ -154,7 +168,8 @@
                         "titles": "country",
                         "dc:description": "The country from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:country-name"
                     },
                     {
                         "@type": "Column",
