@@ -116,7 +116,18 @@
             "url": "data-2.csv",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "{+uri}",
                 "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Customer URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "dpv:Customer"
+                    },
                     {
                         "@type": "Column",
                         "name": "id",
@@ -204,7 +215,18 @@
             "url": "data-3.csv",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "{+uri}",
                 "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Employee URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:EmployeeRole"
+                    },
                     {
                         "@type": "Column",
                         "name": "id",
@@ -368,7 +390,18 @@
             "url": "data-6.csv",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "{+uri}",
                 "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Product URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:Product"
+                    },
                     {
                         "@type": "Column",
                         "name": "id",
@@ -435,7 +468,18 @@
             "url": "data-7.csv",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "{+uri}",
                 "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Brand URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:Brand"
+                    },
                     {
                         "@type": "Column",
                         "name": "id",
@@ -514,7 +558,18 @@
             "url": "data-9.csv",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "{+uri}",
                 "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Warehouse URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "km4c:Warehouse_and_storage"
+                    },
                     {
                         "@type": "Column",
                         "name": "id",
