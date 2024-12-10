@@ -1,4 +1,4 @@
-id,orderNumber,totalPrice,country,city,streetLine,postCode,customerId
-0,0,130,Hungary,Komarom,Cajkovskeho 2,16900,0
-1,1,210,Hungary,Komarom,Cajkovskeho 2,16900,0
-2,2,50,Hungary,Komarom,Cajkovskeho 2,16900,0
+URI,id,orderNumber,totalPrice,country,city,streetLine,postCode,customerId
+schema:Ord1,0,0,130,Hungary,Komarom,Cajkovskeho 2,16900,0
+schema:Ord2,1,1,210,Hungary,Komarom,Cajkovskeho 2,16900,0
+schema:Ord3,2,2,50,Hungary,Komarom,Cajkovskeho 2,16900,0
