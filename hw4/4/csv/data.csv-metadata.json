@@ -126,7 +126,7 @@
                         "required": true,
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "dpv:Customer"
+                        "valueUrl": "https://w3c.github.io/dpv/2.0/Customer"
                     },
                     {
                         "@type": "Column",
@@ -568,7 +568,7 @@
                         "required": true,
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "km4c:Warehouse_and_storage"
+                        "valueUrl": "http://www.disit.org/km4city/schema#Warehouse_and_storage"
                     },
                     {
                         "@type": "Column",
