@@ -8,6 +8,7 @@
     ],
     "tables": [
         {
+            "@type": "Table",
             "url": "data-1.csv",
             "tableSchema": {
                 "@type": "Schema",
@@ -90,8 +91,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-2.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -170,8 +173,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-3.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -242,8 +247,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-4.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -285,8 +292,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-5.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -328,8 +337,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-6.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -393,8 +404,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-7.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -425,8 +438,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-8.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -468,8 +483,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-9.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -524,8 +541,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-10.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
@@ -567,8 +586,10 @@
             }
         },
         {
+            "@type": "Table",
             "url": "data-11.csv",
             "tableSchema": {
+                "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
