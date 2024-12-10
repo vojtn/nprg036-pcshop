@@ -14,43 +14,43 @@
         "customer": {
             "type": "object",
             "properties": {
-                "name": {
-                    "$ref": "#/$defs/langString"
+                "name_f": {
+                "$ref": "#/$defs/langString"
                 },
-                "email": {
-                    "type": "string",
-                    "format": "email"
+                "email_f": {
+                "type": "string",
+                "format": "email"
                 },
                 "registrationDate": {
-                    "type": "string",
-                    "format": "date-time"
+                "type": "string",
+                "format": "date-time"
                 },
-                "privileged": {
-                    "type": "boolean"
+                "identifier": {
+                "$ref": "#/$defs/langString"
                 },
                 "address": {
-                    "$ref": "#/$defs/address"
+                "$ref": "#/$defs/address"
                 }
             },
-            "required": ["name", "email", "registrationDate", "privileged", "address"]
+            "required": ["name_f", "email_f", "registrationDate", "identifier", "address"]
         },
         "address": {
             "type": "object",
             "properties": {
-                "country": {
-                    "$ref": "#/$defs/langString"
+                "countryName": {
+                "$ref": "#/$defs/langString"
                 },
-                "city": {
-                    "$ref": "#/$defs/langString"
+                "locality": {
+                "$ref": "#/$defs/langString"
                 },
-                "streetLine": {
-                    "$ref": "#/$defs/langString"
+                "streetAddress": {
+                "$ref": "#/$defs/langString"
                 },
-                "postCode": {
-                    "$ref": "#/$defs/langString"
+                "postalCode": {
+                "$ref": "#/$defs/langString"
                 }
             },
-            "required": ["country", "city", "streetLine", "postCode"]
+            "required": ["countryName", "locality", "streetAddress", "postalCode"]
         },
         "langString": {
             "type": "object",

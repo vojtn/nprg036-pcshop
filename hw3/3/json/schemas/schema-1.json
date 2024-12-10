@@ -23,14 +23,14 @@
             "customer": {
             "$ref": "#/$defs/customer"
             },
-            "product": {
+            "orderedItem": {
             "type": "array",
             "minItems": 1,
             "items": {
                 "$ref": "#/$defs/product"
             }
             },
-            "address": {
+            "billingAddress": {
             "$ref": "#/$defs/address"
             },
             "employee": {
@@ -41,15 +41,15 @@
             }
             }
         },
-        "required": ["orderNumber", "totalPrice", "customer", "product", "address", "employee"]
+        "required": ["orderNumber", "price", "customer", "orderedItem", "billingAddress", "employee"]
         },
         "customer": {
         "type": "object",
         "properties": {
-            "name": {
+            "name_f": {
             "$ref": "#/$defs/langString"
             },
-            "email": {
+            "email_f": {
             "type": "string",
             "format": "email"
             },
@@ -57,40 +57,40 @@
             "type": "string",
             "format": "date-time"
             },
-            "privileged": {
-            "type": "boolean"
+            "identifier": {
+            "$ref": "#/$defs/langString"
             },
             "address": {
             "$ref": "#/$defs/address"
             }
         },
-        "required": ["name", "email", "registrationDate", "privileged", "address"]
+        "required": ["name_f", "email_f", "registrationDate", "identifier", "address"]
         },
         "employee": {
         "type": "object",
         "properties": {
-            "name": {
+            "name_f": {
             "type": "string"
             },
-            "email": {
+            "email_f": {
             "type": "string",
             "format": "email"
             },
-            "startingDate": {
+            "startDate": {
             "type": "string",
             "format": "date-time"
             },
             "address": {
             "$ref": "#/$defs/address"
             },
-            "warehouse": {
+            "location": {
             "type": "array",
             "items": {
                 "$ref": "#/$defs/warehouse"
             }
             }
         },
-        "required": ["name", "email", "startingDate", "address"]
+        "required": ["name_f", "email_f", "startDate", "address"]
         },
         "warehouse": {
         "type": "object",
@@ -98,10 +98,14 @@
             "capacity": {
             "type": "integer"
             },
-            "contact": {
-            "type": "string"
+            "email_f": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "email"
+            }
             },
-            "address": {
+            "location": {
             "$ref": "#/$defs/address"
             },
             "product": {
@@ -112,7 +116,7 @@
             }
             }
         },
-        "required": ["capacity", "contact", "address"]
+        "required": ["capacity", "email_f", "location"]
         },
         "product": {
         "type": "object",
@@ -120,11 +124,11 @@
             "price": {
             "type": "integer"
             },
-            "name": {
-            "type": "string"
+            "name_sch": {
+            "$ref": "#/$defs/langString"
             },
-            "sale": {
-            "type": "string"
+            "discount": {
+            "type": "integer"
             },
             "VAT": {
             "type": "integer"
@@ -134,38 +138,38 @@
             "nullable": true
             }
         },
-        "required": ["price", "name", "sale", "VAT"]
+        "required": ["price", "name_sch", "discount", "VAT"]
         },
         "brand": {
         "type": "object",
         "properties": {
-            "name": {
-            "type": "string"
+            "name_sch": {
+            "$ref": "#/$defs/langString"
             },
-            "companyEmail": {
+            "email_sch": {
             "type": "string",
             "format": "email"
             }
         },
-        "required": ["name", "companyEmail"]
+        "required": ["name_sch", "email_sch"]
         },
         "address": {
         "type": "object",
         "properties": {
-            "country": {
+            "countryName": {
             "$ref": "#/$defs/langString"
             },
-            "city": {
+            "locality": {
             "$ref": "#/$defs/langString"
             },
-            "streetLine": {
+            "streetAddress": {
             "$ref": "#/$defs/langString"
             },
-            "postCode": {
+            "postalCode": {
             "$ref": "#/$defs/langString"
             }
         },
-        "required": ["country", "city", "streetLine", "postCode"]
+        "required": ["countryName", "locality", "streetAddress", "postalCode"]
         },
         "langString": {
         "type": "object",

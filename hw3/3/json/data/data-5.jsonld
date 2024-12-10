@@ -36,7 +36,8 @@
         "orderNumber": {"@id" : "schema:orderNumber"},
         "billingAddress": {"@id" : "schema:billingAddress"},
         "discount": {"@id" : "schema:discount"},
-        "brand": {"@id" : "schema:brand"}
+        "brand": {"@id" : "schema:brand"},
+        "products": {"@id" : "schema:Product"}
     },
     "@graph": [
     {
@@ -44,7 +45,7 @@
         "@type": "schema:Brand",
         "name_sch": { "@value": "Logitech", "@language": "en" },
         "email_sch": { "@id": "mailto:support@logitech.com"},
-        "schema:Product": [
+        "products": [
             {"@id": "schema:Product1"}
         ]
     },
@@ -53,7 +54,7 @@
         "@type": "schema:Brand",
         "name_sch": { "@value": "AMD", "@language": "en" },
         "email_sch": { "@id": "mailto:support@amd.com"},
-        "schema:Product": [ 
+        "products": [ 
             {"@id": "schema:Product2"},
             {"@id": "schema:Product3"}
         ]
@@ -63,7 +64,7 @@
         "@type": "schema:Brand",
         "name_sch": { "@value": "TSMC", "@language": "en" },
         "email_sch": { "@id": "mailto:support@tsmc.com"},
-        "schema:Product": []
+        "products": []
     },
     {
         "@id": "schema:Product1",
