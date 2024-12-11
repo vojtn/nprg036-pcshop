@@ -1,2 +1,2 @@
-URI,id,name,email,startingDate,country,city,streetLine,postCode
-schema:Emp1,0,Dano Drevo,gabor@szekeshfehervar.sk,2014-02-17,Slovakia,Nitra,Dunajska 14,49411
+URI,id,name,email,startingDate,addressURI
+schema:Emp1,0,Dano Drevo,gabor@szekeshfehervar.sk,2014-02-17,vcard:Addr2
