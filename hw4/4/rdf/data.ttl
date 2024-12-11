@@ -1,0 +1,127 @@
+<http://schema.org/Ord1>
+        a                          <http://schema.org/Order>;
+        <http://schema.org/orderNumber>  0;
+        <http://schema.org/price>  130;
+        <http://schema.org/billingAddress>  <http://www.w3.org/2006/vcard/ns#Addr1>;
+        <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isAssignedTo>  <http://schema.org/Emp1>;
+        <http://schema.org/orderedItem>  <http://schema.org/Product1>;
+        <http://schema.org/orderedItem>  <http://schema.org/Product2> .
+
+<https://w3c.github.io/dpv/2.0/Cust1>
+        <http://schema.org/referencesOrder>  <http://schema.org/Ord1>;
+        <http://schema.org/referencesOrder>  <http://schema.org/Ord2>;
+        <http://schema.org/referencesOrder>  <http://schema.org/Ord3>;
+        a                               <https://w3c.github.io/dpv/2.0/Customer>;
+        <http://xmlns.com/foaf/0.1/name>  "Jožko Mrkvička"@en;
+        <http://xmlns.com/foaf/0.1/mbox>  "<mailto:jozko@gmail.com>";
+        <http://www.w3id.org/urban-iot/core#registrationDate>  "1998-04-10T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://schema.org/identifier>  "VIP"@en;
+        <http://schema.org/address>     <http://www.w3.org/2006/vcard/ns#Addr1> .
+
+<http://schema.org/Ord2>
+        a                          <http://schema.org/Order>;
+        <http://schema.org/orderNumber>  1;
+        <http://schema.org/price>  210;
+        <http://schema.org/billingAddress>  <http://www.w3.org/2006/vcard/ns#Addr1>;
+        <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isAssignedTo>  <http://schema.org/Emp1>;
+        <http://schema.org/orderedItem>  <http://schema.org/Product2>;
+        <http://schema.org/orderedItem>  <http://schema.org/Product3> .
+
+<http://schema.org/Ord3>
+        a                          <http://schema.org/Order>;
+        <http://schema.org/orderNumber>  2;
+        <http://schema.org/price>  50;
+        <http://schema.org/billingAddress>  <http://www.w3.org/2006/vcard/ns#Addr1>;
+        <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isAssignedTo>  <http://schema.org/Emp1>;
+        <http://schema.org/orderedItem>  <http://schema.org/Product1> .
+
+<http://schema.org/Emp1>
+        a                              <http://schema.org/EmployeeRole>;
+        <http://xmlns.com/foaf/0.1/name>  "Dano Drevo"@en;
+        <http://xmlns.com/foaf/0.1/mbox>  "gabor@szekeshfehervar.sk";
+        <http://schema.org/startDate>  "2014-02-17T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://schema.org/address>    <http://www.w3.org/2006/vcard/ns#Addr2>;
+        <http://schema.org/location>   <http://www.disit.org/km4city/schema#Warehouse1>;
+        <http://schema.org/location>   <http://www.disit.org/km4city/schema#Warehouse2>;
+        <http://schema.org/location>   <http://www.disit.org/km4city/schema#Warehouse3> .
+
+<http://schema.org/Product1>
+        a                             <http://schema.org/Product>;
+        <http://schema.org/price>     50;
+        <http://schema.org/name>      "Logitech MX Keys"@en;
+        <http://schema.org/discount>  0;
+        <https://w3id.org/seas/valueAddedTax>  21;
+        <http://schema.org/brand>     <http://schema.org/Brand1>;
+        <http://schema.org/location>  <http://www.disit.org/km4city/schema#Warehouse1> .
+
+<http://schema.org/Product2>
+        a                             <http://schema.org/Product>;
+        <http://schema.org/price>     100;
+        <http://schema.org/name>      "AMD Ryzen 5 7600"@en;
+        <http://schema.org/discount>  20;
+        <https://w3id.org/seas/valueAddedTax>  21;
+        <http://schema.org/brand>     <http://schema.org/Brand2>;
+        <http://schema.org/location>  <http://www.disit.org/km4city/schema#Warehouse2> .
+
+<http://schema.org/Product3>
+        a                             <http://schema.org/Product>;
+        <http://schema.org/price>     150;
+        <http://schema.org/name>      "AMD Ryzen 7 5700X3D"@en;
+        <http://schema.org/discount>  20;
+        <https://w3id.org/seas/valueAddedTax>  21;
+        <http://schema.org/brand>     <http://schema.org/Brand2>;
+        <http://schema.org/location>  <http://www.disit.org/km4city/schema#Warehouse3> .
+
+<http://schema.org/Brand1>
+        a                          <http://schema.org/Brand>;
+        <http://schema.org/name>   "Logitech"@en;
+        <http://schema.org/email>  "<mailto:support@logitech.com>" .
+
+<http://schema.org/Brand2>
+        a                          <http://schema.org/Brand>;
+        <http://schema.org/name>   "AMD"@en;
+        <http://schema.org/email>  "<mailto:support@amd.com>" .
+
+<http://schema.org/Brand3>
+        a                          <http://schema.org/Brand>;
+        <http://schema.org/name>   "TSMC"@en;
+        <http://schema.org/email>  "<mailto:support@tsmc.com>" .
+
+<http://www.disit.org/km4city/schema#Warehouse1>
+        a                             <http://www.disit.org/km4city/schema#Warehouse_and_storage>;
+        <http://purl.org/openorg/capacity>  9;
+        <http://schema.org/location>  <http://www.w3.org/2006/vcard/ns#Addr2>;
+        <http://xmlns.com/foaf/0.1/mbox>  <mailto:warehousesupport1@ppcshop.cz> .
+
+<http://www.disit.org/km4city/schema#Warehouse2>
+        a                             <http://www.disit.org/km4city/schema#Warehouse_and_storage>;
+        <http://purl.org/openorg/capacity>  9;
+        <http://schema.org/location>  <http://www.w3.org/2006/vcard/ns#Addr3>;
+        <http://xmlns.com/foaf/0.1/mbox>  <mailto:warehousesupport2@ppcshop.cz> .
+
+<http://www.disit.org/km4city/schema#Warehouse3>
+        a                             <http://www.disit.org/km4city/schema#Warehouse_and_storage>;
+        <http://purl.org/openorg/capacity>  9;
+        <http://schema.org/location>  <http://www.w3.org/2006/vcard/ns#Addr3>;
+        <http://xmlns.com/foaf/0.1/mbox>  <mailto:warehousesupport3@ppcshop.cz> .
+
+<http://www.w3.org/2006/vcard/ns#Addr1>
+        a       <http://www.w3.org/2006/vcard/ns#Address>;
+        <http://www.w3.org/2006/vcard/ns#country-name>  "Hungary"@en;
+        <http://www.w3.org/2006/vcard/ns#locality>  "Komarom"@en;
+        <http://www.w3.org/2006/vcard/ns#street-address>  "Cajkovskeho 2"@en;
+        <http://www.w3.org/2006/vcard/ns#postal-code>  "16900"@en .
+
+<http://www.w3.org/2006/vcard/ns#Addr2>
+        a       <http://www.w3.org/2006/vcard/ns#Address>;
+        <http://www.w3.org/2006/vcard/ns#country-name>  "Slovakia"@en;
+        <http://www.w3.org/2006/vcard/ns#locality>  "Nitra"@en;
+        <http://www.w3.org/2006/vcard/ns#street-address>  "Dunajska 14"@en;
+        <http://www.w3.org/2006/vcard/ns#postal-code>  "49411"@en .
+
+<http://www.w3.org/2006/vcard/ns#Addr3>
+        a       <http://www.w3.org/2006/vcard/ns#Address>;
+        <http://www.w3.org/2006/vcard/ns#country-name>  "Czech republic"@en;
+        <http://www.w3.org/2006/vcard/ns#locality>  "Praha"@en;
+        <http://www.w3.org/2006/vcard/ns#street-address>  "Za zahradou 2"@en;
+        <http://www.w3.org/2006/vcard/ns#postal-code>  "16200"@en .
