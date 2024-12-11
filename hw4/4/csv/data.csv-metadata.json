@@ -188,15 +188,17 @@
                         "titles": "city",
                         "dc:description": "The city from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:locality"
                     },
                     {
                         "@type": "Column",
                         "name": "streetLine",
                         "titles": "streetLine",
-                        "dc:description": "The street line from the address",
+                        "dc:description": "The address street line",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:street-address"
                     },
                     {
                         "@type": "Column",
@@ -204,7 +206,8 @@
                         "titles": "postCode",
                         "dc:description": "The address post code",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:postal-code"
                     }
                 ],
                 "primaryKey": "id"
@@ -269,7 +272,8 @@
                         "titles": "country",
                         "dc:description": "The country from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:country-name"
                     },
                     {
                         "@type": "Column",
@@ -277,15 +281,17 @@
                         "titles": "city",
                         "dc:description": "The city from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:locality"
                     },
                     {
                         "@type": "Column",
                         "name": "streetLine",
                         "titles": "streetLine",
-                        "dc:description": "The street line from the address",
+                        "dc:description": "The address street line",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:street-address"
                     },
                     {
                         "@type": "Column",
@@ -293,7 +299,8 @@
                         "titles": "postCode",
                         "dc:description": "The address post code",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:postal-code"
                     }
                 ],
                 "primaryKey": "id"
@@ -449,7 +456,7 @@
                         "dc:description": "Product value-added tax",
                         "datatype": "integer",
                         "required": true,
-                        "propertyUrl": "seasto:valueAddedTax"
+                        "propertyUrl": "https://w3id.org/seas/valueAddedTax"
                     },
                     {
                         "@type": "Column",
@@ -590,7 +597,7 @@
                         "dc:description": "Warehouse primary key",
                         "required": true,
                         "datatype": "integer",
-                        "suppressOutput":true
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -599,7 +606,7 @@
                         "dc:description": "Total capacity of the warehouse",
                         "required": true,
                         "datatype": "integer",
-                        "propertyUrl": "oo:capacity"
+                        "propertyUrl": "http://purl.org/openorg/capacity"
                     },
                     {
                         "@type": "Column",
@@ -607,7 +614,8 @@
                         "titles": "country",
                         "dc:description": "The country from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:country-name"
                     },
                     {
                         "@type": "Column",
@@ -615,7 +623,8 @@
                         "titles": "city",
                         "dc:description": "The city from the address",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:locality"
                     },
                     {
                         "@type": "Column",
@@ -623,7 +632,8 @@
                         "titles": "streetLine",
                         "dc:description": "The address street line",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:street-address"
                     },
                     {
                         "@type": "Column",
@@ -631,7 +641,8 @@
                         "titles": "postCode",
                         "dc:description": "The address post code",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "vcard:postal-code"
                     }
                 ],
                 "primaryKey": "id"
