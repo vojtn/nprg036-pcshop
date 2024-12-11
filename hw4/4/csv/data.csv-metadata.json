@@ -113,7 +113,8 @@
                         "dc:description": "Customer name",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "foaf:name"
+                        "propertyUrl": "foaf:name",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -140,7 +141,8 @@
                         "dc:description": "Privileged status of the Customer",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "schema:identifier"
+                        "propertyUrl": "schema:identifier",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -189,7 +191,8 @@
                         "dc:description": "Employee name",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "foaf:name"
+                        "propertyUrl": "foaf:name",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -363,7 +366,8 @@
                         "dc:description": "Product name",
                         "datatype": "string",
                         "required": true,
-                        "propertyUrl": "schema:name"
+                        "propertyUrl": "schema:name",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -430,7 +434,8 @@
                         "dc:description": "Brand name",
                         "datatype": "string",
                         "required": true,
-                        "propertyUrl": "schema:name"
+                        "propertyUrl": "schema:name",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -646,7 +651,8 @@
                         "required": true,
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "vcard:Address"
+                        "valueUrl": "vcard:Address",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -655,7 +661,8 @@
                         "dc:description": "The country from the address",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "vcard:country-name"
+                        "propertyUrl": "vcard:country-name",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -664,7 +671,8 @@
                         "dc:description": "The city from the address",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "vcard:locality"
+                        "propertyUrl": "vcard:locality",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -673,7 +681,8 @@
                         "dc:description": "The address street line",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "vcard:street-address"
+                        "propertyUrl": "vcard:street-address",
+                        "lang": "en"
                     },
                     {
                         "@type": "Column",
@@ -682,7 +691,8 @@
                         "dc:description": "The address post code",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "vcard:postal-code"
+                        "propertyUrl": "vcard:postal-code",
+                        "lang": "en"
                     }
                 ],
                 "primaryKey": "uri"
