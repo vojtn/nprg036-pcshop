@@ -55,48 +55,22 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "country",
-                        "titles": "country",
-                        "dc:description": "The country from the address",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:country-name"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "city",
-                        "titles": "city",
-                        "dc:description": "The city from the address",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:locality"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "streetLine",
-                        "titles": "streetLine",
-                        "dc:description": "The address street line",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:street-address"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "postCode",
-                        "titles": "postCode",
-                        "dc:description": "The address post code",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:postal-code"
-                    },
-                    {
-                        "@type": "Column",
                         "name": "customerId",
                         "titles": "customerId",
                         "dc:description": "Customer foreign key",
                         "required": true,
                         "datatype": "integer",
                         "suppressOutput": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "addressURI",
+                        "titles": "addressURI",
+                        "dc:description": "Address foreign key",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "schema:billingAddress",
+                        "valueUrl": "{+addressURI}"
                     }
                 ],
                 "primaryKey": "id",
@@ -106,6 +80,13 @@
                         "reference": {
                             "resource": "data-2.csv",
                             "columnReference": "id"
+                        }
+                    },
+                    {
+                        "columnReference": "addressURI",
+                        "reference": {
+                            "resource": "data-12.csv",
+                            "columnReference": "uri"
                         }
                     }
                 ]
@@ -175,42 +156,25 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "country",
-                        "titles": "country",
-                        "dc:description": "The country from the address",
+                        "name": "addressURI",
+                        "titles": "addressURI",
+                        "dc:description": "Address foreign key",
                         "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:country-name"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "city",
-                        "titles": "city",
-                        "dc:description": "The city from the address",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:locality"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "streetLine",
-                        "titles": "streetLine",
-                        "dc:description": "The address street line",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:street-address"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "postCode",
-                        "titles": "postCode",
-                        "dc:description": "The address post code",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:postal-code"
+                        "datatype": "anyURI",
+                        "propertyUrl": "schema:address",
+                        "valueUrl": "{+addressURI}"
                     }
                 ],
-                "primaryKey": "id"
+                "primaryKey": "id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "addressURI",
+                        "reference": {
+                            "resource": "data-12.csv",
+                            "columnReference": "uri"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -268,42 +232,25 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "country",
-                        "titles": "country",
-                        "dc:description": "The country from the address",
+                        "name": "addressURI",
+                        "titles": "addressURI",
+                        "dc:description": "Address foreign key",
                         "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:country-name"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "city",
-                        "titles": "city",
-                        "dc:description": "The city from the address",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:locality"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "streetLine",
-                        "titles": "streetLine",
-                        "dc:description": "The address street line",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:street-address"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "postCode",
-                        "titles": "postCode",
-                        "dc:description": "The address post code",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:postal-code"
+                        "datatype": "anyURI",
+                        "propertyUrl": "schema:address",
+                        "valueUrl": "{+addressURI}"
                     }
                 ],
-                "primaryKey": "id"
+                "primaryKey": "id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "addressURI",
+                        "reference": {
+                            "resource": "data-12.csv",
+                            "columnReference": "uri"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -610,42 +557,25 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "country",
-                        "titles": "country",
-                        "dc:description": "The country from the address",
+                        "name": "addressURI",
+                        "titles": "addressURI",
+                        "dc:description": "Address foreign key",
                         "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:country-name"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "city",
-                        "titles": "city",
-                        "dc:description": "The city from the address",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:locality"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "streetLine",
-                        "titles": "streetLine",
-                        "dc:description": "The address street line",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:street-address"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "postCode",
-                        "titles": "postCode",
-                        "dc:description": "The address post code",
-                        "required": true,
-                        "datatype": "string",
-                        "propertyUrl": "vcard:postal-code"
+                        "datatype": "anyURI",
+                        "propertyUrl": "schema:location",
+                        "valueUrl": "{+addressURI}"
                     }
                 ],
-                "primaryKey": "id"
+                "primaryKey": "id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "addressURI",
+                        "reference": {
+                            "resource": "data-12.csv",
+                            "columnReference": "uri"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -736,6 +666,63 @@
                         }
                     }
                 ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-12.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+uri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Address URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "vcard:Address"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "country",
+                        "titles": "country",
+                        "dc:description": "The country from the address",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:country-name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "city",
+                        "titles": "city",
+                        "dc:description": "The city from the address",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:locality"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "streetLine",
+                        "titles": "streetLine",
+                        "dc:description": "The address street line",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:street-address"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "postCode",
+                        "titles": "postCode",
+                        "dc:description": "The address post code",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:postal-code"
+                    }
+                ],
+                "primaryKey": "uri"
             }
         }
     ]
