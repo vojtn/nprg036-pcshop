@@ -28,15 +28,6 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "id",
-                        "titles": "id",
-                        "dc:description": "Order primary key",
-                        "required": true,
-                        "datatype": "integer",
-                        "suppressOutput": true
-                    },
-                    {
-                        "@type": "Column",
                         "name": "orderNumber",
                         "titles": "orderNumber",
                         "dc:description": "Identifier for tracking order state",
@@ -55,11 +46,11 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "customerId",
-                        "titles": "customerId",
+                        "name": "customerURI",
+                        "titles": "customerURI",
                         "dc:description": "Customer foreign key",
                         "required": true,
-                        "datatype": "integer",
+                        "datatype": "anyURI",
                         "suppressOutput": true
                     },
                     {
@@ -71,15 +62,21 @@
                         "datatype": "anyURI",
                         "propertyUrl": "schema:billingAddress",
                         "valueUrl": "{+addressURI}"
+                    },
+                    {
+                        "aboutUrl":"{+customerURI}",
+                        "propertyUrl":"schema:referencesOrder",
+                        "valueUrl":"{+uri}",
+                        "virtual":true
                     }
                 ],
-                "primaryKey": "id",
+                "primaryKey": "uri",
                 "foreignKeys": [
                     {
-                        "columnReference": "customerId",
+                        "columnReference": "customerURI",
                         "reference": {
                             "resource": "data-2.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     },
                     {
@@ -108,15 +105,6 @@
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "https://w3c.github.io/dpv/2.0/Customer"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "id",
-                        "titles": "id",
-                        "dc:description": "Customer primary key",
-                        "required": true,
-                        "datatype": "integer",
-                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -165,7 +153,7 @@
                         "valueUrl": "{+addressURI}"
                     }
                 ],
-                "primaryKey": "id",
+                "primaryKey": "uri",
                 "foreignKeys": [
                     {
                         "columnReference": "addressURI",
@@ -193,15 +181,6 @@
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "schema:EmployeeRole"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "id",
-                        "titles": "id",
-                        "dc:description": "Employee primary key",
-                        "required": true,
-                        "datatype": "integer",
-                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -241,7 +220,7 @@
                         "valueUrl": "{+addressURI}"
                     }
                 ],
-                "primaryKey": "id",
+                "primaryKey": "uri",
                 "foreignKeys": [
                     {
                         "columnReference": "addressURI",
@@ -261,38 +240,42 @@
                 "columns": [
                     {
                         "@type": "Column",
-                        "name": "employeeId",
-                        "titles": "employeeId",
+                        "name": "employeeURI",
+                        "titles": "employeeURI",
                         "dc:description": "Employee foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
-                        "name": "orderId",
-                        "titles": "orderId",
+                        "name": "orderURI",
+                        "titles": "orderURI",
                         "dc:description": "Order foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "aboutUrl":"{+orderURI}",
+                        "propertyUrl":"iol:isAssignedTo",
+                        "valueUrl":"{+employeeURI}"
                     }
                 ],
                 "primaryKey": [
-                    "employeeId",
-                    "orderId"
+                    "employeeURI",
+                    "orderURI"
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "employeeId",
+                        "columnReference": "employeeURI",
                         "reference": {
                             "resource": "data-3.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     },
                     {
-                        "columnReference": "orderId",
+                        "columnReference": "orderURI",
                         "reference": {
                             "resource": "data-1.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     }
                 ]
@@ -306,38 +289,42 @@
                 "columns": [
                     {
                         "@type": "Column",
-                        "name": "orderId",
-                        "titles": "orderId",
+                        "name": "orderURI",
+                        "titles": "orderURI",
                         "dc:description": "Order foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "aboutUrl":"{+orderURI}",
+                        "propertyUrl":"schema:orderedItem",
+                        "valueUrl":"{+productURI}"
                     },
                     {
                         "@type": "Column",
-                        "name": "productId",
-                        "titles": "productId",
+                        "name": "productURI",
+                        "titles": "productURI",
                         "dc:description": "Product foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": [
-                    "orderId",
-                    "productId"
+                    "orderURI",
+                    "productURI"
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "orderId",
+                        "columnReference": "orderURI",
                         "reference": {
                             "resource": "data-1.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     },
                     {
-                        "columnReference": "productId",
+                        "columnReference": "productURI",
                         "reference": {
                             "resource": "data-6.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     }
                 ]
@@ -359,15 +346,6 @@
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "schema:Product"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "id",
-                        "titles": "id",
-                        "dc:description": "Product primary key",
-                        "datatype": "integer",
-                        "required": true,
-                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -407,21 +385,22 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "brandId",
-                        "titles": "brandId",
+                        "name": "brandURI",
+                        "titles": "brandURI",
                         "dc:description": "Brand foreign key",
-                        "datatype": "integer",
+                        "datatype": "anyURI",
                         "required": true,
-                        "suppressOutput": true
+                        "propertyUrl":"schema:brand",
+                        "valueUrl":"{+brandURI}"
                     }
                 ],
-                "primaryKey": "id",
+                "primaryKey": "uri",
                 "foreignKeys": [
                     {
-                        "columnReference": "brandId",
+                        "columnReference": "brandURI",
                         "reference": {
                             "resource": "data-7.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     }
                 ]
@@ -446,15 +425,6 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "id",
-                        "titles": "id",
-                        "dc:description": "Brand primary key",
-                        "datatype": "integer",
-                        "required": true,
-                        "suppressOutput": true
-                    },
-                    {
-                        "@type": "Column",
                         "name": "name",
                         "titles": "name",
                         "dc:description": "Brand name",
@@ -472,7 +442,7 @@
                         "propertyUrl": "schema:email"
                     }
                 ],
-                "primaryKey": "id"
+                "primaryKey": "uri"
             }
         },
         {
@@ -483,38 +453,42 @@
                 "columns": [
                     {
                         "@type": "Column",
-                        "name": "warehouseId",
-                        "titles": "warehouseId",
+                        "name": "warehouseURI",
+                        "titles": "warehouseURI",
                         "dc:description": "Warehouse foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
-                        "name": "productId",
-                        "titles": "productId",
+                        "name": "productURI",
+                        "titles": "productURI",
                         "dc:description": "Product foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "aboutUrl":"{+productURI}",
+                        "propertyUrl":"schema:location",
+                        "valueUrl":"{+warehouseURI}"
                     }
                 ],
                 "primaryKey": [
-                    "warehouseId",
-                    "productId"
+                    "warehouseURI",
+                    "productURI"
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "warehouseId",
+                        "columnReference": "warehouseURI",
                         "reference": {
                             "resource": "data-9.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     },
                     {
-                        "columnReference": "productId",
+                        "columnReference": "productURI",
                         "reference": {
                             "resource": "data-6.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     }
                 ]
@@ -539,15 +513,6 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "id",
-                        "titles": "id",
-                        "dc:description": "Warehouse primary key",
-                        "required": true,
-                        "datatype": "integer",
-                        "suppressOutput": true
-                    },
-                    {
-                        "@type": "Column",
                         "name": "capacity",
                         "titles": "capacity",
                         "dc:description": "Total capacity of the warehouse",
@@ -566,7 +531,7 @@
                         "valueUrl": "{+addressURI}"
                     }
                 ],
-                "primaryKey": "id",
+                "primaryKey": "uri",
                 "foreignKeys": [
                     {
                         "columnReference": "addressURI",
@@ -586,38 +551,42 @@
                 "columns": [
                     {
                         "@type": "Column",
-                        "name": "employeeId",
-                        "titles": "employeeId",
+                        "name": "employeeURI",
+                        "titles": "employeeURI",
                         "dc:description": "Employee foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "aboutUrl":"{+employeeURI}",
+                        "propertyUrl":"schema:location",
+                        "valueUrl":"{+warehouseURI}"
                     },
                     {
                         "@type": "Column",
-                        "name": "warehouseId",
-                        "titles": "warehouseId",
+                        "name": "warehouseURI",
+                        "titles": "warehouseURI",
                         "dc:description": "Warehouse foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": [
-                    "employeeId",
-                    "warehouseId"
+                    "employeeURI",
+                    "warehouseURI"
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "warehouseId",
+                        "columnReference": "warehouseURI",
                         "reference": {
                             "resource": "data-9.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     },
                     {
-                        "columnReference": "employeeId",
+                        "columnReference": "employeeURI",
                         "reference": {
                             "resource": "data-3.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     }
                 ]
@@ -631,19 +600,12 @@
                 "columns": [
                     {
                         "@type": "Column",
-                        "name": "id",
-                        "titles": "id",
-                        "dc:description": "Contact primary key ",
-                        "datatype": "integer",
-                        "required": true
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "warehouseId",
-                        "titles": "warehouseId",
+                        "name": "warehouseURI",
+                        "titles": "warehouseURI",
                         "dc:description": "Warehouse foreign key",
-                        "datatype": "integer",
-                        "required": true
+                        "datatype": "anyURI",
+                        "required": true,
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -651,18 +613,19 @@
                         "titles": "contactInfo",
                         "dc:description": "Contact information",
                         "datatype": "string",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": [
-                    "id"
+                    "warehouseURI"
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "warehouseId",
+                        "columnReference": "warehouseURI",
                         "reference": {
                             "resource": "data-9.csv",
-                            "columnReference": "id"
+                            "columnReference": "uri"
                         }
                     }
                 ]
