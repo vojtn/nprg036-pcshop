@@ -1,4 +1,4 @@
-warehouseId,productId
-0,0
-1,1
-2,2
+warehouseURI,productURI
+km4c:Warehouse1,schema:Product1
+km4c:Warehouse2,schema:Product2
+km4c:Warehouse3,schema:Product3

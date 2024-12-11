@@ -1,2 +1,2 @@
-URI,id,name,email,startingDate,addressURI
-schema:Emp1,0,Dano Drevo,gabor@szekeshfehervar.sk,2014-02-17,vcard:Addr2
+URI,name,email,startingDate,addressURI
+schema:Emp1,Dano Drevo,gabor@szekeshfehervar.sk,2014-02-17,vcard:Addr2

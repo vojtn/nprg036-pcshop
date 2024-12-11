@@ -1,4 +1,4 @@
-URI,id,capacity,addressURI
-schema:Warehouse1,0,9,vcard:Addr2
-schema:Warehouse2,1,9,vcard:Addr3
-schema:Warehouse3,2,9,vcard:Addr3
+URI,capacity,addressURI
+schema:Warehouse1,9,vcard:Addr2
+schema:Warehouse2,9,vcard:Addr3
+schema:Warehouse3,9,vcard:Addr3

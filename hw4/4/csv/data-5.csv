@@ -1,6 +1,6 @@
-orderId,productId
-0,0
-0,1
-1,1
-1,2
-2,1
+orderURI,productURI
+schema:Ord1,schema:Product1
+schema:Ord1,schema:Product2
+schema:Ord2,schema:Product2
+schema:Ord2,schema:Product3
+schema:Ord3,schema:Product1

@@ -1,4 +1,4 @@
-URI,id,orderNumber,totalPrice,customerId,addressURI
-schema:Ord1,0,0,130,0,vcard:Addr1
-schema:Ord2,1,1,210,0,vcard:Addr1
-schema:Ord3,2,2,50,0,vcard:Addr1
+URI,orderNumber,totalPrice,customerURI,addressURI
+schema:Ord1,0,130,dpv:Cust1,vcard:Addr1
+schema:Ord2,1,210,dpv:Cust1,vcard:Addr1
+schema:Ord3,2,50,dpv:Cust1,vcard:Addr1

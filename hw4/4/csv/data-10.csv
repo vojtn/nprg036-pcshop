@@ -1,4 +1,4 @@
-employeeId,warehouseId
-0,0
-0,1
-0,2
+employeeURI,warehouseURI
+schema:Emp1,km4c:Warehouse1
+schema:Emp1,km4c:Warehouse2
+schema:Emp1,km4c:Warehouse3

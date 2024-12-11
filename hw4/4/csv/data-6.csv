@@ -1,4 +1,4 @@
-URI,id,price,name,sale,VAT,brandId
-schema:Product1,0,50,Logitech MX Keys,0,21,0
-schema:Product2,1,100,AMD Ryzen 5 7600,20,21,1
-schema:Product3,2,150,AMD Ryzen 7 5700X3D,20,21,1
+URI,price,name,sale,VAT,brandURI
+schema:Product1,50,Logitech MX Keys,0,21,schema:Brand1
+schema:Product2,100,AMD Ryzen 5 7600,20,21,schema:Brand2
+schema:Product3,150,AMD Ryzen 7 5700X3D,20,21,schema:Brand2

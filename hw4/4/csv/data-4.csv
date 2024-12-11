@@ -1,4 +1,4 @@
-employeeId,orderId
-0,0
-0,1
-0,2
+employeeURI,orderURI
+schema:Emp1,schema:Ord1
+schema:Emp1,schema:Ord2
+schema:Emp1,schema:Ord3
