@@ -31,12 +31,15 @@
         "registrationDate": {"@id" : "uiot:registrationDate"},
         "identifier": {"@id" : "schema:identifier"},
         "referencesOrder": {"@id" : "schema:referencesOrder"},
+        "ordered" : {"@reverse" : "referencesOrder"},
         "address": {"@id" : "schema:address"},
         "isAssignedTo": {"@id" : "iol:isAssignedTo"},
+        "handles": {"@reverse" : "isAssignedTo"},
         "orderNumber": {"@id" : "schema:orderNumber"},
         "billingAddress": {"@id" : "schema:billingAddress"},
         "discount": {"@id" : "schema:discount"},
-        "brand": {"@id" : "schema:brand"}
+        "brand": {"@id" : "schema:brand"},
+        "storedIn": {"@reverse" : "location"}
     },
     "@graph": [
     {
