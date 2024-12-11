@@ -90,14 +90,14 @@
             "capacity": 9,
             "email_f": { "@id": "mailto:warehousesupport1@ppcshop.cz"},
             "location": {"@id" : "vcard:Addr2"},
-            "storedIn": {"@id" : "schema:Product1"}
+            "storedIn": [{"@id" : "schema:Product1"}]
         },
         {
             "@id": "km4c:Warehouse2",
             "@type": "km4c:Warehouse_and_storage",
             "capacity": 9,
             "location": {"@id" : "vcard:Addr3"},
-            "storedIn": {"@id" : "schema:Product2"}
+            "storedIn": [{"@id" : "schema:Product2"}]
     
         },
         {
@@ -109,7 +109,7 @@
             { "@id": "mailto:warehousesupport3@ppcshop.cz"}
             ],
             "location": {"@id" : "vcard:Addr3"},
-            "storedIn": {"@id" : "schema:Product3"}
+            "storedIn": [{"@id" : "schema:Product3"}]
     
         },
         {

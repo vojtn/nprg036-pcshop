@@ -53,7 +53,7 @@
             "location": {
             "$ref": "#/$defs/address"
             },
-            "product": {
+            "storedIn": {
             "type": "array",
             "minItems": 0,
             "items": {
