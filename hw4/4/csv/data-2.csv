@@ -1,2 +1,2 @@
 URI,name,email,registrationDate,privileged,addressURI
-dpv:Cust1,Jožko Mrkvička,mailto:jozko@gmail.com,1998-04-10,VIP,vcard:Addr1
+dpv:Cust1,Jožko Mrkvička,mailto:jozko@gmail.com,1998-04-10T00:00:00Z,VIP,vcard:Addr1

@@ -64,10 +64,10 @@
                         "valueUrl": "{+addressURI}"
                     },
                     {
-                        "aboutUrl":"{+customerURI}",
-                        "propertyUrl":"schema:referencesOrder",
-                        "valueUrl":"{+uri}",
-                        "virtual":true
+                        "aboutUrl": "{+customerURI}",
+                        "propertyUrl": "schema:referencesOrder",
+                        "valueUrl": "{+uri}",
+                        "virtual": true
                     }
                 ],
                 "primaryKey": "uri",
@@ -130,7 +130,7 @@
                         "titles": "registrationDate",
                         "dc:description": "Registration date of the Customer",
                         "required": true,
-                        "datatype": "date",
+                        "datatype": "dateTime",
                         "propertyUrl": "uiot:registrationDate"
                     },
                     {
@@ -206,7 +206,7 @@
                         "titles": "startingDate",
                         "dc:description": "Starting date of the Employee",
                         "required": true,
-                        "datatype": "date",
+                        "datatype": "dateTime",
                         "propertyUrl": "schema:startDate"
                     },
                     {
@@ -254,9 +254,9 @@
                         "dc:description": "Order foreign key",
                         "datatype": "anyURI",
                         "required": true,
-                        "aboutUrl":"{+orderURI}",
-                        "propertyUrl":"iol:isAssignedTo",
-                        "valueUrl":"{+employeeURI}"
+                        "aboutUrl": "{+orderURI}",
+                        "propertyUrl": "iol:isAssignedTo",
+                        "valueUrl": "{+employeeURI}"
                     }
                 ],
                 "primaryKey": [
@@ -294,9 +294,9 @@
                         "dc:description": "Order foreign key",
                         "datatype": "anyURI",
                         "required": true,
-                        "aboutUrl":"{+orderURI}",
-                        "propertyUrl":"schema:orderedItem",
-                        "valueUrl":"{+productURI}"
+                        "aboutUrl": "{+orderURI}",
+                        "propertyUrl": "schema:orderedItem",
+                        "valueUrl": "{+productURI}"
                     },
                     {
                         "@type": "Column",
@@ -390,8 +390,8 @@
                         "dc:description": "Brand foreign key",
                         "datatype": "anyURI",
                         "required": true,
-                        "propertyUrl":"schema:brand",
-                        "valueUrl":"{+brandURI}"
+                        "propertyUrl": "schema:brand",
+                        "valueUrl": "{+brandURI}"
                     }
                 ],
                 "primaryKey": "uri",
@@ -467,9 +467,9 @@
                         "dc:description": "Product foreign key",
                         "datatype": "anyURI",
                         "required": true,
-                        "aboutUrl":"{+productURI}",
-                        "propertyUrl":"schema:location",
-                        "valueUrl":"{+warehouseURI}"
+                        "aboutUrl": "{+productURI}",
+                        "propertyUrl": "schema:location",
+                        "valueUrl": "{+warehouseURI}"
                     }
                 ],
                 "primaryKey": [
@@ -556,9 +556,9 @@
                         "dc:description": "Employee foreign key",
                         "datatype": "anyURI",
                         "required": true,
-                        "aboutUrl":"{+employeeURI}",
-                        "propertyUrl":"schema:location",
-                        "valueUrl":"{+warehouseURI}"
+                        "aboutUrl": "{+employeeURI}",
+                        "propertyUrl": "schema:location",
+                        "valueUrl": "{+warehouseURI}"
                     },
                     {
                         "@type": "Column",
