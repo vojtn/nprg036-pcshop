@@ -1,4 +1,4 @@
-id,capacity,country,city,streetLine,postCode
-0,9,Slovakia,Nitra,Dunajska 14,49411
-1,9,Czech republic,Praha,Za zahradou 2,16200
-2,9,Czech republic,Praha,Za zahradou 2,16200
+URI,id,capacity,country,city,streetLine,postCode
+schema:Warehouse1,0,9,Slovakia,Nitra,Dunajska 14,49411
+schema:Warehouse2,1,9,Czech republic,Praha,Za zahradou 2,16200
+schema:Warehouse3,2,9,Czech republic,Praha,Za zahradou 2,16200

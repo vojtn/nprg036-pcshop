@@ -1,2 +1,2 @@
-id,name,email,registrationDate,privileged,country,city,streetLine,postCode
-0,Jožko Mrkvička,mailto:jozko@gmail.com,1998-04-10,VIP,Hungary,Komarom,Cajkovskeho 2,16900
+URI,id,name,email,registrationDate,privileged,country,city,streetLine,postCode
+schema:Cust1,0,Jožko Mrkvička,mailto:jozko@gmail.com,1998-04-10,VIP,Hungary,Komarom,Cajkovskeho 2,16900

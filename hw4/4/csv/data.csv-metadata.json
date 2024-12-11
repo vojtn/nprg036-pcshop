@@ -1,0 +1,731 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "TableGroup",
+    "@id": "http://example.org/pcshop/csv-metadata.json",
+    "dc:description": "PC Shop Database",
+    "tables": [
+        {
+            "@type": "Table",
+            "url": "data-1.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+uri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Order URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:Order"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "id",
+                        "titles": "id",
+                        "dc:description": "Order primary key",
+                        "required": true,
+                        "datatype": "integer",
+                        "suppressOutput": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "orderNumber",
+                        "titles": "orderNumber",
+                        "dc:description": "Identifier for tracking order state",
+                        "required": true,
+                        "datatype": "integer",
+                        "propertyUrl": "schema:orderNumber"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "totalPrice",
+                        "titles": "totalPrice",
+                        "dc:description": "Total price of the order",
+                        "required": true,
+                        "datatype": "integer",
+                        "propertyUrl": "schema:price"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "country",
+                        "titles": "country",
+                        "dc:description": "The country from the address",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:country-name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "city",
+                        "titles": "city",
+                        "dc:description": "The city from the address",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:locality"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "streetLine",
+                        "titles": "streetLine",
+                        "dc:description": "The address street line",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:street-address"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "postCode",
+                        "titles": "postCode",
+                        "dc:description": "The address post code",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:postal-code"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "customerId",
+                        "titles": "customerId",
+                        "dc:description": "Customer foreign key",
+                        "required": true,
+                        "datatype": "integer",
+                        "suppressOutput": true
+                    }
+                ],
+                "primaryKey": "id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "customerId",
+                        "reference": {
+                            "resource": "data-2.csv",
+                            "columnReference": "id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-2.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+uri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Customer URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "https://w3c.github.io/dpv/2.0/Customer"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "id",
+                        "titles": "id",
+                        "dc:description": "Customer primary key",
+                        "required": true,
+                        "datatype": "integer",
+                        "suppressOutput": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Customer name",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "foaf:name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "email",
+                        "titles": "email",
+                        "dc:description": "Customer e-mail",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "foaf:mbox"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "registrationDate",
+                        "titles": "registrationDate",
+                        "dc:description": "Registration date of the Customer",
+                        "required": true,
+                        "datatype": "date",
+                        "propertyUrl": "uiot:registrationDate"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "privileged",
+                        "titles": "privileged",
+                        "dc:description": "Privileged status of the Customer",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "schema:identifier"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "country",
+                        "titles": "country",
+                        "dc:description": "The country from the address",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "vcard:country-name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "city",
+                        "titles": "city",
+                        "dc:description": "The city from the address",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "streetLine",
+                        "titles": "streetLine",
+                        "dc:description": "The street line from the address",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "postCode",
+                        "titles": "postCode",
+                        "dc:description": "The address post code",
+                        "required": true,
+                        "datatype": "string"
+                    }
+                ],
+                "primaryKey": "id"
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-3.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+uri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Employee URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:EmployeeRole"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "id",
+                        "titles": "id",
+                        "dc:description": "Employee primary key",
+                        "required": true,
+                        "datatype": "integer",
+                        "suppressOutput": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Employee name",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "foaf:name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "email",
+                        "titles": "email",
+                        "dc:description": "Employee e-mail",
+                        "required": true,
+                        "datatype": "string",
+                        "propertyUrl": "foaf:mbox"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "startingDate",
+                        "titles": "startingDate",
+                        "dc:description": "Starting date of the Employee",
+                        "required": true,
+                        "datatype": "date",
+                        "propertyUrl": "schema:startDate"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "country",
+                        "titles": "country",
+                        "dc:description": "The country from the address",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "city",
+                        "titles": "city",
+                        "dc:description": "The city from the address",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "streetLine",
+                        "titles": "streetLine",
+                        "dc:description": "The street line from the address",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "postCode",
+                        "titles": "postCode",
+                        "dc:description": "The address post code",
+                        "required": true,
+                        "datatype": "string"
+                    }
+                ],
+                "primaryKey": "id"
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-4.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "employeeId",
+                        "titles": "employeeId",
+                        "dc:description": "Employee foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "orderId",
+                        "titles": "orderId",
+                        "dc:description": "Order foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    }
+                ],
+                "primaryKey": [
+                    "employeeId",
+                    "orderId"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "employeeId",
+                        "reference": {
+                            "resource": "data-3.csv",
+                            "columnReference": "id"
+                        }
+                    },
+                    {
+                        "columnReference": "orderId",
+                        "reference": {
+                            "resource": "data-1.csv",
+                            "columnReference": "id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-5.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "orderId",
+                        "titles": "orderId",
+                        "dc:description": "Order foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "productId",
+                        "titles": "productId",
+                        "dc:description": "Product foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    }
+                ],
+                "primaryKey": [
+                    "orderId",
+                    "productId"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "orderId",
+                        "reference": {
+                            "resource": "data-1.csv",
+                            "columnReference": "id"
+                        }
+                    },
+                    {
+                        "columnReference": "productId",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-6.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+uri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Product URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:Product"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "id",
+                        "titles": "id",
+                        "dc:description": "Product primary key",
+                        "datatype": "integer",
+                        "required": true,
+                        "suppressOutput": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "price",
+                        "titles": "price",
+                        "dc:description": "Product price",
+                        "datatype": "integer",
+                        "required": true,
+                        "propertyUrl": "schema:price"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Product name",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "schema:name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "sale",
+                        "titles": "sale",
+                        "dc:description": "Product sale value",
+                        "datatype": "integer",
+                        "required": true,
+                        "propertyUrl": "schema:discount"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "VAT",
+                        "titles": "VAT",
+                        "dc:description": "Product value-added tax",
+                        "datatype": "integer",
+                        "required": true,
+                        "propertyUrl": "seasto:valueAddedTax"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "brandId",
+                        "titles": "brandId",
+                        "dc:description": "Brand foreign key",
+                        "datatype": "integer",
+                        "required": true,
+                        "suppressOutput": true
+                    }
+                ],
+                "primaryKey": "id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "brandId",
+                        "reference": {
+                            "resource": "data-7.csv",
+                            "columnReference": "id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-7.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+uri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Brand URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "schema:Brand"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "id",
+                        "titles": "id",
+                        "dc:description": "Brand primary key",
+                        "datatype": "integer",
+                        "required": true,
+                        "suppressOutput": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Brand name",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "schema:name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "companyEmail",
+                        "titles": "companyEmail",
+                        "dc:description": "Company email address (e.g., <mailto:email@example.com>)",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "schema:email"
+                    }
+                ],
+                "primaryKey": "id"
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-8.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "warehouseId",
+                        "titles": "warehouseId",
+                        "dc:description": "Warehouse foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "productId",
+                        "titles": "productId",
+                        "dc:description": "Product foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    }
+                ],
+                "primaryKey": [
+                    "warehouseId",
+                    "productId"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "warehouseId",
+                        "reference": {
+                            "resource": "data-9.csv",
+                            "columnReference": "id"
+                        }
+                    },
+                    {
+                        "columnReference": "productId",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-9.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+uri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "uri",
+                        "titles": "URI",
+                        "dc:description": "Warehouse URI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://www.disit.org/km4city/schema#Warehouse_and_storage"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "id",
+                        "titles": "id",
+                        "dc:description": "Warehouse primary key",
+                        "required": true,
+                        "datatype": "integer",
+                        "suppressOutput":true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "capacity",
+                        "titles": "capacity",
+                        "dc:description": "Total capacity of the warehouse",
+                        "required": true,
+                        "datatype": "integer",
+                        "propertyUrl": "oo:capacity"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "country",
+                        "titles": "country",
+                        "dc:description": "The country from the address",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "city",
+                        "titles": "city",
+                        "dc:description": "The city from the address",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "streetLine",
+                        "titles": "streetLine",
+                        "dc:description": "The address street line",
+                        "required": true,
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "postCode",
+                        "titles": "postCode",
+                        "dc:description": "The address post code",
+                        "required": true,
+                        "datatype": "string"
+                    }
+                ],
+                "primaryKey": "id"
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-10.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "employeeId",
+                        "titles": "employeeId",
+                        "dc:description": "Employee foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "warehouseId",
+                        "titles": "warehouseId",
+                        "dc:description": "Warehouse foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    }
+                ],
+                "primaryKey": [
+                    "employeeId",
+                    "warehouseId"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "warehouseId",
+                        "reference": {
+                            "resource": "data-9.csv",
+                            "columnReference": "id"
+                        }
+                    },
+                    {
+                        "columnReference": "employeeId",
+                        "reference": {
+                            "resource": "data-3.csv",
+                            "columnReference": "id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "data-11.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "id",
+                        "titles": "id",
+                        "dc:description": "Contact primary key ",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "warehouseId",
+                        "titles": "warehouseId",
+                        "dc:description": "Warehouse foreign key",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "contactInfo",
+                        "titles": "contactInfo",
+                        "dc:description": "Contact information",
+                        "datatype": "string",
+                        "required": true
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "warehouseId",
+                        "reference": {
+                            "resource": "data-9.csv",
+                            "columnReference": "id"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
