@@ -132,7 +132,7 @@
                         "dc:description": "Registration date of the Customer",
                         "required": true,
                         "datatype": "dateTime",
-                        "propertyUrl": "uiot:registrationDate"
+                        "propertyUrl": "http://www.w3id.org/urban-iot/core#registrationDate"
                     },
                     {
                         "@type": "Column",
@@ -258,7 +258,7 @@
                         "datatype": "anyURI",
                         "required": true,
                         "aboutUrl": "{+orderURI}",
-                        "propertyUrl": "iol:isAssignedTo",
+                        "propertyUrl": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isAssignedTo",
                         "valueUrl": "{+employeeURI}"
                     }
                 ],
@@ -619,7 +619,9 @@
                         "dc:description": "Contact information",
                         "datatype": "string",
                         "required": true,
-                        "suppressOutput": true
+                        "aboutUrl": "{+warehouseURI}",
+                        "propertyUrl": "foaf:mbox",
+                        "valueUrl": "mailto:{+contactInfo}"
                     }
                 ],
                 "primaryKey": [
