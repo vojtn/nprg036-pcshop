@@ -25,7 +25,7 @@
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "schema:Order"
-                    },                    
+                    },
                     {
                         "@type": "Column",
                         "name": "id",
@@ -233,7 +233,8 @@
                         "titles": "id",
                         "dc:description": "Employee primary key",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -241,7 +242,8 @@
                         "titles": "name",
                         "dc:description": "Employee name",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "foaf:name"
                     },
                     {
                         "@type": "Column",
@@ -249,7 +251,8 @@
                         "titles": "email",
                         "dc:description": "Employee e-mail",
                         "required": true,
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "foaf:mbox"
                     },
                     {
                         "@type": "Column",
@@ -257,7 +260,8 @@
                         "titles": "startingDate",
                         "dc:description": "Starting date of the Employee",
                         "required": true,
-                        "datatype": "date"
+                        "datatype": "date",
+                        "propertyUrl": "schema:startDate"
                     },
                     {
                         "@type": "Column",
@@ -408,7 +412,8 @@
                         "titles": "id",
                         "dc:description": "Product primary key",
                         "datatype": "integer",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -416,7 +421,8 @@
                         "titles": "price",
                         "dc:description": "Product price",
                         "datatype": "integer",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "schema:price"
                     },
                     {
                         "@type": "Column",
@@ -424,7 +430,8 @@
                         "titles": "name",
                         "dc:description": "Product name",
                         "datatype": "string",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "schema:name"
                     },
                     {
                         "@type": "Column",
@@ -432,7 +439,8 @@
                         "titles": "sale",
                         "dc:description": "Product sale value",
                         "datatype": "integer",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "schema:discount"
                     },
                     {
                         "@type": "Column",
@@ -440,7 +448,8 @@
                         "titles": "VAT",
                         "dc:description": "Product value-added tax",
                         "datatype": "integer",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "seasto:valueAddedTax"
                     },
                     {
                         "@type": "Column",
@@ -448,7 +457,8 @@
                         "titles": "brandId",
                         "dc:description": "Brand foreign key",
                         "datatype": "integer",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": "id",
@@ -486,7 +496,8 @@
                         "titles": "id",
                         "dc:description": "Brand primary key",
                         "datatype": "integer",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     },
                     {
                         "@type": "Column",
@@ -494,7 +505,8 @@
                         "titles": "name",
                         "dc:description": "Brand name",
                         "datatype": "string",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "schema:name"
                     },
                     {
                         "@type": "Column",
@@ -502,7 +514,8 @@
                         "titles": "companyEmail",
                         "dc:description": "Company email address (e.g., <mailto:email@example.com>)",
                         "datatype": "string",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "schema:email"
                     }
                 ],
                 "primaryKey": "id"
@@ -576,7 +589,8 @@
                         "titles": "id",
                         "dc:description": "Warehouse primary key",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "suppressOutput":true
                     },
                     {
                         "@type": "Column",
@@ -584,7 +598,8 @@
                         "titles": "capacity",
                         "dc:description": "Total capacity of the warehouse",
                         "required": true,
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "propertyUrl": "oo:capacity"
                     },
                     {
                         "@type": "Column",
