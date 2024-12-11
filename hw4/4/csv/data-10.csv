@@ -1,4 +1,4 @@
 employeeURI,warehouseURI
-schema:Emp1,km4c:Warehouse1
-schema:Emp1,km4c:Warehouse2
-schema:Emp1,km4c:Warehouse3
+schema:Emp1,http://www.disit.org/km4city/schema#Warehouse1
+schema:Emp1,http://www.disit.org/km4city/schema#Warehouse2
+schema:Emp1,http://www.disit.org/km4city/schema#Warehouse3

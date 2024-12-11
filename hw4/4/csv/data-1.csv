@@ -1,4 +1,4 @@
 URI,orderNumber,totalPrice,customerURI,addressURI
-schema:Ord1,0,130,dpv:Cust1,vcard:Addr1
-schema:Ord2,1,210,dpv:Cust1,vcard:Addr1
-schema:Ord3,2,50,dpv:Cust1,vcard:Addr1
+schema:Ord1,0,130,https://w3c.github.io/dpv/2.0/Cust1,vcard:Addr1
+schema:Ord2,1,210,https://w3c.github.io/dpv/2.0/Cust1,vcard:Addr1
+schema:Ord3,2,50,https://w3c.github.io/dpv/2.0/Cust1,vcard:Addr1

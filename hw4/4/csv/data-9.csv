@@ -1,4 +1,4 @@
 URI,capacity,addressURI
-schema:Warehouse1,9,vcard:Addr2
-schema:Warehouse2,9,vcard:Addr3
-schema:Warehouse3,9,vcard:Addr3
+http://www.disit.org/km4city/schema#Warehouse1,9,vcard:Addr2
+http://www.disit.org/km4city/schema#Warehouse2,9,vcard:Addr3
+http://www.disit.org/km4city/schema#Warehouse3,9,vcard:Addr3
