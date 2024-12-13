@@ -13,13 +13,13 @@
         @prefix seasto: <https://w3id.org/seas/> .
         @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
-    dpv:Cust1 a dpv:Customer ;
+    ex:Cust1 a dpv:Customer ;
         foaf:name "Jožko Mrkvička"@en ;
         foaf:mbox <mailto:jozko@gmail.com> ;
         uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime ;
         schema:identifier "VIP"@en . 
 
-    vcard:Addr1 a vcard:Address ;
+    ex:Addr1 a vcard:Address ;
         vcard:country-name "Hungary"@en ;
         vcard:locality "Komarom"@en ;
         vcard:street-address "Cajkovskeho 2"@en ;

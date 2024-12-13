@@ -13,135 +13,135 @@
         @prefix seasto: <https://w3id.org/seas/> .
         @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
-    dpv:Cust1 a dpv:Customer ;
+    ex:Cust1 a dpv:Customer ;
         foaf:name "Jožko Mrkvička"@en ;
         foaf:mbox <mailto:jozko@gmail.com> ;
         uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime ;
         schema:identifier "VIP"@en . 
 
-    schema:Emp1 a schema:EmployeeRole ;
+    ex:Emp1 a schema:EmployeeRole ;
         foaf:name "Dano Drevo"@en ;
         foaf:mbox <mailto:gabor@szekeshfehervar.sk> ;
         schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime . 
 
-    schema:Brand1 a schema:Brand ;
+    ex:Brand1 a schema:Brand ;
         schema:name "Logitech"@en ;
         schema:email <mailto:support@logitech.com> . 
 
-    schema:Brand2 a schema:Brand ;
+    ex:Brand2 a schema:Brand ;
         schema:name "AMD"@en ;
         schema:email <mailto:support@amd.com> . 
 
-    vcard:Addr1 a vcard:Address ;
+    ex:Addr1 a vcard:Address ;
         vcard:country-name "Hungary"@en ;
         vcard:locality "Komarom"@en ;
         vcard:street-address "Cajkovskeho 2"@en ;
         vcard:postal-code "16900"@en . 
 
-    vcard:Addr2 a vcard:Address ;
+    ex:Addr2 a vcard:Address ;
         vcard:country-name "Slovakia"@en ;
         vcard:locality "Nitra"@en ;
         vcard:street-address "Dunajska 14"@en ;
         vcard:postal-code "49411"@en . 
 
-    vcard:Addr3 a vcard:Address ;
+    ex:Addr3 a vcard:Address ;
         vcard:country-name "Czech republic"@en ;
         vcard:locality "Praha"@en ;
         vcard:street-address "Za zahradou 2"@en ;
         vcard:postal-code "16200"@en . 
 
-    schema:Ord1 a schema:Order ;
+    ex:Ord1 a schema:Order ;
         schema:orderNumber 0 ;
         schema:price 130 . 
 
-    schema:Ord2 a schema:Order ;
+    ex:Ord2 a schema:Order ;
         schema:orderNumber 1 ;
         schema:price 210 . 
 
-    schema:Ord3 a schema:Order ;
+    ex:Ord3 a schema:Order ;
         schema:orderNumber 2 ;
         schema:price 50 . 
 
-    km4c:Warehouse1 a km4c:Warehouse_and_storage ;
+    ex:Warehouse1 a km4c:Warehouse_and_storage ;
         oo:capacity 9 ;
         foaf:mbox <mailto:warehousesupport1@ppcshop.cz> . 
 
-    km4c:Warehouse2 a km4c:Warehouse_and_storage ;
+    ex:Warehouse2 a km4c:Warehouse_and_storage ;
         oo:capacity 9 ;
         foaf:mbox <mailto:warehousesupport2@ppcshop.cz> . 
 
-    km4c:Warehouse3 a km4c:Warehouse_and_storage ;
+    ex:Warehouse3 a km4c:Warehouse_and_storage ;
         oo:capacity 9 ;
         foaf:mbox <mailto:warehousesupport3@ppcshop.cz> . 
 
-    schema:Product1 a schema:Product ;
+    ex:Product1 a schema:Product ;
         schema:price 50 ;
         schema:name "Logitech MX Keys"@en ;
         schema:discount 0 ;
         seasto:valueAddedTax 21 . 
 
-    schema:Product2 a schema:Product ;
+    ex:Product2 a schema:Product ;
         schema:price 100 ;
         schema:name "AMD Ryzen 5 7600"@en ;
         schema:discount 20 ;
         seasto:valueAddedTax 21 . 
 
-    schema:Product3 a schema:Product ;
+    ex:Product3 a schema:Product ;
         schema:price 150 ;
         schema:name "AMD Ryzen 7 5700X3D"@en ;
         schema:discount 20 ;
         seasto:valueAddedTax 21 . 
 
-    dpv:Cust1 schema:referencesOrder schema:Ord1 . 
+    ex:Cust1 schema:referencesOrder ex:Ord1 . 
 
-    dpv:Cust1 schema:referencesOrder schema:Ord2 . 
+    ex:Cust1 schema:referencesOrder ex:Ord2 . 
 
-    dpv:Cust1 schema:referencesOrder schema:Ord3 . 
+    ex:Cust1 schema:referencesOrder ex:Ord3 . 
 
-    schema:Emp1 schema:location km4c:Warehouse1 . 
+    ex:Emp1 schema:location ex:Warehouse1 . 
 
-    schema:Emp1 schema:location km4c:Warehouse2 . 
+    ex:Emp1 schema:location ex:Warehouse2 . 
 
-    schema:Emp1 schema:location km4c:Warehouse3 . 
+    ex:Emp1 schema:location ex:Warehouse3 . 
 
-    schema:Ord1 schema:orderedItem schema:Product1 . 
+    ex:Ord1 schema:orderedItem ex:Product1 . 
 
-    schema:Ord1 schema:orderedItem schema:Product2 . 
+    ex:Ord1 schema:orderedItem ex:Product2 . 
 
-    schema:Ord1 schema:billingAddress vcard:Addr1 . 
+    ex:Ord1 schema:billingAddress ex:Addr1 . 
 
-    schema:Ord1 iol:isAssignedTo schema:Emp1 . 
+    ex:Ord1 iol:isAssignedTo ex:Emp1 . 
 
-    schema:Ord2 schema:orderedItem schema:Product2 . 
+    ex:Ord2 schema:orderedItem ex:Product2 . 
 
-    schema:Ord2 schema:orderedItem schema:Product3 . 
+    ex:Ord2 schema:orderedItem ex:Product3 . 
 
-    schema:Ord2 schema:billingAddress vcard:Addr1 . 
+    ex:Ord2 schema:billingAddress ex:Addr1 . 
 
-    schema:Ord2 iol:isAssignedTo schema:Emp1 . 
+    ex:Ord2 iol:isAssignedTo ex:Emp1 . 
 
-    schema:Ord3 schema:orderedItem schema:Product1 . 
+    ex:Ord3 schema:orderedItem ex:Product1 . 
 
-    schema:Ord3 schema:billingAddress vcard:Addr1 . 
+    ex:Ord3 schema:billingAddress ex:Addr1 . 
 
-    schema:Ord3 iol:isAssignedTo schema:Emp1 . 
+    ex:Ord3 iol:isAssignedTo ex:Emp1 . 
 
-    schema:Product1 schema:brand schema:Brand1 . 
+    ex:Product1 schema:brand ex:Brand1 . 
 
-    schema:Product2 schema:brand schema:Brand2 . 
+    ex:Product2 schema:brand ex:Brand2 . 
 
-    schema:Product3 schema:brand schema:Brand2 . 
+    ex:Product3 schema:brand ex:Brand2 . 
 
-    schema:Product1 schema:location km4c:Warehouse1 . 
+    ex:Product1 schema:location ex:Warehouse1 . 
 
-    km4c:Warehouse1 schema:location vcard:Addr2 . 
+    ex:Warehouse1 schema:location ex:Addr2 . 
 
-    schema:Product2 schema:location km4c:Warehouse2 . 
+    ex:Product2 schema:location ex:Warehouse2 . 
 
-    km4c:Warehouse2 schema:location vcard:Addr3 . 
+    ex:Warehouse2 schema:location ex:Addr3 . 
 
-    schema:Product3 schema:location km4c:Warehouse3 . 
+    ex:Product3 schema:location ex:Warehouse3 . 
 
-    km4c:Warehouse3 schema:location vcard:Addr3 . 
+    ex:Warehouse3 schema:location ex:Addr3 . 
 
     
