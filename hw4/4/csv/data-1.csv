@@ -1,4 +1,4 @@
 URI,orderNumber,totalPrice,customerURI,addressURI
-ex:Ord1,0,130,https://example.org/Cust1,ex:Addr1
-ex:Ord2,1,210,https://example.org/Cust1,ex:Addr1
-ex:Ord3,2,50,https://example.org/Cust1,ex:Addr1
+ex:Ord1,0,130,http://example.org/Cust1,ex:Addr1
+ex:Ord2,1,210,http://example.org/Cust1,ex:Addr1
+ex:Ord3,2,50,http://example.org/Cust1,ex:Addr1
