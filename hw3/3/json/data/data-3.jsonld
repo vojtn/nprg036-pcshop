@@ -13,6 +13,7 @@
         "oo": "http://purl.org/openorg/",
         "seasto": "https://w3id.org/seas/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "http://example.org/",
 
         "location" : {"@id" : "schema:location"},
         "startDate": {"@id": "schema:startDate"},
@@ -43,34 +44,34 @@
     },
     "@graph": [
         {
-            "@id": "schema:Emp1",
+            "@id": "ex:Emp1",
             "@type": "schema:EmployeeRole",
             "name_f": { "@value": "Dano Drevo", "@language": "en" },
             "email_f": { "@id": "mailto:gabor@szekeshfehervar.sk"},
             "startDate": { "@value": "2014-02-17T00:00:00Z", "@type": "xsd:dateTime" },
-            "location": ["km4c:Warehouse1", "km4c:Warehouse2", "km4c:Warehouse3"],
-            "address": {"@id" : "vcard:Addr2"}
+            "location": ["ex:Warehouse1", "ex:Warehouse2", "ex:Warehouse3"],
+            "address": {"@id" : "ex:Addr2"}
         },
         {
-            "@id": "schema:Brand1",
+            "@id": "ex:Brand1",
             "@type": "schema:Brand",
             "name_sch": { "@value": "Logitech", "@language": "en" },
             "email_sch": { "@id": "mailto:support@logitech.com"}
         },
         {
-            "@id": "schema:Brand2",
+            "@id": "ex:Brand2",
             "@type": "schema:Brand",
             "name_sch": { "@value": "AMD", "@language": "en" },
             "email_sch": { "@id": "mailto:support@amd.com"}
         },
         {
-            "@id": "schema:Brand3",
+            "@id": "ex:Brand3",
             "@type": "schema:Brand",
             "name_sch": { "@value": "TSMC", "@language": "en" },
             "email_sch": { "@id": "mailto:support@tsmc.com"}
         },
         {
-            "@id": "vcard:Addr1",
+            "@id": "ex:Addr1",
             "@type": "vcard:Address",
             "countryName": { "@value": "Hungary", "@language": "en" },
             "locality": { "@value": "Komarom", "@language": "en" },
@@ -78,7 +79,7 @@
             "postalCode": { "@value": "16900", "@language": "en" }
         },
         {
-            "@id": "vcard:Addr2",
+            "@id": "ex:Addr2",
             "@type": "vcard:Address",
             "countryName": { "@value": "Slovakia", "@language": "en" },
             "locality": { "@value": "Nitra", "@language": "en" },
@@ -86,7 +87,7 @@
             "postalCode": { "@value": "49411", "@language": "en" }
         },
         {
-            "@id": "vcard:Addr3",
+            "@id": "ex:Addr3",
             "@type": "vcard:Address",
             "countryName": { "@value": "Czech republic", "@language": "en" },
             "locality": { "@value": "Praha", "@language": "en" },
@@ -94,59 +95,59 @@
             "postalCode": { "@value": "16200", "@language": "en" }
         },
         {
-            "@id": "km4c:Warehouse1",
+            "@id": "ex:Warehouse1",
             "@type": "km4c:Warehouse_and_storage",
             "capacity": 9,
             "email_f": { "@id": "mailto:warehousesupport1@ppcshop.cz"},
-            "location": {"@id" : "vcard:Addr2"},
-            "storedIn": [{"@id" : "schema:Product1"}]
+            "location": {"@id" : "ex:Addr2"},
+            "storedIn": [{"@id" : "ex:Product1"}]
         },
         {
-            "@id": "km4c:Warehouse2",
+            "@id": "ex:Warehouse2",
             "@type": "km4c:Warehouse_and_storage",
             "capacity": 9,
-            "location": {"@id" : "vcard:Addr3"},
-            "storedIn": [{"@id" : "schema:Product2"}]
+            "location": {"@id" : "ex:Addr3"},
+            "storedIn": [{"@id" : "ex:Product2"}]
     
         },
         {
-            "@id": "km4c:Warehouse3",
+            "@id": "ex:Warehouse3",
             "@type": "km4c:Warehouse_and_storage",
             "capacity": 9,
             "email_f": [
             { "@id": "mailto:dwad@ppcshop.cz"},
             { "@id": "mailto:warehousesupport3@ppcshop.cz"}
             ],
-            "location": {"@id" : "vcard:Addr3"},
-            "storedIn": [{"@id" : "schema:Product3"}]
+            "location": {"@id" : "ex:Addr3"},
+            "storedIn": [{"@id" : "ex:Product3"}]
     
         },
         {
-            "@id": "schema:Product1",
+            "@id": "ex:Product1",
             "@type": "schema:Product",
             "price": 50,
             "name_sch": { "@value": "Logitech MX Keys", "@language": "en" },
             "discount": 0,
             "VAT": 21,
-            "brand": {"@id" : "schema:Brand1"}
+            "brand": {"@id" : "ex:Brand1"}
         },
         {
-            "@id": "schema:Product2",
+            "@id": "ex:Product2",
             "@type": "schema:Product",
             "price": 100,
             "name_sch": { "@value": "AMD Ryzen 5 7600", "@language": "en" },
             "discount": 20,
             "VAT": 21,
-            "brand": {"@id" : "schema:Brand2"}
+            "brand": {"@id" : "ex:Brand2"}
         },
         {
-            "@id": "schema:Product3",
+            "@id": "ex:Product3",
             "@type": "schema:Product",
             "price": 150,
             "name_sch": { "@value": "AMD Ryzen 7 5700X3D", "@language": "en" },
             "discount": 20,
             "VAT": 21,
-            "brand": {"@id" : "schema:Brand2"}
+            "brand": {"@id" : "ex:Brand2"}
         }
     ]
 }

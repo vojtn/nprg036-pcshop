@@ -13,6 +13,7 @@
         "oo": "http://purl.org/openorg/",
         "seasto": "https://w3id.org/seas/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "http://example.org/",
 
         "location" : {"@id" : "schema:location"},
         "startDate": {"@id": "schema:startDate"},
@@ -45,7 +46,7 @@
     "@graph": [
     
     {
-        "@id": "schema:Product1",
+        "@id": "ex:Product1",
         "@type": "schema:Product",
         "price": 50,
         "name_sch": { "@value": "Logitech MX Keys", "@language": "en" },
@@ -53,7 +54,7 @@
         "VAT": 21
     },
     {
-        "@id": "schema:Product2",
+        "@id": "ex:Product2",
         "@type": "schema:Product",
         "price": 100,
         "name_sch": { "@value": "AMD Ryzen 5 7600", "@language": "en" },
@@ -61,7 +62,7 @@
         "VAT": 21
     },
     {
-        "@id": "schema:Product3",
+        "@id": "ex:Product3",
         "@type": "schema:Product",
         "price": 150,
         "name_sch": { "@value": "AMD Ryzen 7 5700X3D", "@language": "en" },
@@ -69,22 +70,22 @@
         "VAT": 21
     },
     {
-        "@id": "schema:Brand1",
+        "@id": "ex:Brand1",
         "@type": "schema:Brand",
         "name_sch": { "@value": "Logitech", "@language": "en" },
         "email_sch": { "@id": "mailto:support@logitech.com"},
         "revBrand": [
-            {"@id": "schema:Product1"}
+            {"@id": "ex:Product1"}
         ]
     },
     {
-        "@id": "schema:Brand2",
+        "@id": "ex:Brand2",
         "@type": "schema:Brand",
         "name_sch": { "@value": "AMD", "@language": "en" },
         "email_sch": { "@id": "mailto:support@amd.com"},
         "revBrand": [ 
-            {"@id": "schema:Product2"},
-            {"@id": "schema:Product3"}
+            {"@id": "ex:Product2"},
+            {"@id": "ex:Product3"}
         ]
     },
     {

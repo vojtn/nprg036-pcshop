@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../schemas/schema-1.xsd">
-    <order id="schema:Ord1">
+    <order id="ex:Ord1">
         <orderNumber>0</orderNumber>
         <totalPrice>130</totalPrice>
-        <customer id="dpv:Cust1">
+        <customer id="ex:Cust1">
             <name xml:lang="en">Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
-            <address id="vcard:Addr1">
+            <address id="ex:Addr1">
                 <country xml:lang="en">Hungary</country>
                 <city xml:lang="en">Komarom</city>
                 <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
                 <postCode xml:lang="en">16900</postCode>
             </address>
         </customer>
-        <product id="schema:Product1">
+        <product id="ex:Product1">
             <price>50</price>
             <name xml:lang="en">Logitech MX Keys</name>
             <sale>0</sale>
             <VAT>21</VAT>
-            <brand id="schema:Brand1">
+            <brand id="ex:Brand1">
                 <name xml:lang="en">Logitech</name>
                 <companyEmail>support@logitech.com</companyEmail>
             </brand>
         </product>
-        <product id="schema:Product2">
+        <product id="ex:Product2">
             <price>100</price>
             <name xml:lang="en">AMD Ryzen 5 7600</name>
             <sale>20</sale>
             <VAT>21</VAT>
-            <brand id="schema:Brand2">
+            <brand id="ex:Brand2">
                 <name xml:lang="en">AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
-        <address id="vcard:Addr1">
+        <address id="ex:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
             <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
             <postCode xml:lang="en">16900</postCode>
         </address>
-        <employee id="schema:Emp1">
+        <employee id="ex:Emp1">
             <name xml:lang="en">Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
             <startingDate>2014-02-17T00:00:00Z</startingDate>
-            <address id="vcard:Addr2">
+            <address id="ex:Addr2">
                 <country xml:lang="en">Slovakia</country>
                 <city xml:lang="en">Nitra</city>
                 <streetLine xml:lang="en">Dunajska 14</streetLine>
                 <postCode xml:lang="en">49411</postCode>
             </address>
-            <warehouse id="km4c:Warehouse1">
+            <warehouse id="ex:Warehouse1">
                 <capacity>9</capacity>
                 <contact>warehousesupport1@ppcshop.cz</contact>
-                <address id="vcard:Addr2">
+                <address id="ex:Addr2">
                     <country xml:lang="en">Slovakia</country>
                     <city xml:lang="en">Nitra</city>
                     <streetLine xml:lang="en">Dunajska 14</streetLine>
                     <postCode xml:lang="en">49411</postCode>
                 </address>
-                <product id="schema:Product1">
+                <product id="ex:Product1">
                     <price>50</price>
                     <name xml:lang="en">Logitech MX Keys</name>
                     <sale>0</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand1">
+                    <brand id="ex:Brand1">
                         <name xml:lang="en">Logitech</name>
                         <companyEmail>support@logitech.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse2">
+            <warehouse id="ex:Warehouse2">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
-                <address id="vcard:Addr3">
+                <address id="ex:Addr3">
                     <country xml:lang="en">Czech republic</country>
                     <city xml:lang="en">Praha</city>
                     <streetLine xml:lang="en">Za zahradou 2</streetLine>
                     <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product id="schema:Product2">
+                <product id="ex:Product2">
                     <price>100</price>
                     <name xml:lang="en">AMD Ryzen 5 7600</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand2">
+                    <brand id="ex:Brand2">
                         <name xml:lang="en">AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse3">
+            <warehouse id="ex:Warehouse3">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <address id="vcard:Addr3">
+                <address id="ex:Addr3">
                     <country xml:lang="en">Czech republic</country>
                     <city xml:lang="en">Praha</city>
                     <streetLine xml:lang="en">Za zahradou 2</streetLine>
                     <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product id="schema:Product3">
+                <product id="ex:Product3">
                     <price>150</price>
                     <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand2">
+                    <brand id="ex:Brand2">
                         <name xml:lang="en">AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
@@ -114,112 +114,112 @@
             </warehouse>
         </employee>
     </order>
-    <order id="schema:Ord2">
+    <order id="ex:Ord2">
         <orderNumber>1</orderNumber>
         <totalPrice>210</totalPrice>
-        <customer id="dpv:Cust1">
+        <customer id="ex:Cust1">
             <name xml:lang="en">Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
-            <address id="vcard:Addr1">
+            <address id="ex:Addr1">
                 <country xml:lang="en">Hungary</country>
                 <city xml:lang="en">Komarom</city>
                 <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
                 <postCode xml:lang="en">16900</postCode>
             </address>
         </customer>
-        <product id="schema:Product2">
+        <product id="ex:Product2">
             <price>100</price>
             <name xml:lang="en">AMD Ryzen 5 7600</name>
             <sale>20</sale>
             <VAT>21</VAT>
-            <brand id="schema:Brand2">
+            <brand id="ex:Brand2">
                 <name xml:lang="en">AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
-        <product id="schema:Product3">
+        <product id="ex:Product3">
             <price>150</price>
             <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
             <sale>20</sale>
             <VAT>21</VAT>
-            <brand id="schema:Brand2">
+            <brand id="ex:Brand2">
                 <name xml:lang="en">AMD</name>
                 <companyEmail>support@amd.com</companyEmail>
             </brand>
         </product>
-        <address id="vcard:Addr1">
+        <address id="ex:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
             <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
             <postCode xml:lang="en">16900</postCode>
         </address>
-        <employee id="schema:Emp1">
+        <employee id="ex:Emp1">
             <name xml:lang="en">Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
             <startingDate>2014-02-17T00:00:00Z</startingDate>
-            <address id="vcard:Addr2">
+            <address id="ex:Addr2">
                 <country xml:lang="en">Slovakia</country>
                 <city xml:lang="en">Nitra</city>
                 <streetLine xml:lang="en">Dunajska 14</streetLine>
                 <postCode xml:lang="en">49411</postCode>
             </address>
-            <warehouse id="km4c:Warehouse1">
+            <warehouse id="ex:Warehouse1">
                 <capacity>9</capacity>
                 <contact>warehousesupport1@ppcshop.cz</contact>
-                <address id="vcard:Addr2">
+                <address id="ex:Addr2">
                     <country xml:lang="en">Slovakia</country>
                     <city xml:lang="en">Nitra</city>
                     <streetLine xml:lang="en">Dunajska 14</streetLine>
                     <postCode xml:lang="en">49411</postCode>
                 </address>
-                <product id="schema:Product1">
+                <product id="ex:Product1">
                     <price>50</price>
                     <name xml:lang="en">Logitech MX Keys</name>
                     <sale>0</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand1">
+                    <brand id="ex:Brand1">
                         <name xml:lang="en">Logitech</name>
                         <companyEmail>support@logitech.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse2">
+            <warehouse id="ex:Warehouse2">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
-                <address id="vcard:Addr3">
+                <address id="ex:Addr3">
                     <country xml:lang="en">Czech republic</country>
                     <city xml:lang="en">Praha</city>
                     <streetLine xml:lang="en">Za zahradou 2</streetLine>
                     <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product id="schema:Product2">
+                <product id="ex:Product2">
                     <price>100</price>
                     <name xml:lang="en">AMD Ryzen 5 7600</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand2">
+                    <brand id="ex:Brand2">
                         <name xml:lang="en">AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse3">
+            <warehouse id="ex:Warehouse3">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <address id="vcard:Addr3">
+                <address id="ex:Addr3">
                     <country xml:lang="en">Czech republic</country>
                     <city xml:lang="en">Praha</city>
                     <streetLine xml:lang="en">Za zahradou 2</streetLine>
                     <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product id="schema:Product3">
+                <product id="ex:Product3">
                     <price>150</price>
                     <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand2">
+                    <brand id="ex:Brand2">
                         <name xml:lang="en">AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
@@ -227,102 +227,102 @@
             </warehouse>
         </employee>
     </order>
-    <order id="schema:Ord3">
+    <order id="ex:Ord3">
         <orderNumber>2</orderNumber>
         <totalPrice>50</totalPrice>
-        <customer id="dpv:Cust1">
+        <customer id="ex:Cust1">
             <name xml:lang="en">Jožko Mrkvička</name>
             <email>jozko@gmail.com</email>
             <registrationDate>1998-04-10T00:00:00Z</registrationDate>
             <identifier xml:lang="en">VIP</identifier>
-            <address id="vcard:Addr1">
+            <address id="ex:Addr1">
                 <country xml:lang="en">Hungary</country>
                 <city xml:lang="en">Komarom</city>
                 <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
                 <postCode xml:lang="en">16900</postCode>
             </address>
         </customer>
-        <product id="schema:Product1">
+        <product id="ex:Product1">
             <price>50</price>
             <name xml:lang="en">Logitech MX Keys</name>
             <sale>0</sale>
             <VAT>21</VAT>
-            <brand id="schema:Brand1">
+            <brand id="ex:Brand1">
                 <name xml:lang="en">Logitech</name>
                 <companyEmail>support@logitech.com</companyEmail>
             </brand>
         </product>
-        <address id="vcard:Addr1">
+        <address id="ex:Addr1">
             <country xml:lang="en">Hungary</country>
             <city xml:lang="en">Komarom</city>
             <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
             <postCode xml:lang="en">16900</postCode>
         </address>
-        <employee id="schema:Emp1">
+        <employee id="ex:Emp1">
             <name xml:lang="en">Dano Drevo</name>
             <email>gabor@szekeshfehervar.sk</email>
             <startingDate>2014-02-17T00:00:00Z</startingDate>
-            <address id="vcard:Addr2">
+            <address id="ex:Addr2">
                 <country xml:lang="en">Slovakia</country>
                 <city xml:lang="en">Nitra</city>
                 <streetLine xml:lang="en">Dunajska 14</streetLine>
                 <postCode xml:lang="en">49411</postCode>
             </address>
-            <warehouse id="km4c:Warehouse1">
+            <warehouse id="ex:Warehouse1">
                 <capacity>9</capacity>
                 <contact>warehousesupport1@ppcshop.cz</contact>
-                <address id="vcard:Addr2">
+                <address id="ex:Addr2">
                     <country xml:lang="en">Slovakia</country>
                     <city xml:lang="en">Nitra</city>
                     <streetLine xml:lang="en">Dunajska 14</streetLine>
                     <postCode xml:lang="en">49411</postCode>
                 </address>
-                <product id="schema:Product1">
+                <product id="ex:Product1">
                     <price>50</price>
                     <name xml:lang="en">Logitech MX Keys</name>
                     <sale>0</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand1">
+                    <brand id="ex:Brand1">
                         <name xml:lang="en">Logitech</name>
                         <companyEmail>support@logitech.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse2">
+            <warehouse id="ex:Warehouse2">
                 <capacity>9</capacity>
                 <contact>warehousesupport2@ppcshop.cz</contact>
-                <address id="vcard:Addr3">
+                <address id="ex:Addr3">
                     <country xml:lang="en">Czech republic</country>
                     <city xml:lang="en">Praha</city>
                     <streetLine xml:lang="en">Za zahradou 2</streetLine>
                     <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product id="schema:Product2">
+                <product id="ex:Product2">
                     <price>100</price>
                     <name xml:lang="en">AMD Ryzen 5 7600</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand2">
+                    <brand id="ex:Brand2">
                         <name xml:lang="en">AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>
                 </product>
             </warehouse>
-            <warehouse id="km4c:Warehouse3">
+            <warehouse id="ex:Warehouse3">
                 <capacity>9</capacity>
                 <contact>warehousesupport3@ppcshop.cz</contact>
-                <address id="vcard:Addr3">
+                <address id="ex:Addr3">
                     <country xml:lang="en">Czech republic</country>
                     <city xml:lang="en">Praha</city>
                     <streetLine xml:lang="en">Za zahradou 2</streetLine>
                     <postCode xml:lang="en">16200</postCode>
                 </address>
-                <product id="schema:Product3">
+                <product id="ex:Product3">
                     <price>150</price>
                     <name xml:lang="en">AMD Ryzen 7 5700X3D</name>
                     <sale>20</sale>
                     <VAT>21</VAT>
-                    <brand id="schema:Brand2">
+                    <brand id="ex:Brand2">
                         <name xml:lang="en">AMD</name>
                         <companyEmail>support@amd.com</companyEmail>
                     </brand>

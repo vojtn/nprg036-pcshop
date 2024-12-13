@@ -13,6 +13,7 @@
         "oo": "http://purl.org/openorg/",
         "seasto": "https://w3id.org/seas/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "http://example.org/",
         
         "location" : {"@id" : "schema:location"},
         "startDate": {"@id": "schema:startDate"},
@@ -43,16 +44,16 @@
     },
     "@graph": [
     {
-        "@id": "dpv:Cust1",
+        "@id": "ex:Cust1",
         "@type": "dpv:Customer",
         "name_f": { "@value": "Jožko Mrkvička", "@language": "en" },
         "email_f": { "@id": "mailto:jozko@gmail.com"},
         "registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
         "identifier": { "@value": "VIP", "@language": "en" },
-        "address": {"@id" : "vcard:Addr1"}
+        "address": {"@id" : "ex:Addr1"}
     },
     {
-        "@id": "vcard:Addr1",
+        "@id": "ex:Addr1",
         "@type": "vcard:Address",
         "countryName": { "@value": "Hungary", "@language": "en" },
         "locality": { "@value": "Komarom", "@language": "en" },
@@ -60,7 +61,7 @@
         "postalCode": { "@value": "16900", "@language": "en" }
     },
     {
-        "@id": "vcard:Addr2",
+        "@id": "ex:Addr2",
         "@type": "vcard:Address",
         "countryName": { "@value": "Slovakia", "@language": "en" },
         "locality": { "@value": "Nitra", "@language": "en" },
@@ -68,7 +69,7 @@
         "postalCode": { "@value": "49411", "@language": "en" }
     },
     {
-        "@id": "vcard:Addr3",
+        "@id": "ex:Addr3",
         "@type": "vcard:Address",
         "countryName": { "@value": "Czech republic", "@language": "en" },
         "locality": { "@value": "Praha", "@language": "en" },
