@@ -1,80 +1,40 @@
 {
-    "@context": {
-        "@base": "http://example.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "foaf": "http://xmlns.com/foaf/0.1/",
-        "schema": "http://schema.org/",
-        "dpv": "https://w3c.github.io/dpv/2.0/",
-        "iol": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#",
-        "vcard": "http://www.w3.org/2006/vcard/ns#",
-        "km4c": "http://www.disit.org/km4city/schema#",
-        "uiot": "http://www.w3id.org/urban-iot/core#",
-        "oo": "http://purl.org/openorg/",
-        "seasto": "https://w3id.org/seas/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "ex": "http://example.org/",
-        
-        "location" : {"@id" : "schema:location"},
-        "startDate": {"@id": "schema:startDate"},
-        "email_f": {"@id": "foaf:mbox"},
-        "email_sch": {"@id" : "schema:email"},
-        "price": {"@id": "schema:price"},
-        "orderedItem": {"@id": "schema:orderedItem"},
-        "countryName": {"@id": "vcard:country-name"},
-        "locality": {"@id": "vcard:locality"},
-        "streetAddress": {"@id": "vcard:street-address"},
-        "postalCode": {"@id": "vcard:postal-code"},
-        "capacity": {"@id": "oo:capacity"},
-        "VAT": {"@id": "seasto:valueAddedTax"},
-        "name_sch": {"@id" : "schema:name"},
-        "name_f": {"@id" : "foaf:name"},
-        "registrationDate": {"@id" : "uiot:registrationDate"},
-        "identifier": {"@id" : "schema:identifier"},
-        "referencesOrder": {"@id" : "schema:referencesOrder"},
-        "ordered" : {"@reverse" : "referencesOrder"},
-        "address": {"@id" : "schema:address"},
-        "isAssignedTo": {"@id" : "iol:isAssignedTo"},
-        "handles": {"@reverse" : "isAssignedTo"},
-        "orderNumber": {"@id" : "schema:orderNumber"},
-        "billingAddress": {"@id" : "schema:billingAddress"},
-        "discount": {"@id" : "schema:discount"},
-        "brand": {"@id" : "schema:brand"},
-        "storedIn": {"@reverse" : "location"}
-    },
+    "@context": "data-1.jsonld",
     "@graph": [
-    {
-        "@id": "ex:Cust1",
-        "@type": "dpv:Customer",
-        "name_f": { "@value": "Jožko Mrkvička", "@language": "en" },
-        "email_f": { "@id": "mailto:jozko@gmail.com"},
-        "registrationDate": { "@value": "1998-04-10T00:00:00Z", "@type": "xsd:dateTime" },
-        "identifier": { "@value": "VIP", "@language": "en" },
-        "address": {"@id" : "ex:Addr1"}
-    },
-    {
-        "@id": "ex:Addr1",
-        "@type": "vcard:Address",
-        "countryName": { "@value": "Hungary", "@language": "en" },
-        "locality": { "@value": "Komarom", "@language": "en" },
-        "streetAddress": { "@value": "Cajkovskeho 2", "@language": "en" },
-        "postalCode": { "@value": "16900", "@language": "en" }
-    },
-    {
-        "@id": "ex:Addr2",
-        "@type": "vcard:Address",
-        "countryName": { "@value": "Slovakia", "@language": "en" },
-        "locality": { "@value": "Nitra", "@language": "en" },
-        "streetAddress": { "@value": "Dunajska 14", "@language": "en" },
-        "postalCode": { "@value": "49411", "@language": "en" }
-    },
-    {
-        "@id": "ex:Addr3",
-        "@type": "vcard:Address",
-        "countryName": { "@value": "Czech republic", "@language": "en" },
-        "locality": { "@value": "Praha", "@language": "en" },
-        "streetAddress": { "@value": "Za zahradou 2", "@language": "en" },
-        "postalCode": { "@value": "16200", "@language": "en" }
-    }
+        {
+            "@type": "dpv:Customer",
+            "@id": "ex:Cust1",
+            "personName": {
+                "@value": "Jožko Mrkvička",
+                "@language": "en"
+            },
+            "mbox": "mailto:jozko@gmail.com",
+            "registrationDate": "1998-04-10T00:00:00Z",
+            "identifier": {
+                "@value": "VIP",
+                "@language": "en"
+            },
+            "hasAddress": "ex:Addr1"
+        },
+        {
+            "@id": "ex:Addr1",
+            "@type": "vcard:Address",
+            "countryName": {
+                "@value": "Hungary",
+                "@language": "en"
+            },
+            "locality": {
+                "@value": "Komarom",
+                "@language": "en"
+            },
+            "streetAddress": {
+                "@value": "Cajkovskeho 2",
+                "@language": "en"
+            },
+            "postalCode": {
+                "@value": "16900",
+                "@language": "en"
+            }
+        }
     ]
 }

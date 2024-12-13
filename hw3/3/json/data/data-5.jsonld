@@ -1,99 +1,89 @@
 {
-    "@context": {
-        "@base": "http://example.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "foaf": "http://xmlns.com/foaf/0.1/",
-        "schema": "http://schema.org/",
-        "dpv": "https://w3c.github.io/dpv/2.0/",
-        "iol": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#",
-        "vcard": "http://www.w3.org/2006/vcard/ns#",
-        "km4c": "http://www.disit.org/km4city/schema#",
-        "uiot": "http://www.w3id.org/urban-iot/core#",
-        "oo": "http://purl.org/openorg/",
-        "seasto": "https://w3id.org/seas/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "ex": "http://example.org/",
-
-        "location" : {"@id" : "schema:location"},
-        "startDate": {"@id": "schema:startDate"},
-        "email_f": {"@id": "foaf:mbox"},
-        "email_sch": {"@id" : "schema:email"},
-        "price": {"@id": "schema:price"},
-        "orderedItem": {"@id": "schema:orderedItem"},
-        "countryName": {"@id": "vcard:country-name"},
-        "locality": {"@id": "vcard:locality"},
-        "streetAddress": {"@id": "vcard:street-address"},
-        "postalCode": {"@id": "vcard:postal-code"},
-        "capacity": {"@id": "oo:capacity"},
-        "VAT": {"@id": "seasto:valueAddedTax"},
-        "name_sch": {"@id" : "schema:name"},
-        "name_f": {"@id" : "foaf:name"},
-        "registrationDate": {"@id" : "uiot:registrationDate"},
-        "identifier": {"@id" : "schema:identifier"},
-        "referencesOrder": {"@id" : "schema:referencesOrder"},
-        "ordered" : {"@reverse" : "referencesOrder"},
-        "address": {"@id" : "schema:address"},
-        "isAssignedTo": {"@id" : "iol:isAssignedTo"},
-        "handles": {"@reverse" : "isAssignedTo"},
-        "orderNumber": {"@id" : "schema:orderNumber"},
-        "billingAddress": {"@id" : "schema:billingAddress"},
-        "discount": {"@id" : "schema:discount"},
-        "brand": {"@id" : "schema:brand"},
-        "storedIn": {"@reverse" : "location"},
-        "revBrand": {"@reverse":"brand"}
-    },
+    "@context": [
+        "data-1.jsonld",
+        {
+            "revBrand": {
+                "@reverse": "brand"
+            }
+        }
+    ],
     "@graph": [
-    
-    {
-        "@id": "ex:Product1",
-        "@type": "schema:Product",
-        "price": 50,
-        "name_sch": { "@value": "Logitech MX Keys", "@language": "en" },
-        "discount": 0,
-        "VAT": 21
-    },
-    {
-        "@id": "ex:Product2",
-        "@type": "schema:Product",
-        "price": 100,
-        "name_sch": { "@value": "AMD Ryzen 5 7600", "@language": "en" },
-        "discount": 20,
-        "VAT": 21
-    },
-    {
-        "@id": "ex:Product3",
-        "@type": "schema:Product",
-        "price": 150,
-        "name_sch": { "@value": "AMD Ryzen 7 5700X3D", "@language": "en" },
-        "discount": 20,
-        "VAT": 21
-    },
-    {
-        "@id": "ex:Brand1",
-        "@type": "schema:Brand",
-        "name_sch": { "@value": "Logitech", "@language": "en" },
-        "email_sch": { "@id": "mailto:support@logitech.com"},
-        "revBrand": [
-            {"@id": "ex:Product1"}
-        ]
-    },
-    {
-        "@id": "ex:Brand2",
-        "@type": "schema:Brand",
-        "name_sch": { "@value": "AMD", "@language": "en" },
-        "email_sch": { "@id": "mailto:support@amd.com"},
-        "revBrand": [ 
-            {"@id": "ex:Product2"},
-            {"@id": "ex:Product3"}
-        ]
-    },
-    {
-        "@id": "schema:Brand3",
-        "@type": "schema:Brand",
-        "name_sch": { "@value": "TSMC", "@language": "en" },
-        "email_sch": { "@id": "mailto:support@tsmc.com"},
-        "revBrand": []
-    }
+        {
+            "@id": "ex:Product1",
+            "@type": "schema:Product",
+            "price": 50,
+            "name": {
+                "@value": "Logitech MX Keys",
+                "@language": "en"
+            },
+            "discount": 0,
+            "VAT": 21,
+            "brand": "ex:Brand1"
+        },
+        {
+            "@id": "ex:Product2",
+            "@type": "schema:Product",
+            "price": 100,
+            "name": {
+                "@value": "AMD Ryzen 5 7600",
+                "@language": "en"
+            },
+            "discount": 20,
+            "VAT": 21,
+            "brand": "ex:Brand2"
+        },
+        {
+            "@id": "ex:Product3",
+            "@type": "schema:Product",
+            "price": 150,
+            "name": {
+                "@value": "AMD Ryzen 7 5700X3D",
+                "@language": "en"
+            },
+            "discount": 20,
+            "VAT": 21,
+            "brand": "ex:Brand2"
+        },
+        {
+            "@id": "ex:Brand1",
+            "@type": "schema:Brand",
+            "name": {
+                "@value": "Logitech",
+                "@language": "en"
+            },
+            "email": "mailto:support@logitech.com",
+            "revBrand": [
+                {
+                    "@id": "ex:Product1"
+                }
+            ]
+        },
+        {
+            "@id": "ex:Brand2",
+            "@type": "schema:Brand",
+            "name": {
+                "@value": "AMD",
+                "@language": "en"
+            },
+            "email": "mailto:support@amd.com",
+            "revBrand": [
+                {
+                    "@id": "ex:Product2"
+                },
+                {
+                    "@id": "ex:Product3"
+                }
+            ]
+        },
+        {
+            "@id": "ex:Brand3",
+            "@type": "schema:Brand",
+            "name": {
+                "@value": "TSMC",
+                "@language": "en"
+            },
+            "email": "mailto:support@tsmc.com",
+            "revBrand": []
+        }
     ]
 }
