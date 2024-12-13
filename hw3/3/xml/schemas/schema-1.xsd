@@ -116,7 +116,7 @@
     <xs:complexType name="warehouseType">
         <xs:sequence>
             <xs:element name="capacity" type="xs:integer" />
-            <xs:sequence>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
                 <xs:element name="contact" type="xs:string" />
             </xs:sequence>
             <xs:element name="address" type="addressType" />
