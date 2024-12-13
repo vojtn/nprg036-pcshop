@@ -7,6 +7,7 @@
     
     <!-- Prefix definition -->
     <xsl:template name="prefixes">
+        @prefix ex: &lt;http://example.org/&gt; .
         @base &lt;http://example.org/&gt; .
         @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
         @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
