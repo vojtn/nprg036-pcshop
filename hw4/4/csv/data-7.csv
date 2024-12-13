@@ -1,4 +1,4 @@
 URI,name,companyEmail
-schema:Brand1,Logitech,<mailto:support@logitech.com>
-schema:Brand2,AMD,<mailto:support@amd.com>
-schema:Brand3,TSMC,<mailto:support@tsmc.com>
+ex:Brand1,Logitech,<mailto:support@logitech.com>
+ex:Brand2,AMD,<mailto:support@amd.com>
+ex:Brand3,TSMC,<mailto:support@tsmc.com>

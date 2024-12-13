@@ -1,6 +1,6 @@
 orderURI,productURI
-schema:Ord1,schema:Product1
-schema:Ord1,schema:Product2
-schema:Ord2,schema:Product2
-schema:Ord2,schema:Product3
-schema:Ord3,schema:Product1
+ex:Ord1,ex:Product1
+ex:Ord1,ex:Product2
+ex:Ord2,ex:Product2
+ex:Ord2,ex:Product3
+ex:Ord3,ex:Product1

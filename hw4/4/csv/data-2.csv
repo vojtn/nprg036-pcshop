@@ -1,2 +1,2 @@
 URI,name,email,registrationDate,privileged,addressURI
-https://w3c.github.io/dpv/2.0/Cust1,Jožko Mrkvička,<mailto:jozko@gmail.com>,1998-04-10T00:00:00Z,VIP,vcard:Addr1
+https://www.example.org/Cust1,Jožko Mrkvička,<mailto:jozko@gmail.com>,1998-04-10T00:00:00Z,VIP,ex:Addr1

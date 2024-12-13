@@ -1,4 +1,4 @@
 warehouseURI,productURI
-http://www.disit.org/km4city/schema#Warehouse1,schema:Product1
-http://www.disit.org/km4city/schema#Warehouse2,schema:Product2
-http://www.disit.org/km4city/schema#Warehouse3,schema:Product3
+http://www.example.org/Warehouse1,ex:Product1
+http://www.example.org/Warehouse2,ex:Product2
+http://www.example.org/Warehouse3,ex:Product3

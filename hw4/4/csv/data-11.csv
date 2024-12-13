@@ -1,4 +1,4 @@
 warehouseURI,contactInfo
-http://www.disit.org/km4city/schema#Warehouse1,warehousesupport1@ppcshop.cz
-http://www.disit.org/km4city/schema#Warehouse2,warehousesupport2@ppcshop.cz
-http://www.disit.org/km4city/schema#Warehouse3,warehousesupport3@ppcshop.cz
+http://www.example.org/Warehouse1,warehousesupport1@ppcshop.cz
+http://www.example.org/Warehouse2,warehousesupport2@ppcshop.cz
+http://www.example.org/Warehouse3,warehousesupport3@ppcshop.cz

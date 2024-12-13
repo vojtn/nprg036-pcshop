@@ -1,4 +1,4 @@
 employeeURI,orderURI
-schema:Emp1,schema:Ord1
-schema:Emp1,schema:Ord2
-schema:Emp1,schema:Ord3
+ex:Emp1,ex:Ord1
+ex:Emp1,ex:Ord2
+ex:Emp1,ex:Ord3
