@@ -1,108 +1,22 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "schema-4.json",
     "title": "Warehouse Schema",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
-        "orders": {
-        "type": "array",
-        "items": {
-            "$ref": "#/$defs/warehouse"
-        }
+        "@context": {
+            "const": "data-1.jsonld"
+        },
+        "@graph": {
+            "type": "array",
+            "items": {
+                "$ref": "schema-1.json#/$defs/warehouse"
+            }
         }
     },
-    "$defs": {
-        "warehouse": {
-        "type": "object",
-        "properties": {
-            "capacity": {
-            "type": "integer"
-            },
-            "email_f": {
-            "type": "array",
-            "items": {
-                "type": "string",
-                "format": "email"
-            }
-            },
-            "location": {
-            "$ref": "#/$defs/address"
-            },
-            "storedIn": {
-            "type": "array",
-            "minItems": 0,
-            "items": {
-                "$ref": "#/$defs/product"
-            }
-            }
-        },
-        "required": ["capacity", "email_f", "location"]
-        },
-        "product": {
-        "type": "object",
-        "properties": {
-            "price": {
-            "type": "integer"
-            },
-            "name_sch": {
-            "$ref": "#/$defs/langString"
-            },
-            "discount": {
-            "type": "integer"
-            },
-            "VAT": {
-            "type": "integer"
-            },
-            "brand": {
-            "$ref": "#/$defs/brand",
-            "nullable": true
-            }
-        },
-        "required": ["price", "name_sch", "discount", "VAT"]
-        },
-        "brand": {
-        "type": "object",
-        "properties": {
-            "name_sch": {
-            "$ref": "#/$defs/langString"
-            },
-            "email_sch": {
-            "type": "string",
-            "format": "email"
-            }
-        },
-        "required": ["name_sch", "email_sch"]
-        },
-        "address": {
-        "type": "object",
-        "properties": {
-            "countryName": {
-            "$ref": "#/$defs/langString"
-            },
-            "locality": {
-            "$ref": "#/$defs/langString"
-            },
-            "streetAddress": {
-            "$ref": "#/$defs/langString"
-            },
-            "postalCode": {
-            "$ref": "#/$defs/langString"
-            }
-        },
-        "required": ["countryName", "locality", "streetAddress", "postalCode"]
-        },
-        "langString": {
-        "type": "object",
-        "properties": {
-            "value": {
-            "type": "string"
-            },
-            "lang": {
-            "type": "string",
-            "pattern": "^[a-zA-Z]{2,}$"
-            }
-        },
-        "required": ["value"],
-        "additionalProperties": false
-        }
-    }
+    "required": [
+        "@context",
+        "@graph"
+    ]
 }

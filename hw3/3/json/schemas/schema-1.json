@@ -8,7 +8,7 @@
         "@context": {
             "$ref": "#/$defs/context"
         },
-        "orders": {
+        "@graph": {
             "type": "array",
             "description": "List of orders",
             "items": {
@@ -18,7 +18,7 @@
     },
     "required": [
         "@context",
-        "orders"
+        "@graph"
     ],
     "$defs": {
         "context": {

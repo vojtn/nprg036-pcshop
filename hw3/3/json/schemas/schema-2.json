@@ -1,70 +1,22 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "schema-2.json",
     "title": "Customer Schema",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
-        "customers": {
+        "@context": {
+            "const": "data-1.jsonld"
+        },
+        "@graph": {
             "type": "array",
             "items": {
-                "$ref": "#/$defs/customer"
+                "$ref": "schema-1.json#/$defs/customer"
             }
         }
     },
-    "$defs": {
-        "customer": {
-            "type": "object",
-            "properties": {
-                "name_f": {
-                "$ref": "#/$defs/langString"
-                },
-                "email_f": {
-                "type": "string",
-                "format": "email"
-                },
-                "registrationDate": {
-                "type": "string",
-                "format": "date-time"
-                },
-                "identifier": {
-                "$ref": "#/$defs/langString"
-                },
-                "address": {
-                "$ref": "#/$defs/address"
-                }
-            },
-            "required": ["name_f", "email_f", "registrationDate", "identifier", "address"]
-        },
-        "address": {
-            "type": "object",
-            "properties": {
-                "countryName": {
-                "$ref": "#/$defs/langString"
-                },
-                "locality": {
-                "$ref": "#/$defs/langString"
-                },
-                "streetAddress": {
-                "$ref": "#/$defs/langString"
-                },
-                "postalCode": {
-                "$ref": "#/$defs/langString"
-                }
-            },
-            "required": ["countryName", "locality", "streetAddress", "postalCode"]
-        },
-        "langString": {
-            "type": "object",
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "lang": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z]{2,}$"
-            }
-        },
-        "required": ["value"],
-        "additionalProperties": false
-        }
-    }
-}   
+    "required": [
+        "@context",
+        "@graph"
+    ]
+}
