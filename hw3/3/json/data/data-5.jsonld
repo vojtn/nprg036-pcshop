@@ -7,7 +7,7 @@
             }
         }
     ],
-    "@graph": [
+    "orderedItem": [
         {
             "@id": "ex:Product1",
             "@type": "schema:Product",
@@ -18,7 +18,15 @@
             },
             "discount": 0,
             "VAT": 21,
-            "brand": "ex:Brand1"
+            "revBrand": {
+                "@id": "ex:Brand1",
+                "@type": "schema:Brand",
+                "name": {
+                    "@value": "Logitech",
+                    "@language": "en"
+                },
+                "email": "support@logitech.com"
+            }
         },
         {
             "@id": "ex:Product2",
@@ -30,7 +38,15 @@
             },
             "discount": 20,
             "VAT": 21,
-            "brand": "ex:Brand2"
+            "revBrand": {
+                "@id": "ex:Brand2",
+                "@type": "schema:Brand",
+                "name": {
+                    "@value": "AMD",
+                    "@language": "en"
+                },
+                "email": "support@amd.com"
+            }
         },
         {
             "@id": "ex:Product3",
@@ -42,48 +58,15 @@
             },
             "discount": 20,
             "VAT": 21,
-            "brand": "ex:Brand2"
-        },
-        {
-            "@id": "ex:Brand1",
-            "@type": "schema:Brand",
-            "name": {
-                "@value": "Logitech",
-                "@language": "en"
-            },
-            "email": "mailto:support@logitech.com",
-            "revBrand": [
-                {
-                    "@id": "ex:Product1"
-                }
-            ]
-        },
-        {
-            "@id": "ex:Brand2",
-            "@type": "schema:Brand",
-            "name": {
-                "@value": "AMD",
-                "@language": "en"
-            },
-            "email": "mailto:support@amd.com",
-            "revBrand": [
-                {
-                    "@id": "ex:Product2"
+            "revBrand": {
+                "@id": "ex:Brand2",
+                "@type": "schema:Brand",
+                "name": {
+                    "@value": "AMD",
+                    "@language": "en"
                 },
-                {
-                    "@id": "ex:Product3"
-                }
-            ]
-        },
-        {
-            "@id": "ex:Brand3",
-            "@type": "schema:Brand",
-            "name": {
-                "@value": "TSMC",
-                "@language": "en"
-            },
-            "email": "mailto:support@tsmc.com",
-            "revBrand": []
+                "email": "support@amd.com"
+            }
         }
     ]
 }
