@@ -95,6 +95,10 @@
         },
         "storedIn": {
             "@reverse": "location"
+        },
+        "orders": {
+            "@id": "ex:orders",
+            "@container": "@list"
         }
     },
     "orders": [
