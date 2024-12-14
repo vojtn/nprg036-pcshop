@@ -95,13 +95,10 @@
         },
         "storedIn": {
             "@reverse": "location"
-        },
-        "orders": {
-            "@id": "ex:orders",
-            "@container": "@list"
         }
     },
-    "orders": [
+    "description": "Orders",
+    "@graph": [
         {
             "@id": "ex:Ord1",
             "@type": "schema:Order",

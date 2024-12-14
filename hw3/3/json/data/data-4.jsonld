@@ -1,6 +1,7 @@
 {
     "@context": "data-1.jsonld",
-    "location": [
+    "description": "Warehouses",
+    "@graph": [
         {
             "@id": "ex:Warehouse1",
             "@type": "km4c:Warehouse_and_storage",

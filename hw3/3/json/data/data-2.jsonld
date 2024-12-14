@@ -1,37 +1,40 @@
 {
     "@context": "data-1.jsonld",
-    "ordered": {
-        "@type": "dpv:Customer",
-        "@id": "ex:Cust1",
-        "personName": {
-            "@value": "Jožko Mrkvička",
-            "@language": "en"
-        },
-        "mbox": "jozko@gmail.com",
-        "registrationDate": "1998-04-10T00:00:00Z",
-        "identifier": {
-            "@value": "VIP",
-            "@language": "en"
-        },
-        "hasAddress": {
-            "@id": "ex:Addr1",
-            "@type": "vcard:Address",
-            "countryName": {
-                "@value": "Hungary",
+    "description": "Customers",
+    "@graph": [
+        {
+            "@type": "dpv:Customer",
+            "@id": "ex:Cust1",
+            "personName": {
+                "@value": "Jožko Mrkvička",
                 "@language": "en"
             },
-            "locality": {
-                "@value": "Komarom",
+            "mbox": "jozko@gmail.com",
+            "registrationDate": "1998-04-10T00:00:00Z",
+            "identifier": {
+                "@value": "VIP",
                 "@language": "en"
             },
-            "streetAddress": {
-                "@value": "Cajkovskeho 2",
-                "@language": "en"
-            },
-            "postalCode": {
-                "@value": "16900",
-                "@language": "en"
+            "hasAddress": {
+                "@id": "ex:Addr1",
+                "@type": "vcard:Address",
+                "countryName": {
+                    "@value": "Hungary",
+                    "@language": "en"
+                },
+                "locality": {
+                    "@value": "Komarom",
+                    "@language": "en"
+                },
+                "streetAddress": {
+                    "@value": "Cajkovskeho 2",
+                    "@language": "en"
+                },
+                "postalCode": {
+                    "@value": "16900",
+                    "@language": "en"
+                }
             }
         }
-    }
+    ]
 }

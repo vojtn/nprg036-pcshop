@@ -1,184 +1,186 @@
 {
     "@context": "data-1.jsonld",
-    "handles":
-    {
-        "@id": "ex:Emp1",
-        "@type": "schema:EmployeeRole",
-        "personName": {
-            "@value": "Dano Drevo",
-            "@language": "en"
-        },
-        "mbox": "gabor@szekeshfehervar.sk",
-        "startDate": "2014-02-17T00:00:00Z",
-        "location": [
-            {
-                "@id": "ex:Warehouse1",
-                "@type": "km4c:Warehouse_and_storage",
-                "capacity": 9,
-                "mbox": [
-                    "warehousesupport1@ppcshop.cz"
-                ],
-                "location": {
-                    "@id": "ex:Addr2",
-                    "@type": "vcard:Address",
-                    "countryName": {
-                        "@value": "Slovakia",
-                        "@language": "en"
-                    },
-                    "locality": {
-                        "@value": "Nitra",
-                        "@language": "en"
-                    },
-                    "streetAddress": {
-                        "@value": "Dunajska 14",
-                        "@language": "en"
-                    },
-                    "postalCode": {
-                        "@value": "49411",
-                        "@language": "en"
-                    }
-                },
-                "storedIn": [
-                    {
-                        "@id": "ex:Product1",
-                        "@type": "schema:Product",
-                        "price": 50,
-                        "name": {
-                            "@value": "Logitech MX Keys",
+    "description": "Employees",
+    "@graph": [
+        {
+            "@id": "ex:Emp1",
+            "@type": "schema:EmployeeRole",
+            "personName": {
+                "@value": "Dano Drevo",
+                "@language": "en"
+            },
+            "mbox": "gabor@szekeshfehervar.sk",
+            "startDate": "2014-02-17T00:00:00Z",
+            "location": [
+                {
+                    "@id": "ex:Warehouse1",
+                    "@type": "km4c:Warehouse_and_storage",
+                    "capacity": 9,
+                    "mbox": [
+                        "warehousesupport1@ppcshop.cz"
+                    ],
+                    "location": {
+                        "@id": "ex:Addr2",
+                        "@type": "vcard:Address",
+                        "countryName": {
+                            "@value": "Slovakia",
                             "@language": "en"
                         },
-                        "discount": 0,
-                        "VAT": 21,
-                        "brand": {
-                            "@id": "ex:Brand1",
-                            "@type": "schema:Brand",
-                            "name": {
-                                "@value": "Logitech",
-                                "@language": "en"
-                            },
-                            "email": "support@logitech.com"
-                        }
-                    }
-                ]
-            },
-            {
-                "@id": "ex:Warehouse2",
-                "@type": "km4c:Warehouse_and_storage",
-                "capacity": 9,
-                "location": {
-                    "@id": "ex:Addr3",
-                    "@type": "vcard:Address",
-                    "countryName": {
-                        "@value": "Czech republic",
-                        "@language": "en"
-                    },
-                    "locality": {
-                        "@value": "Praha",
-                        "@language": "en"
-                    },
-                    "streetAddress": {
-                        "@value": "Za zahradou 2",
-                        "@language": "en"
-                    },
-                    "postalCode": {
-                        "@value": "16200",
-                        "@language": "en"
-                    }
-                },
-                "storedIn": [
-                    {
-                        "@id": "ex:Product2",
-                        "@type": "schema:Product",
-                        "price": 100,
-                        "name": {
-                            "@value": "AMD Ryzen 5 7600",
+                        "locality": {
+                            "@value": "Nitra",
                             "@language": "en"
                         },
-                        "discount": 20,
-                        "VAT": 21,
-                        "brand": {
-                            "@id": "ex:Brand2",
-                            "@type": "schema:Brand",
-                            "name": {
-                                "@value": "AMD",
-                                "@language": "en"
-                            },
-                            "email": "support@amd.com"
-                        }
-                    }
-                ]
-            },
-            {
-                "@id": "ex:Warehouse3",
-                "@type": "km4c:Warehouse_and_storage",
-                "capacity": 9,
-                "mbox": [
-                    "dwad@ppcshop.cz",
-                    "warehousesupport3@ppcshop.cz"
-                ],
-                "location": {
-                    "@id": "ex:Addr3",
-                    "@type": "vcard:Address",
-                    "countryName": {
-                        "@value": "Czech republic",
-                        "@language": "en"
-                    },
-                    "locality": {
-                        "@value": "Praha",
-                        "@language": "en"
-                    },
-                    "streetAddress": {
-                        "@value": "Za zahradou 2",
-                        "@language": "en"
-                    },
-                    "postalCode": {
-                        "@value": "16200",
-                        "@language": "en"
-                    }
-                },
-                "storedIn": [
-                    {
-                        "@id": "ex:Product3",
-                        "@type": "schema:Product",
-                        "price": 150,
-                        "name": {
-                            "@value": "AMD Ryzen 7 5700X3D",
+                        "streetAddress": {
+                            "@value": "Dunajska 14",
                             "@language": "en"
                         },
-                        "discount": 20,
-                        "VAT": 21,
-                        "brand": {
-                            "@id": "ex:Brand2",
-                            "@type": "schema:Brand",
+                        "postalCode": {
+                            "@value": "49411",
+                            "@language": "en"
+                        }
+                    },
+                    "storedIn": [
+                        {
+                            "@id": "ex:Product1",
+                            "@type": "schema:Product",
+                            "price": 50,
                             "name": {
-                                "@value": "AMD",
+                                "@value": "Logitech MX Keys",
                                 "@language": "en"
                             },
-                            "email": "support@amd.com"
+                            "discount": 0,
+                            "VAT": 21,
+                            "brand": {
+                                "@id": "ex:Brand1",
+                                "@type": "schema:Brand",
+                                "name": {
+                                    "@value": "Logitech",
+                                    "@language": "en"
+                                },
+                                "email": "support@logitech.com"
+                            }
                         }
-                    }
-                ]
-            }
-        ],
-        "hasAddress": {
-            "@id": "ex:Addr2",
-            "@type": "vcard:Address",
-            "countryName": {
-                "@value": "Slovakia",
-                "@language": "en"
-            },
-            "locality": {
-                "@value": "Nitra",
-                "@language": "en"
-            },
-            "streetAddress": {
-                "@value": "Dunajska 14",
-                "@language": "en"
-            },
-            "postalCode": {
-                "@value": "49411",
-                "@language": "en"
+                    ]
+                },
+                {
+                    "@id": "ex:Warehouse2",
+                    "@type": "km4c:Warehouse_and_storage",
+                    "capacity": 9,
+                    "location": {
+                        "@id": "ex:Addr3",
+                        "@type": "vcard:Address",
+                        "countryName": {
+                            "@value": "Czech republic",
+                            "@language": "en"
+                        },
+                        "locality": {
+                            "@value": "Praha",
+                            "@language": "en"
+                        },
+                        "streetAddress": {
+                            "@value": "Za zahradou 2",
+                            "@language": "en"
+                        },
+                        "postalCode": {
+                            "@value": "16200",
+                            "@language": "en"
+                        }
+                    },
+                    "storedIn": [
+                        {
+                            "@id": "ex:Product2",
+                            "@type": "schema:Product",
+                            "price": 100,
+                            "name": {
+                                "@value": "AMD Ryzen 5 7600",
+                                "@language": "en"
+                            },
+                            "discount": 20,
+                            "VAT": 21,
+                            "brand": {
+                                "@id": "ex:Brand2",
+                                "@type": "schema:Brand",
+                                "name": {
+                                    "@value": "AMD",
+                                    "@language": "en"
+                                },
+                                "email": "support@amd.com"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "ex:Warehouse3",
+                    "@type": "km4c:Warehouse_and_storage",
+                    "capacity": 9,
+                    "mbox": [
+                        "dwad@ppcshop.cz",
+                        "warehousesupport3@ppcshop.cz"
+                    ],
+                    "location": {
+                        "@id": "ex:Addr3",
+                        "@type": "vcard:Address",
+                        "countryName": {
+                            "@value": "Czech republic",
+                            "@language": "en"
+                        },
+                        "locality": {
+                            "@value": "Praha",
+                            "@language": "en"
+                        },
+                        "streetAddress": {
+                            "@value": "Za zahradou 2",
+                            "@language": "en"
+                        },
+                        "postalCode": {
+                            "@value": "16200",
+                            "@language": "en"
+                        }
+                    },
+                    "storedIn": [
+                        {
+                            "@id": "ex:Product3",
+                            "@type": "schema:Product",
+                            "price": 150,
+                            "name": {
+                                "@value": "AMD Ryzen 7 5700X3D",
+                                "@language": "en"
+                            },
+                            "discount": 20,
+                            "VAT": 21,
+                            "brand": {
+                                "@id": "ex:Brand2",
+                                "@type": "schema:Brand",
+                                "name": {
+                                    "@value": "AMD",
+                                    "@language": "en"
+                                },
+                                "email": "support@amd.com"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hasAddress": {
+                "@id": "ex:Addr2",
+                "@type": "vcard:Address",
+                "countryName": {
+                    "@value": "Slovakia",
+                    "@language": "en"
+                },
+                "locality": {
+                    "@value": "Nitra",
+                    "@language": "en"
+                },
+                "streetAddress": {
+                    "@value": "Dunajska 14",
+                    "@language": "en"
+                },
+                "postalCode": {
+                    "@value": "49411",
+                    "@language": "en"
+                }
             }
         }
-    }
+    ]
 }

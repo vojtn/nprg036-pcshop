@@ -7,7 +7,8 @@
             }
         }
     ],
-    "orderedItem": [
+    "description": "",
+    "@graph": [
         {
             "@id": "ex:Product1",
             "@type": "schema:Product",
