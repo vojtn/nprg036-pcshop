@@ -1,189 +1,371 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "schema-1.json",
     "title": "Orders Schema",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
+        "@context": {
+            "$ref": "#/$defs/context"
+        },
         "orders": {
-        "type": "array",
-        "items": {
-            "$ref": "#/$defs/order"
-        }
+            "type": "array",
+            "description": "List of orders",
+            "items": {
+                "$ref": "#/$defs/order"
+            }
         }
     },
+    "required": [
+        "@context",
+        "orders"
+    ],
     "$defs": {
-        "order": {
-        "type": "object",
-        "properties": {
-            "orderNumber": {
-            "type": "integer"
+        "context": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "properties": {
+                "ex": {
+                    "type": "string"
+                },
+                "@base": {
+                    "type": "string"
+                },
+                "rdf": {
+                    "type": "string"
+                },
+                "rdfs": {
+                    "type": "string"
+                },
+                "foaf": {
+                    "type": "string"
+                },
+                "schema": {
+                    "type": "string"
+                },
+                "dpv": {
+                    "type": "string"
+                },
+                "iol": {
+                    "type": "string"
+                },
+                "vcard": {
+                    "type": "string"
+                },
+                "km4c": {
+                    "type": "string"
+                },
+                "uiot": {
+                    "type": "string"
+                },
+                "oo": {
+                    "type": "string"
+                },
+                "seasto": {
+                    "type": "string"
+                },
+                "xsd": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "uri": {
+                    "type": "string"
+                }
             },
-            "price": {
-            "type": "integer"
-            },
-            "orderedItem": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "$ref": "#/$defs/product"
-            }
-            },
-            "ordered": {
-            "$ref": "#/$defs/customer"
-            },
-            "handles": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "$ref": "#/$defs/employee"
-            }
-            },
-            "billingAddress": {
-            "$ref": "#/$defs/address"
-            }
+            "required": [
+                "ex",
+                "@base",
+                "rdf",
+                "rdfs",
+                "foaf",
+                "schema",
+                "dpv",
+                "iol",
+                "vcard",
+                "km4c",
+                "uiot",
+                "oo",
+                "seasto",
+                "xsd",
+                "type",
+                "uri"
+            ]
         },
-        "required": ["orderNumber", "price", "ordered", "orderedItem", "billingAddress", "handles"]
+        "valueWithLanguage": {
+            "type": "object",
+            "properties": {
+                "@value": {
+                    "type": "string",
+                    "description": "The value of the property."
+                },
+                "@language": {
+                    "type": "string",
+                    "description": "The language tag of the value."
+                }
+            },
+            "required": [
+                "@value"
+            ]
+        },
+        "@id": {
+            "type": "string",
+            "format": "uri"
         },
         "customer": {
-        "type": "object",
-        "properties": {
-            "name_f": {
-            "$ref": "#/$defs/langString"
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "dpv:Customer"
+                },
+                "personName": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "mbox": {
+                    "type": "string",
+                    "format": "string",
+                    "description": "The email address of the person."
+                },
+                "registrationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "identifier": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "hasAddress": {
+                    "$ref": "#/$defs/address"
+                }
             },
-            "email_f": {
-            "type": "string",
-            "format": "email"
-            },
-            "registrationDate": {
-            "type": "string",
-            "format": "date-time"
-            },
-            "identifier": {
-            "$ref": "#/$defs/langString"
-            },
-            "address": {
-            "$ref": "#/$defs/address"
-            }
+            "required": [
+                "@type",
+                "personName",
+                "mbox",
+                "registrationDate",
+                "identifier",
+                "hasAddress"
+            ]
         },
-        "required": ["name_f", "email_f", "registrationDate", "identifier", "address"]
+        "employeeRole": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:EmployeeRole"
+                },
+                "personName": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "mbox": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "The email address of the employee."
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "location": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/warehouse"
+                    }
+                },
+                "hasAddress": {
+                    "$ref": "#/$defs/address"
+                }
+            },
+            "required": [
+                "@type",
+                "personName",
+                "mbox",
+                "startDate",
+                "location",
+                "hasAddress"
+            ]
         },
-        "employee": {
-        "type": "object",
-        "properties": {
-            "name_f": {
-            "type": "string"
+        "order": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:Order"
+                },
+                "orderNumber": {
+                    "type": "integer"
+                },
+                "price": {
+                    "type": "integer"
+                },
+                "orderedItem": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/$defs/product"
+                    }
+                },
+                "ordered": {
+                    "$ref": "#/$defs/customer"
+                },
+                "handles": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/$defs/employeeRole"
+                    }
+                },
+                "billingAddress": {
+                    "$ref": "#/$defs/address"
+                }
             },
-            "email_f": {
-            "type": "string",
-            "format": "email"
-            },
-            "startDate": {
-            "type": "string",
-            "format": "date-time"
-            },
-            "address": {
-            "$ref": "#/$defs/address"
-            },
-            "location": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/warehouse"
-            }
-            }
-        },
-        "required": ["name_f", "email_f", "startDate", "address"]
+            "required": [
+                "@id",
+                "@type",
+                "orderNumber",
+                "price",
+                "orderedItem",
+                "ordered",
+                "handles",
+                "billingAddress"
+            ]
         },
         "warehouse": {
-        "type": "object",
-        "properties": {
-            "capacity": {
-            "type": "integer"
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "km4c:Warehouse_and_storage"
+                },
+                "capacity": {
+                    "type": "integer"
+                },
+                "mbox": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "type": "string",
+                        "format": "email"
+                    }
+                },
+                "location": {
+                    "$ref": "#/$defs/address"
+                },
+                "storedIn": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "$ref": "#/$defs/product"
+                    }
+                }
             },
-            "email_f": {
-            "type": "array",
-            "items": {
-                "type": "string",
-                "format": "email"
-            }
-            },
-            "location": {
-            "$ref": "#/$defs/address"
-            },
-            "storedIn": {
-            "type": "array",
-            "minItems": 0,
-            "items": {
-                "$ref": "#/$defs/product"
-            }
-            }
-        },
-        "required": ["capacity", "email_f", "location"]
+            "required": [
+                "@type",
+                "capacity",
+                "location",
+                "storedIn"
+            ]
         },
         "product": {
-        "type": "object",
-        "properties": {
-            "price": {
-            "type": "integer"
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:Product"
+                },
+                "price": {
+                    "type": "integer"
+                },
+                "name": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "discount": {
+                    "type": "integer"
+                },
+                "VAT": {
+                    "type": "integer"
+                },
+                "brand": {
+                    "$ref": "#/$defs/brand",
+                    "minItems": 0,
+                    "maxItems": 1,
+                    "nullable": true
+                }
             },
-            "name_sch": {
-            "$ref": "#/$defs/langString"
-            },
-            "discount": {
-            "type": "integer"
-            },
-            "VAT": {
-            "type": "integer"
-            },
-            "brand": {
-            "$ref": "#/$defs/brand",
-            "nullable": true
-            }
-        },
-        "required": ["price", "name_sch", "discount", "VAT"]
+            "required": [
+                "@type",
+                "price",
+                "name",
+                "discount",
+                "VAT"
+            ]
         },
         "brand": {
-        "type": "object",
-        "properties": {
-            "name_sch": {
-            "$ref": "#/$defs/langString"
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:Brand"
+                },
+                "name": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "The email address for the brand."
+                }
             },
-            "email_sch": {
-            "type": "string",
-            "format": "email"
-            }
-        },
-        "required": ["name_sch", "email_sch"]
+            "required": [
+                "@type",
+                "name",
+                "email"
+            ]
         },
         "address": {
-        "type": "object",
-        "properties": {
-            "countryName": {
-            "$ref": "#/$defs/langString"
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "vcard:Address"
+                },
+                "countryName": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "locality": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "streetAddress": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "postalCode": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                }
             },
-            "locality": {
-            "$ref": "#/$defs/langString"
-            },
-            "streetAddress": {
-            "$ref": "#/$defs/langString"
-            },
-            "postalCode": {
-            "$ref": "#/$defs/langString"
-            }
-        },
-        "required": ["countryName", "locality", "streetAddress", "postalCode"]
-        },
-        "langString": {
-        "type": "object",
-        "properties": {
-            "value": {
-            "type": "string"
-            },
-            "lang": {
-            "type": "string",
-            "pattern": "^[a-zA-Z]{2,}$"
-            }
-        },
-        "required": ["value"],
-        "additionalProperties": false
+            "required": [
+                "@type",
+                "countryName",
+                "locality",
+                "streetAddress",
+                "postalCode"
+            ]
         }
     }
 }
