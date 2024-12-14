@@ -5,6 +5,9 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+        "description": {
+            "type": "string"
+        },
         "@context": {
             "$ref": "#/$defs/context"
         },

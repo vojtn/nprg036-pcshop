@@ -5,6 +5,9 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+        "description": {
+            "type": "string"
+        },
         "@context": {
             "const": "data-1.jsonld"
         },
