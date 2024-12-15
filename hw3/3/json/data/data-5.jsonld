@@ -95,6 +95,9 @@
         },
         "storedIn": {
             "@reverse": "location"
+        },
+        "products": {
+            "@reverse": "schema:brand"
         }
     },
     "description": "Brands",
