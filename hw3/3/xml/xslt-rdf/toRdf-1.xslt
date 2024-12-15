@@ -116,8 +116,15 @@
     <!-- Template to transform Warehouse -->
     <xsl:template match="warehouse" mode="#default">
         <xsl:value-of select="@id" /> a km4c:Warehouse_and_storage ;
-        oo:capacity <xsl:value-of select="capacity"/> ;
-        foaf:mbox &lt;mailto:<xsl:value-of select="contact"/>&gt; . &#10;
+        <xsl:if test="exists(contact)">
+            <xsl:apply-templates select="contact"/>
+        </xsl:if>
+        oo:capacity <xsl:value-of select="capacity"/> . &#10;
+    </xsl:template>
+
+    <!-- Template to transform contact -->
+    <xsl:template match="contact" mode="#default">
+        foaf:mbox &lt;mailto:<xsl:value-of select="."/>&gt; ;
     </xsl:template>
     
     <!-- Template to transform Product -->
