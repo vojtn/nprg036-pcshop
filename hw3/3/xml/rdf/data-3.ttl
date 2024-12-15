@@ -40,16 +40,22 @@
         vcard:postal-code "16200"@en . 
 
     ex:Warehouse1 a km4c:Warehouse_and_storage ;
-        oo:capacity 9 ;
-        foaf:mbox <mailto:warehousesupport1@ppcshop.cz> . 
+        
+        foaf:mbox <mailto:warehousesupport1@ppcshop.cz> ;
+    
+        oo:capacity 9 . 
 
     ex:Warehouse2 a km4c:Warehouse_and_storage ;
-        oo:capacity 9 ;
-        foaf:mbox <mailto:warehousesupport2@ppcshop.cz> . 
+        
+        oo:capacity 9 . 
 
     ex:Warehouse3 a km4c:Warehouse_and_storage ;
-        oo:capacity 9 ;
-        foaf:mbox <mailto:warehousesupport3@ppcshop.cz> . 
+        
+        foaf:mbox <mailto:mailto:dwad@ppcshop.cz> ;
+    
+        foaf:mbox <mailto:warehousesupport3@ppcshop.cz> ;
+    
+        oo:capacity 9 . 
 
     ex:Product1 a schema:Product ;
         schema:price 50 ;
