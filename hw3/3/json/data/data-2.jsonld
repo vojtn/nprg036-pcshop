@@ -1,5 +1,102 @@
 {
-    "@context": "data-1.jsonld",
+    "@context": {
+        "ex": "http://example.org/",
+        "@base": "http://example.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "http://schema.org/",
+        "dpv": "https://w3c.github.io/dpv/2.0/",
+        "iol": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "km4c": "http://www.disit.org/km4city/schema#",
+        "uiot": "http://www.w3id.org/urban-iot/core#",
+        "oo": "http://purl.org/openorg/",
+        "seasto": "https://w3id.org/seas/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "type": "@type",
+        "uri": "@id",
+        "location": {
+            "@id": "schema:location"
+        },
+        "startDate": {
+            "@id": "schema:startDate",
+            "@type": "xsd:dateTime"
+        },
+        "mbox": {
+            "@id": "foaf:mbox"
+        },
+        "email": {
+            "@id": "schema:email"
+        },
+        "price": {
+            "@id": "schema:price"
+        },
+        "orderedItem": {
+            "@id": "schema:orderedItem"
+        },
+        "countryName": {
+            "@id": "vcard:country-name"
+        },
+        "locality": {
+            "@id": "vcard:locality"
+        },
+        "streetAddress": {
+            "@id": "vcard:street-address"
+        },
+        "postalCode": {
+            "@id": "vcard:postal-code"
+        },
+        "capacity": {
+            "@id": "oo:capacity"
+        },
+        "VAT": {
+            "@id": "seasto:valueAddedTax"
+        },
+        "name": {
+            "@id": "schema:name"
+        },
+        "personName": {
+            "@id": "foaf:name"
+        },
+        "registrationDate": {
+            "@id": "uiot:registrationDate",
+            "@type": "xsd:dateTime"
+        },
+        "identifier": {
+            "@id": "schema:identifier"
+        },
+        "referencesOrder": {
+            "@id": "schema:referencesOrder"
+        },
+        "ordered": {
+            "@reverse": "referencesOrder"
+        },
+        "hasAddress": {
+            "@id": "schema:address"
+        },
+        "isAssignedTo": {
+            "@id": "iol:isAssignedTo"
+        },
+        "handles": {
+            "@reverse": "isAssignedTo"
+        },
+        "orderNumber": {
+            "@id": "schema:orderNumber"
+        },
+        "billingAddress": {
+            "@id": "schema:billingAddress"
+        },
+        "discount": {
+            "@id": "schema:discount"
+        },
+        "brand": {
+            "@id": "schema:brand"
+        },
+        "storedIn": {
+            "@reverse": "location"
+        }
+    },
     "description": "Customers",
     "@graph": [
         {
