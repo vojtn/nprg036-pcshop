@@ -18,12 +18,21 @@
         foaf:name "Jožko Mrkvička"@en ;
         foaf:mbox <mailto:jozko@gmail.com> ;
         uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime ;
-        schema:identifier "VIP"@en . 
+        schema:identifier "VIP"@en ;
+        schema:address ex:Addr1 . 
 
     ex:Emp1 a schema:EmployeeRole ;
         foaf:name "Dano Drevo"@en ;
         foaf:mbox <mailto:gabor@szekeshfehervar.sk> ;
-        schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime . 
+        schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime ;
+        
+            schema:location ex:Warehouse1 ;
+        
+            schema:location ex:Warehouse2 ;
+        
+            schema:location ex:Warehouse3 ;
+        
+        schema:address ex:Addr2 . 
 
     ex:Brand1 a schema:Brand ;
         schema:name "Logitech"@en ;
@@ -67,11 +76,13 @@
         
         foaf:mbox <mailto:warehousesupport1@ppcshop.cz> ;
     
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr2 . 
 
     ex:Warehouse2 a km4c:Warehouse_and_storage ;
         
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr3 . 
 
     ex:Warehouse3 a km4c:Warehouse_and_storage ;
         
@@ -79,7 +90,8 @@
     
         foaf:mbox <mailto:warehousesupport3@ppcshop.cz> ;
     
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr3 . 
 
     ex:Product1 a schema:Product ;
         schema:price 50 ;
@@ -104,12 +116,6 @@
     ex:Cust1 schema:referencesOrder ex:Ord2 . 
 
     ex:Cust1 schema:referencesOrder ex:Ord3 . 
-
-    ex:Emp1 schema:location ex:Warehouse1 . 
-
-    ex:Emp1 schema:location ex:Warehouse2 . 
-
-    ex:Emp1 schema:location ex:Warehouse3 . 
 
     ex:Ord1 schema:orderedItem ex:Product1 . 
 
@@ -141,14 +147,8 @@
 
     ex:Product1 schema:location ex:Warehouse1 . 
 
-    ex:Warehouse1 schema:location ex:Addr2 . 
-
     ex:Product2 schema:location ex:Warehouse2 . 
 
-    ex:Warehouse2 schema:location ex:Addr3 . 
-
     ex:Product3 schema:location ex:Warehouse3 . 
-
-    ex:Warehouse3 schema:location ex:Addr3 . 
 
     

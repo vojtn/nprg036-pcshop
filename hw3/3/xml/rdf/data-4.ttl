@@ -38,11 +38,13 @@
         
         foaf:mbox <mailto:warehousesupport1@ppcshop.cz> ;
     
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr2 . 
 
     ex:Warehouse2 a km4c:Warehouse_and_storage ;
         
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr3 . 
 
     ex:Warehouse3 a km4c:Warehouse_and_storage ;
         
@@ -50,7 +52,8 @@
     
         foaf:mbox <mailto:warehousesupport3@ppcshop.cz> ;
     
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr3 . 
 
     ex:Product1 a schema:Product ;
         schema:price 50 ;
@@ -78,14 +81,8 @@
 
     ex:Product1 schema:location ex:Warehouse1 . 
 
-    ex:Warehouse1 schema:location ex:Addr2 . 
-
     ex:Product2 schema:location ex:Warehouse2 . 
 
-    ex:Warehouse2 schema:location ex:Addr3 . 
-
     ex:Product3 schema:location ex:Warehouse3 . 
-
-    ex:Warehouse3 schema:location ex:Addr3 . 
 
     

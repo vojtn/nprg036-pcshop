@@ -18,7 +18,8 @@
         foaf:name "Jožko Mrkvička"@en ;
         foaf:mbox <mailto:jozko@gmail.com> ;
         uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime ;
-        schema:identifier "VIP"@en . 
+        schema:identifier "VIP"@en ;
+        schema:address ex:Addr1 . 
 
     ex:Addr1 a vcard:Address ;
         vcard:country-name "Hungary"@en ;

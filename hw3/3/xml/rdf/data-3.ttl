@@ -17,7 +17,15 @@
     ex:Emp1 a schema:EmployeeRole ;
         foaf:name "Dano Drevo"@en ;
         foaf:mbox <mailto:gabor@szekeshfehervar.sk> ;
-        schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime . 
+        schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime ;
+        
+            schema:location ex:Warehouse1 ;
+        
+            schema:location ex:Warehouse2 ;
+        
+            schema:location ex:Warehouse3 ;
+        
+        schema:address ex:Addr2 . 
 
     ex:Brand1 a schema:Brand ;
         schema:name "Logitech"@en ;
@@ -43,11 +51,13 @@
         
         foaf:mbox <mailto:warehousesupport1@ppcshop.cz> ;
     
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr2 . 
 
     ex:Warehouse2 a km4c:Warehouse_and_storage ;
         
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr3 . 
 
     ex:Warehouse3 a km4c:Warehouse_and_storage ;
         
@@ -55,7 +65,8 @@
     
         foaf:mbox <mailto:warehousesupport3@ppcshop.cz> ;
     
-        oo:capacity 9 . 
+        oo:capacity 9 ;
+        schema:location ex:Addr3 . 
 
     ex:Product1 a schema:Product ;
         schema:price 50 ;
@@ -75,12 +86,6 @@
         schema:discount 20 ;
         seasto:valueAddedTax 21 . 
 
-    ex:Emp1 schema:location ex:Warehouse1 . 
-
-    ex:Emp1 schema:location ex:Warehouse2 . 
-
-    ex:Emp1 schema:location ex:Warehouse3 . 
-
     ex:Product1 schema:brand ex:Brand1 . 
 
     ex:Product2 schema:brand ex:Brand2 . 
@@ -89,14 +94,8 @@
 
     ex:Product1 schema:location ex:Warehouse1 . 
 
-    ex:Warehouse1 schema:location ex:Addr2 . 
-
     ex:Product2 schema:location ex:Warehouse2 . 
 
-    ex:Warehouse2 schema:location ex:Addr3 . 
-
     ex:Product3 schema:location ex:Warehouse3 . 
-
-    ex:Warehouse3 schema:location ex:Addr3 . 
 
     

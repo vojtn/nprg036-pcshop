@@ -61,10 +61,6 @@
         <xsl:for-each-group select="//order" group-by="@id">
             <xsl:apply-templates select="./customer" mode="relation"/>
         </xsl:for-each-group>
-        
-        <xsl:for-each-group select="//employee" group-by="@id">
-            <xsl:apply-templates select="./warehouse" mode="relation"/>
-        </xsl:for-each-group>
 
         <xsl:for-each-group select="//order" group-by="@id">
             <xsl:apply-templates select="./product" mode="relation"/>
@@ -79,7 +75,6 @@
 
         <xsl:for-each-group select="//warehouse" group-by="@id">
             <xsl:apply-templates select="./product" mode="relationWarehouse"/>
-            <xsl:apply-templates select="./address" mode="relationWarehouse"/>
         </xsl:for-each-group>
     </xsl:template>
     
@@ -93,7 +88,8 @@
         foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
         foaf:mbox &lt;mailto:<xsl:value-of select="email"/>&gt; ;
         uiot:registrationDate "<xsl:value-of select="registrationDate"/>"^^xsd:dateTime ;
-        schema:identifier "<xsl:value-of select="identifier"/>"@<xsl:value-of select="name/@xml:lang"/> . &#10;
+        schema:identifier "<xsl:value-of select="identifier"/>"@<xsl:value-of select="name/@xml:lang"/> ;
+        schema:address <xsl:value-of select="address/@id"/> . &#10;
     </xsl:template>
     
     <!-- Template to transform Employee -->
@@ -101,7 +97,11 @@
         <xsl:value-of select="@id" /> a schema:EmployeeRole ;
         foaf:name "<xsl:value-of select="name"/>"@<xsl:value-of select="name/@xml:lang" /> ;
         foaf:mbox &lt;mailto:<xsl:value-of select="email"/>&gt; ;
-        schema:startDate "<xsl:value-of select="startingDate"/>"^^xsd:dateTime . &#10;
+        schema:startDate "<xsl:value-of select="startingDate"/>"^^xsd:dateTime ;
+        <xsl:for-each select="warehouse">
+            schema:location <xsl:value-of select="./@id"/> ;
+        </xsl:for-each>
+        schema:address <xsl:value-of select="address/@id"/> . &#10;
     </xsl:template>
     
     <!-- Template to transform Address -->
@@ -119,7 +119,8 @@
         <xsl:if test="exists(contact)">
             <xsl:apply-templates select="contact"/>
         </xsl:if>
-        oo:capacity <xsl:value-of select="capacity"/> . &#10;
+        oo:capacity <xsl:value-of select="capacity"/> ;
+        schema:location <xsl:value-of select="address/@id"/> . &#10;
     </xsl:template>
 
     <!-- Template to transform contact -->
@@ -155,11 +156,6 @@
         <xsl:value-of select="@id"/> schema:referencesOrder <xsl:value-of select="../@id"/> . &#10;
     </xsl:template>
 
-    <!-- Template to transform Employee - Warehouse relation -->
-    <xsl:template match="warehouse" mode="relation">
-        <xsl:value-of select="../@id"/> schema:location <xsl:value-of select="@id"/> . &#10;
-    </xsl:template>
-
     <!-- Template to transform Product - Warehouse relation -->
     <xsl:template match="product" mode="relationWarehouse">
         <xsl:value-of select="@id"/> schema:location <xsl:value-of select="../@id"/> . &#10;
@@ -178,12 +174,7 @@
     <!-- Template to transform Order - Address relation -->
     <xsl:template match="address" mode="relation">
         <xsl:value-of select="../@id"/> schema:billingAddress <xsl:value-of select="@id"/> . &#10;
-    </xsl:template>
-
-    <!-- Template to transform Warehouse - Address relation -->
-    <xsl:template match="address" mode="relationWarehouse">
-        <xsl:value-of select="../@id"/> schema:location <xsl:value-of select="@id"/> . &#10;
-    </xsl:template>
+    </xsl:template>    
 
     <!-- Template to transform Order - Employee relation -->
     <xsl:template match="employee" mode="relation">
