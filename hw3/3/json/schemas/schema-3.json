@@ -132,7 +132,7 @@
                 },
                 "mbox": {
                     "type": "string",
-                    "format": "email",
+                    "format": "string",
                     "description": "The email address of the employee."
                 },
                 "startDate": {
@@ -223,7 +223,7 @@
                     "minItems": 0,
                     "items": {
                         "type": "string",
-                        "format": "email"
+                        "format": "string"
                     }
                 },
                 "location": {

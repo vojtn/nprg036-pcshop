@@ -136,7 +136,7 @@
                     "minItems": 0,
                     "items": {
                         "type": "string",
-                        "format": "email"
+                        "format": "string"
                     }
                 },
                 "location": {
