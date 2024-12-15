@@ -1,37 +1,26 @@
-PREFIX dpv:    <https://w3c.github.io/dpv/2.0/>
-PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
-PREFIX iol:    <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#>
-PREFIX km4c:   <http://www.disit.org/km4city/schema#>
-PREFIX oo:     <http://purl.org/openorg/>
-PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex: <http://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX schema: <http://schema.org/>
+PREFIX dpv: <https://w3c.github.io/dpv/2.0/>
+PREFIX iol: <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX km4c: <http://www.disit.org/km4city/schema#>
+PREFIX uiot: <http://www.w3id.org/urban-iot/core#>
+PREFIX oo: <http://purl.org/openorg/>
 PREFIX seasto: <https://w3id.org/seas/>
-PREFIX uiot:   <http://www.w3id.org/urban-iot/core#>
-PREFIX vcard:  <http://www.w3.org/2006/vcard/ns#>
-PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-dpv:Cust1  rdf:type            dpv:Customer;
-        schema:address         vcard:Addr1;
-        schema:identifier      "VIP"@en;
-        uiot:registrationDate  "1998-04-10T00:00:00Z"^^xsd:dateTime;
-        foaf:mbox              <mailto:jozko@gmail.com>;
-        foaf:name              "Jožko Mrkvička"@en .
-
-vcard:Addr3  rdf:type         vcard:Address;
-        vcard:country-name    "Czech republic"@en;
-        vcard:locality        "Praha"@en;
-        vcard:postal-code     "16200"@en;
-        vcard:street-address  "Za zahradou 2"@en .
-
-vcard:Addr2  rdf:type         vcard:Address;
-        vcard:country-name    "Slovakia"@en;
-        vcard:locality        "Nitra"@en;
-        vcard:postal-code     "49411"@en;
-        vcard:street-address  "Dunajska 14"@en .
-
-vcard:Addr1  rdf:type         vcard:Address;
+ex:Addr1  rdf:type            vcard:Address;
         vcard:country-name    "Hungary"@en;
         vcard:locality        "Komarom"@en;
         vcard:postal-code     "16900"@en;
         vcard:street-address  "Cajkovskeho 2"@en .
+
+ex:Cust1  rdf:type             dpv:Customer;
+        schema:address         ex:Addr1;
+        schema:identifier      "VIP"@en;
+        uiot:registrationDate  "1998-04-10T00:00:00Z"^^xsd:dateTime;
+        foaf:mbox              "jozko@gmail.com";
+        foaf:name              "Jožko Mrkvička"@en .
