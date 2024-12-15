@@ -24,7 +24,8 @@
             "@type": "xsd:dateTime"
         },
         "mbox": {
-            "@id": "foaf:mbox"
+            "@id": "foaf:mbox",
+            "@type": "@id"
         },
         "email": {
             "@id": "schema:email"
@@ -78,9 +79,6 @@
         "isAssignedTo": {
             "@id": "iol:isAssignedTo"
         },
-        "handles": {
-            "@reverse": "isAssignedTo"
-        },
         "orderNumber": {
             "@id": "schema:orderNumber"
         },
@@ -106,7 +104,7 @@
                 "@value": "Jožko Mrkvička",
                 "@language": "en"
             },
-            "mbox": "jozko@gmail.com",
+            "mbox": "mailto:jozko@gmail.com",
             "registrationDate": "1998-04-10T00:00:00Z",
             "identifier": {
                 "@value": "VIP",

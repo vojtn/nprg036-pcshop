@@ -24,7 +24,8 @@
             "@type": "xsd:dateTime"
         },
         "mbox": {
-            "@id": "foaf:mbox"
+            "@id": "foaf:mbox",
+            "@type": "@id"
         },
         "email": {
             "@id": "schema:email"
@@ -78,9 +79,6 @@
         "isAssignedTo": {
             "@id": "iol:isAssignedTo"
         },
-        "handles": {
-            "@reverse": "isAssignedTo"
-        },
         "orderNumber": {
             "@id": "schema:orderNumber"
         },
@@ -109,7 +107,7 @@
                 "@value": "Logitech",
                 "@language": "en"
             },
-            "email": "support@logitech.com",
+            "email": "mailto:support@logitech.com",
             "products": [
                 {
                     "@id": "ex:Product1",
@@ -131,7 +129,7 @@
                 "@value": "AMD",
                 "@language": "en"
             },
-            "email": "support@amd.com",
+            "email": "mailto:support@amd.com",
             "products": [
                 {
                     "@id": "ex:Product2",
@@ -164,7 +162,7 @@
                 "@value": "TSMC",
                 "@language": "en"
             },
-            "email": "support@tsmc.com"
+            "email": "mailto:support@tsmc.com"
         }
     ]
 }

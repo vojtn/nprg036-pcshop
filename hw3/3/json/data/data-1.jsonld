@@ -24,10 +24,12 @@
             "@type": "xsd:dateTime"
         },
         "mbox": {
-            "@id": "foaf:mbox"
+            "@id": "foaf:mbox",
+            "@type": "@id"
         },
         "email": {
-            "@id": "schema:email"
+            "@id": "schema:email",
+            "@type": "@id"
         },
         "price": {
             "@id": "schema:price"
@@ -78,9 +80,6 @@
         "isAssignedTo": {
             "@id": "iol:isAssignedTo"
         },
-        "handles": {
-            "@reverse": "isAssignedTo"
-        },
         "orderNumber": {
             "@id": "schema:orderNumber"
         },
@@ -122,7 +121,7 @@
                             "@value": "Logitech",
                             "@language": "en"
                         },
-                        "email": "support@logitech.com"
+                        "email": "mailto:support@logitech.com"
                     }
                 },
                 {
@@ -142,7 +141,7 @@
                             "@value": "AMD",
                             "@language": "en"
                         },
-                        "email": "support@amd.com"
+                        "email": "mailto:support@amd.com"
                     }
                 }
             ],
@@ -153,7 +152,7 @@
                     "@value": "Jožko Mrkvička",
                     "@language": "en"
                 },
-                "mbox": "jozko@gmail.com",
+                "mbox": "mailto:jozko@gmail.com",
                 "registrationDate": "1998-04-10T00:00:00Z",
                 "identifier": {
                     "@value": "VIP",
@@ -180,7 +179,7 @@
                     }
                 }
             },
-            "handles": [
+            "isAssignedTo": [
                 {
                     "@id": "ex:Emp1",
                     "@type": "schema:EmployeeRole",
@@ -188,7 +187,7 @@
                         "@value": "Dano Drevo",
                         "@language": "en"
                     },
-                    "mbox": "gabor@szekeshfehervar.sk",
+                    "mbox": "mailto:gabor@szekeshfehervar.sk",
                     "startDate": "2014-02-17T00:00:00Z",
                     "location": [
                         {
@@ -196,7 +195,7 @@
                             "@type": "km4c:Warehouse_and_storage",
                             "capacity": 9,
                             "mbox": [
-                                "warehousesupport1@ppcshop.cz"
+                                "mailto:warehousesupport1@ppcshop.cz"
                             ],
                             "location": {
                                 "@id": "ex:Addr2",
@@ -236,7 +235,7 @@
                                             "@value": "Logitech",
                                             "@language": "en"
                                         },
-                                        "email": "support@logitech.com"
+                                        "email": "mailto:support@logitech.com"
                                     }
                                 }
                             ]
@@ -283,7 +282,7 @@
                                             "@value": "AMD",
                                             "@language": "en"
                                         },
-                                        "email": "support@amd.com"
+                                        "email": "mailto:support@amd.com"
                                     }
                                 }
                             ]
@@ -293,8 +292,8 @@
                             "@type": "km4c:Warehouse_and_storage",
                             "capacity": 9,
                             "mbox": [
-                                "dwad@ppcshop.cz",
-                                "warehousesupport3@ppcshop.cz"
+                                "mailto:dwad@ppcshop.cz",
+                                "mailto:warehousesupport3@ppcshop.cz"
                             ],
                             "location": {
                                 "@id": "ex:Addr3",
@@ -334,7 +333,7 @@
                                             "@value": "AMD",
                                             "@language": "en"
                                         },
-                                        "email": "support@amd.com"
+                                        "email": "mailto:support@amd.com"
                                     }
                                 }
                             ]
@@ -406,7 +405,7 @@
                             "@value": "AMD",
                             "@language": "en"
                         },
-                        "email": "support@amd.com"
+                        "email": "mailto:support@amd.com"
                     }
                 },
                 {
@@ -426,7 +425,7 @@
                             "@value": "AMD",
                             "@language": "en"
                         },
-                        "email": "support@amd.com"
+                        "email": "mailto:support@amd.com"
                     }
                 }
             ],
@@ -437,7 +436,7 @@
                     "@value": "Jožko Mrkvička",
                     "@language": "en"
                 },
-                "mbox": "jozko@gmail.com",
+                "mbox": "mailto:jozko@gmail.com",
                 "registrationDate": "1998-04-10T00:00:00Z",
                 "identifier": {
                     "@value": "VIP",
@@ -464,7 +463,7 @@
                     }
                 }
             },
-            "handles": [
+            "isAssignedTo": [
                 {
                     "@id": "ex:Emp1",
                     "@type": "schema:EmployeeRole",
@@ -472,7 +471,7 @@
                         "@value": "Dano Drevo",
                         "@language": "en"
                     },
-                    "mbox": "gabor@szekeshfehervar.sk",
+                    "mbox": "mailto:gabor@szekeshfehervar.sk",
                     "startDate": "2014-02-17T00:00:00Z",
                     "location": [
                         {
@@ -480,7 +479,7 @@
                             "@type": "km4c:Warehouse_and_storage",
                             "capacity": 9,
                             "mbox": [
-                                "warehousesupport1@ppcshop.cz"
+                                "mailto:warehousesupport1@ppcshop.cz"
                             ],
                             "location": {
                                 "@id": "ex:Addr2",
@@ -520,7 +519,7 @@
                                             "@value": "Logitech",
                                             "@language": "en"
                                         },
-                                        "email": "support@logitech.com"
+                                        "email": "mailto:support@logitech.com"
                                     }
                                 }
                             ]
@@ -567,7 +566,7 @@
                                             "@value": "AMD",
                                             "@language": "en"
                                         },
-                                        "email": "support@amd.com"
+                                        "email": "mailto:support@amd.com"
                                     }
                                 }
                             ]
@@ -577,8 +576,8 @@
                             "@type": "km4c:Warehouse_and_storage",
                             "capacity": 9,
                             "mbox": [
-                                "dwad@ppcshop.cz",
-                                "warehousesupport3@ppcshop.cz"
+                                "mailto:dwad@ppcshop.cz",
+                                "mailto:warehousesupport3@ppcshop.cz"
                             ],
                             "location": {
                                 "@id": "ex:Addr3",
@@ -618,7 +617,7 @@
                                             "@value": "AMD",
                                             "@language": "en"
                                         },
-                                        "email": "support@amd.com"
+                                        "email": "mailto:support@amd.com"
                                     }
                                 }
                             ]
@@ -690,7 +689,7 @@
                             "@value": "Logitech",
                             "@language": "en"
                         },
-                        "email": "support@logitech.com"
+                        "email": "mailto:support@logitech.com"
                     }
                 }
             ],
@@ -701,7 +700,7 @@
                     "@value": "Jožko Mrkvička",
                     "@language": "en"
                 },
-                "mbox": "jozko@gmail.com",
+                "mbox": "mailto:jozko@gmail.com",
                 "registrationDate": "1998-04-10T00:00:00Z",
                 "identifier": {
                     "@value": "VIP",
@@ -728,7 +727,7 @@
                     }
                 }
             },
-            "handles": [
+            "isAssignedTo": [
                 {
                     "@id": "ex:Emp1",
                     "@type": "schema:EmployeeRole",
@@ -736,7 +735,7 @@
                         "@value": "Dano Drevo",
                         "@language": "en"
                     },
-                    "mbox": "gabor@szekeshfehervar.sk",
+                    "mbox": "mailto:gabor@szekeshfehervar.sk",
                     "startDate": "2014-02-17T00:00:00Z",
                     "location": [
                         {
@@ -744,7 +743,7 @@
                             "@type": "km4c:Warehouse_and_storage",
                             "capacity": 9,
                             "mbox": [
-                                "warehousesupport1@ppcshop.cz"
+                                "mailto:warehousesupport1@ppcshop.cz"
                             ],
                             "location": {
                                 "@id": "ex:Addr2",
@@ -784,7 +783,7 @@
                                             "@value": "Logitech",
                                             "@language": "en"
                                         },
-                                        "email": "support@logitech.com"
+                                        "email": "mailto:support@logitech.com"
                                     }
                                 }
                             ]
@@ -831,7 +830,7 @@
                                             "@value": "AMD",
                                             "@language": "en"
                                         },
-                                        "email": "support@amd.com"
+                                        "email": "mailto:support@amd.com"
                                     }
                                 }
                             ]
@@ -841,8 +840,8 @@
                             "@type": "km4c:Warehouse_and_storage",
                             "capacity": 9,
                             "mbox": [
-                                "dwad@ppcshop.cz",
-                                "warehousesupport3@ppcshop.cz"
+                                "mailto:dwad@ppcshop.cz",
+                                "mailto:warehousesupport3@ppcshop.cz"
                             ],
                             "location": {
                                 "@id": "ex:Addr3",
@@ -882,7 +881,7 @@
                                             "@value": "AMD",
                                             "@language": "en"
                                         },
-                                        "email": "support@amd.com"
+                                        "email": "mailto:support@amd.com"
                                     }
                                 }
                             ]
