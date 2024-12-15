@@ -1,73 +1,72 @@
 {
-    "@context": [
-        "data-1.jsonld",
-        {
-            "revBrand": {
-                "@reverse": "brand"
-            }
-        }
-    ],
-    "description": "",
+    "@context": {
+        "@import": "data-1.jsonld"
+    },
+    "description": "Brands",
     "@graph": [
         {
-            "@id": "ex:Product1",
-            "@type": "schema:Product",
-            "price": 50,
+            "@id": "ex:Brand1",
+            "@type": "schema:Brand",
             "name": {
-                "@value": "Logitech MX Keys",
+                "@value": "Logitech",
                 "@language": "en"
             },
-            "discount": 0,
-            "VAT": 21,
-            "revBrand": {
-                "@id": "ex:Brand1",
-                "@type": "schema:Brand",
-                "name": {
-                    "@value": "Logitech",
-                    "@language": "en"
-                },
-                "email": "support@logitech.com"
-            }
+            "email": "support@logitech.com",
+            "products": [
+                {
+                    "@id": "ex:Product1",
+                    "@type": "schema:Product",
+                    "price": 50,
+                    "name": {
+                        "@value": "Logitech MX Keys",
+                        "@language": "en"
+                    },
+                    "discount": 0,
+                    "VAT": 21
+                }
+            ]
         },
         {
-            "@id": "ex:Product2",
-            "@type": "schema:Product",
-            "price": 100,
+            "@id": "ex:Brand2",
+            "@type": "schema:Brand",
             "name": {
-                "@value": "AMD Ryzen 5 7600",
+                "@value": "AMD",
                 "@language": "en"
             },
-            "discount": 20,
-            "VAT": 21,
-            "revBrand": {
-                "@id": "ex:Brand2",
-                "@type": "schema:Brand",
-                "name": {
-                    "@value": "AMD",
-                    "@language": "en"
+            "email": "support@amd.com",
+            "products": [
+                {
+                    "@id": "ex:Product2",
+                    "@type": "schema:Product",
+                    "price": 100,
+                    "name": {
+                        "@value": "AMD Ryzen 5 7600",
+                        "@language": "en"
+                    },
+                    "discount": 20,
+                    "VAT": 21
                 },
-                "email": "support@amd.com"
-            }
+                {
+                    "@id": "ex:Product3",
+                    "@type": "schema:Product",
+                    "price": 150,
+                    "name": {
+                        "@value": "AMD Ryzen 7 5700X3D",
+                        "@language": "en"
+                    },
+                    "discount": 20,
+                    "VAT": 21
+                }
+            ]
         },
         {
-            "@id": "ex:Product3",
-            "@type": "schema:Product",
-            "price": 150,
+            "@id": "ex:Brand3",
+            "@type": "schema:Brand",
             "name": {
-                "@value": "AMD Ryzen 7 5700X3D",
+                "@value": "TSMC",
                 "@language": "en"
             },
-            "discount": 20,
-            "VAT": 21,
-            "revBrand": {
-                "@id": "ex:Brand2",
-                "@type": "schema:Brand",
-                "name": {
-                    "@value": "AMD",
-                    "@language": "en"
-                },
-                "email": "support@amd.com"
-            }
+            "email": "support@tsmc.com"
         }
     ]
 }
