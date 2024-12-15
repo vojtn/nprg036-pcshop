@@ -150,6 +150,7 @@
                 }
             },
             "required": [
+                "@id",
                 "@type",
                 "personName",
                 "mbox",
@@ -237,6 +238,7 @@
                 }
             },
             "required": [
+                "@id",
                 "@type",
                 "capacity",
                 "location",
@@ -272,6 +274,7 @@
                 }
             },
             "required": [
+                "@id",
                 "@type",
                 "price",
                 "name",
@@ -298,6 +301,7 @@
                 }
             },
             "required": [
+                "@id",
                 "@type",
                 "name",
                 "email"
@@ -326,6 +330,7 @@
                 }
             },
             "required": [
+                "@id",
                 "@type",
                 "countryName",
                 "locality",

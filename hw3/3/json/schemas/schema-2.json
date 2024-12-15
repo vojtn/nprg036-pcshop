@@ -147,6 +147,7 @@
                 }
             },
             "required": [
+                "@id",
                 "@type",
                 "personName",
                 "mbox",
@@ -178,6 +179,7 @@
                 }
             },
             "required": [
+                "@id",
                 "@type",
                 "countryName",
                 "locality",
