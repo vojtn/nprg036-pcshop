@@ -31,11 +31,11 @@ ex:Addr3  rdf:type            vcard:Address;
         vcard:street-address  "Za zahradou 2"@en .
 
 ex:Brand1  rdf:type   schema:Brand;
-        schema:email  "support@logitech.com";
+        schema:email  <mailto:support@logitech.com>;
         schema:name   "Logitech"@en .
 
 ex:Brand2  rdf:type   schema:Brand;
-        schema:email  "support@amd.com";
+        schema:email  <mailto:support@amd.com>;
         schema:name   "AMD"@en .
 
 ex:Cust1  rdf:type              dpv:Customer;
@@ -45,7 +45,7 @@ ex:Cust1  rdf:type              dpv:Customer;
         schema:referencesOrder  ex:Ord2;
         schema:referencesOrder  ex:Ord3;
         uiot:registrationDate   "1998-04-10T00:00:00Z"^^xsd:dateTime;
-        foaf:mbox               "jozko@gmail.com";
+        foaf:mbox               <mailto:jozko@gmail.com>;
         foaf:name               "Jožko Mrkvička"@en .
 
 ex:Emp1  rdf:type         schema:EmployeeRole;
@@ -54,10 +54,7 @@ ex:Emp1  rdf:type         schema:EmployeeRole;
         schema:location   ex:Warehouse2;
         schema:location   ex:Warehouse3;
         schema:startDate  "2014-02-17T00:00:00Z"^^xsd:dateTime;
-        iol:isAssignedTo  ex:Ord1;
-        iol:isAssignedTo  ex:Ord2;
-        iol:isAssignedTo  ex:Ord3;
-        foaf:mbox         "gabor@szekeshfehervar.sk";
+        foaf:mbox         <mailto:gabor@szekeshfehervar.sk>;
         foaf:name         "Dano Drevo"@en .
 
 ex:Ord1  rdf:type              schema:Order;
@@ -65,20 +62,23 @@ ex:Ord1  rdf:type              schema:Order;
         schema:orderNumber     0;
         schema:orderedItem     ex:Product1;
         schema:orderedItem     ex:Product2;
-        schema:price           130 .
+        schema:price           130;
+        iol:isAssignedTo       ex:Emp1 .
 
 ex:Ord2  rdf:type              schema:Order;
         schema:billingAddress  ex:Addr1;
         schema:orderNumber     1;
         schema:orderedItem     ex:Product2;
         schema:orderedItem     ex:Product3;
-        schema:price           210 .
+        schema:price           210;
+        iol:isAssignedTo       ex:Emp1 .
 
 ex:Ord3  rdf:type              schema:Order;
         schema:billingAddress  ex:Addr1;
         schema:orderNumber     2;
         schema:orderedItem     ex:Product1;
-        schema:price           50 .
+        schema:price           50;
+        iol:isAssignedTo       ex:Emp1 .
 
 ex:Product1  rdf:type         schema:Product;
         schema:brand          ex:Brand1;
@@ -107,7 +107,7 @@ ex:Product3  rdf:type         schema:Product;
 ex:Warehouse1  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
         schema:location  ex:Addr2;
-        foaf:mbox        "warehousesupport1@ppcshop.cz" .
+        foaf:mbox        <mailto:warehousesupport1@ppcshop.cz> .
 
 ex:Warehouse2  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
@@ -116,5 +116,5 @@ ex:Warehouse2  rdf:type  km4c:Warehouse_and_storage;
 ex:Warehouse3  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
         schema:location  ex:Addr3;
-        foaf:mbox        "dwad@ppcshop.cz";
-        foaf:mbox        "warehousesupport3@ppcshop.cz" .
+        foaf:mbox        <mailto:dwad@ppcshop.cz>;
+        foaf:mbox        <mailto:warehousesupport3@ppcshop.cz> .

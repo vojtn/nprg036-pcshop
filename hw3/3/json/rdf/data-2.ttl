@@ -22,5 +22,5 @@ ex:Cust1  rdf:type             dpv:Customer;
         schema:address         ex:Addr1;
         schema:identifier      "VIP"@en;
         uiot:registrationDate  "1998-04-10T00:00:00Z"^^xsd:dateTime;
-        foaf:mbox              "jozko@gmail.com";
+        foaf:mbox              <mailto:jozko@gmail.com>;
         foaf:name              "Jožko Mrkvička"@en .

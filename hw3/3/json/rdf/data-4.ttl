@@ -25,11 +25,11 @@ ex:Addr3  rdf:type            vcard:Address;
         vcard:street-address  "Za zahradou 2"@en .
 
 ex:Brand1  rdf:type   schema:Brand;
-        schema:email  "support@logitech.com";
+        schema:email  "mailto:support@logitech.com";
         schema:name   "Logitech"@en .
 
 ex:Brand2  rdf:type   schema:Brand;
-        schema:email  "support@amd.com";
+        schema:email  "mailto:support@amd.com";
         schema:name   "AMD"@en .
 
 ex:Product1  rdf:type         schema:Product;
@@ -59,7 +59,7 @@ ex:Product3  rdf:type         schema:Product;
 ex:Warehouse1  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
         schema:location  ex:Addr2;
-        foaf:mbox        "warehousesupport1@ppcshop.cz" .
+        foaf:mbox        <mailto:warehousesupport1@ppcshop.cz> .
 
 ex:Warehouse2  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
@@ -68,5 +68,5 @@ ex:Warehouse2  rdf:type  km4c:Warehouse_and_storage;
 ex:Warehouse3  rdf:type  km4c:Warehouse_and_storage;
         oo:capacity      9;
         schema:location  ex:Addr3;
-        foaf:mbox        "dwad@ppcshop.cz";
-        foaf:mbox        "warehousesupport3@ppcshop.cz" .
+        foaf:mbox        <mailto:dwad@ppcshop.cz>;
+        foaf:mbox        <mailto:warehousesupport3@ppcshop.cz> .
