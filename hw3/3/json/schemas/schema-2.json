@@ -9,17 +9,181 @@
             "type": "string"
         },
         "@context": {
-            "const": "data-1.jsonld"
+            "$ref": "#/$defs/context"
         },
         "@graph": {
             "type": "array",
+            "description": "List of customers",
             "items": {
-                "$ref": "schema-1.json#/$defs/customer"
+                "$ref": "#/$defs/customer"
             }
         }
     },
     "required": [
         "@context",
         "@graph"
-    ]
+    ],
+    "$defs": {
+        "context": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "properties": {
+                "ex": {
+                    "type": "string"
+                },
+                "@base": {
+                    "type": "string"
+                },
+                "rdf": {
+                    "type": "string"
+                },
+                "rdfs": {
+                    "type": "string"
+                },
+                "foaf": {
+                    "type": "string"
+                },
+                "schema": {
+                    "type": "string"
+                },
+                "dpv": {
+                    "type": "string"
+                },
+                "iol": {
+                    "type": "string"
+                },
+                "vcard": {
+                    "type": "string"
+                },
+                "km4c": {
+                    "type": "string"
+                },
+                "uiot": {
+                    "type": "string"
+                },
+                "oo": {
+                    "type": "string"
+                },
+                "seasto": {
+                    "type": "string"
+                },
+                "xsd": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "uri": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ex",
+                "@base",
+                "rdf",
+                "rdfs",
+                "foaf",
+                "schema",
+                "dpv",
+                "iol",
+                "vcard",
+                "km4c",
+                "uiot",
+                "oo",
+                "seasto",
+                "xsd",
+                "type",
+                "uri"
+            ]
+        },
+        "valueWithLanguage": {
+            "type": "object",
+            "properties": {
+                "@value": {
+                    "type": "string",
+                    "description": "The value of the property."
+                },
+                "@language": {
+                    "type": "string",
+                    "description": "The language tag of the value."
+                }
+            },
+            "required": [
+                "@value"
+            ]
+        },
+        "@id": {
+            "type": "string",
+            "format": "uri"
+        },
+        "customer": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "dpv:Customer"
+                },
+                "personName": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "mbox": {
+                    "type": "string",
+                    "format": "string",
+                    "description": "The email address of the person."
+                },
+                "registrationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "identifier": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "hasAddress": {
+                    "$ref": "#/$defs/address"
+                }
+            },
+            "required": [
+                "@type",
+                "personName",
+                "mbox",
+                "registrationDate",
+                "identifier",
+                "hasAddress"
+            ]
+        },
+        "address": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "vcard:Address"
+                },
+                "countryName": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "locality": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "streetAddress": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "postalCode": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                }
+            },
+            "required": [
+                "@type",
+                "countryName",
+                "locality",
+                "streetAddress",
+                "postalCode"
+            ]
+        }
+    }
 }

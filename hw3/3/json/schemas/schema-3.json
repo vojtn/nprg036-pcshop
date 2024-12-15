@@ -9,17 +9,329 @@
             "type": "string"
         },
         "@context": {
-            "const": "data-1.jsonld"
+            "$ref": "#/$defs/context"
         },
         "@graph": {
             "type": "array",
+            "description": "List of employees",
             "items": {
-                "$ref": "schema-1.json#/$defs/employeeRole"
+                "$ref": "#/$defs/employeeRole"
             }
         }
     },
     "required": [
         "@context",
         "@graph"
-    ]
+    ],
+    "$defs": {
+        "context": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "properties": {
+                "ex": {
+                    "type": "string"
+                },
+                "@base": {
+                    "type": "string"
+                },
+                "rdf": {
+                    "type": "string"
+                },
+                "rdfs": {
+                    "type": "string"
+                },
+                "foaf": {
+                    "type": "string"
+                },
+                "schema": {
+                    "type": "string"
+                },
+                "dpv": {
+                    "type": "string"
+                },
+                "iol": {
+                    "type": "string"
+                },
+                "vcard": {
+                    "type": "string"
+                },
+                "km4c": {
+                    "type": "string"
+                },
+                "uiot": {
+                    "type": "string"
+                },
+                "oo": {
+                    "type": "string"
+                },
+                "seasto": {
+                    "type": "string"
+                },
+                "xsd": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "uri": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ex",
+                "@base",
+                "rdf",
+                "rdfs",
+                "foaf",
+                "schema",
+                "dpv",
+                "iol",
+                "vcard",
+                "km4c",
+                "uiot",
+                "oo",
+                "seasto",
+                "xsd",
+                "type",
+                "uri"
+            ]
+        },
+        "valueWithLanguage": {
+            "type": "object",
+            "properties": {
+                "@value": {
+                    "type": "string",
+                    "description": "The value of the property."
+                },
+                "@language": {
+                    "type": "string",
+                    "description": "The language tag of the value."
+                }
+            },
+            "required": [
+                "@value"
+            ]
+        },
+        "@id": {
+            "type": "string",
+            "format": "uri"
+        },
+        "employeeRole": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:EmployeeRole"
+                },
+                "personName": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "mbox": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "The email address of the employee."
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "location": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/warehouse"
+                    }
+                },
+                "hasAddress": {
+                    "$ref": "#/$defs/address"
+                }
+            },
+            "required": [
+                "@type",
+                "personName",
+                "mbox",
+                "startDate",
+                "location",
+                "hasAddress"
+            ]
+        },
+        "order": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:Order"
+                },
+                "orderNumber": {
+                    "type": "integer"
+                },
+                "price": {
+                    "type": "integer"
+                },
+                "orderedItem": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/$defs/product"
+                    }
+                },
+                "ordered": {
+                    "$ref": "#/$defs/customer"
+                },
+                "handles": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/$defs/employeeRole"
+                    }
+                },
+                "billingAddress": {
+                    "$ref": "#/$defs/address"
+                }
+            },
+            "required": [
+                "@id",
+                "@type",
+                "orderNumber",
+                "price",
+                "orderedItem",
+                "ordered",
+                "handles",
+                "billingAddress"
+            ]
+        },
+        "warehouse": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "km4c:Warehouse_and_storage"
+                },
+                "capacity": {
+                    "type": "integer"
+                },
+                "mbox": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "type": "string",
+                        "format": "email"
+                    }
+                },
+                "location": {
+                    "$ref": "#/$defs/address"
+                },
+                "storedIn": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "$ref": "#/$defs/product"
+                    }
+                }
+            },
+            "required": [
+                "@type",
+                "capacity",
+                "location",
+                "storedIn"
+            ]
+        },
+        "product": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:Product"
+                },
+                "price": {
+                    "type": "integer"
+                },
+                "name": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "discount": {
+                    "type": "integer"
+                },
+                "VAT": {
+                    "type": "integer"
+                },
+                "brand": {
+                    "$ref": "#/$defs/brand",
+                    "minItems": 0,
+                    "maxItems": 1,
+                    "nullable": true
+                }
+            },
+            "required": [
+                "@type",
+                "price",
+                "name",
+                "discount",
+                "VAT"
+            ]
+        },
+        "brand": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "schema:Brand"
+                },
+                "name": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "The email address for the brand."
+                }
+            },
+            "required": [
+                "@type",
+                "name",
+                "email"
+            ]
+        },
+        "address": {
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "$ref": "#/$defs/@id"
+                },
+                "@type": {
+                    "const": "vcard:Address"
+                },
+                "countryName": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "locality": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "streetAddress": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                },
+                "postalCode": {
+                    "$ref": "#/$defs/valueWithLanguage"
+                }
+            },
+            "required": [
+                "@type",
+                "countryName",
+                "locality",
+                "streetAddress",
+                "postalCode"
+            ]
+        }
+    }
 }
