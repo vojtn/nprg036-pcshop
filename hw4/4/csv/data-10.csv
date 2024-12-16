@@ -1,4 +1,4 @@
 employeeURI,warehouseURI
-ex:Emp1,http://www.example.org/Warehouse1
-ex:Emp1,http://www.example.org/Warehouse2
-ex:Emp1,http://www.example.org/Warehouse3
+ex:Emp1,ex:Warehouse1
+ex:Emp1,ex:Warehouse2
+ex:Emp1,ex:Warehouse3

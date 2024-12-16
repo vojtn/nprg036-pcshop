@@ -104,7 +104,7 @@
                         "required": true,
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "dpv:Customer"
+                        "valueUrl": "https://w3c.github.io/dpv/2.0/Customer"
                     },
                     {
                         "@type": "Column",
@@ -132,7 +132,7 @@
                         "dc:description": "Registration date of the Customer",
                         "required": true,
                         "datatype": "dateTime",
-                        "propertyUrl": "uiot:registrationDate"
+                        "propertyUrl": "http://www.w3id.org/urban-iot/core#registrationDate"
                     },
                     {
                         "@type": "Column",
@@ -258,7 +258,7 @@
                         "datatype": "anyURI",
                         "required": true,
                         "aboutUrl": "{+orderURI}",
-                        "propertyUrl": "iol:isAssignedTo",
+                        "propertyUrl": "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isAssignedTo",
                         "valueUrl": "{+employeeURI}"
                     }
                 ],
@@ -385,7 +385,7 @@
                         "dc:description": "Product value-added tax",
                         "datatype": "integer",
                         "required": true,
-                        "propertyUrl": "seasto:valueAddedTax"
+                        "propertyUrl": "https://w3id.org/seas/valueAddedTax"
                     },
                     {
                         "@type": "Column",
@@ -514,7 +514,7 @@
                         "required": true,
                         "datatype": "anyURI",
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "km4c:Warehouse_and_storage"
+                        "valueUrl": "http://www.disit.org/km4city/schema#Warehouse_and_storage"
                     },
                     {
                         "@type": "Column",
@@ -523,7 +523,7 @@
                         "dc:description": "Total capacity of the warehouse",
                         "required": true,
                         "datatype": "integer",
-                        "propertyUrl": "oo:capacity"
+                        "propertyUrl": "http://purl.org/openorg/capacity"
                     },
                     {
                         "@type": "Column",
