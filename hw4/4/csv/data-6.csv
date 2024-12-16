@@ -1,4 +1,4 @@
 URI,price,name,sale,VAT,brandURI
-ex:Product1,50,Logitech MX Keys,0,21,ex:Brand1
-ex:Product2,100,AMD Ryzen 5 7600,20,21,ex:Brand2
-ex:Product3,150,AMD Ryzen 7 5700X3D,20,21,ex:Brand2
+http://example.org/Product1,50,Logitech MX Keys,0,21,http://example.org/Brand1
+http://example.org/Product2,100,AMD Ryzen 5 7600,20,21,http://example.org/Brand2
+http://example.org/Product3,150,AMD Ryzen 7 5700X3D,20,21,http://example.org/Brand2

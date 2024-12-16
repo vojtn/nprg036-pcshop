@@ -1,2 +1,2 @@
 URI,name,email,startingDate,addressURI
-ex:Emp1,Dano Drevo,gabor@szekeshfehervar.sk,2014-02-17T00:00:00Z,ex:Addr2
+http://example.org/Emp1,Dano Drevo,gabor@szekeshfehervar.sk,2014-02-17T00:00:00Z,http://example.org/Addr2

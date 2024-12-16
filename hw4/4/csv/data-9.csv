@@ -1,4 +1,4 @@
 URI,capacity,addressURI
-ex:Warehouse1,9,ex:Addr2
-ex:Warehouse2,9,ex:Addr3
-ex:Warehouse3,9,ex:Addr3
+http://example.org/Warehouse1,9,http://example.org/Addr2
+http://example.org/Warehouse2,9,http://example.org/Addr3
+http://example.org/Warehouse3,9,http://example.org/Addr3

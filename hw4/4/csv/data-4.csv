@@ -1,4 +1,4 @@
 employeeURI,orderURI
-ex:Emp1,ex:Ord1
-ex:Emp1,ex:Ord2
-ex:Emp1,ex:Ord3
+http://example.org/Emp1,http://example.org/Ord1
+http://example.org/Emp1,http://example.org/Ord2
+http://example.org/Emp1,http://example.org/Ord3

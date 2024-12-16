@@ -1,4 +1,4 @@
 warehouseURI,productURI
-ex:Warehouse1,ex:Product1
-ex:Warehouse2,ex:Product2
-ex:Warehouse3,ex:Product3
+http://example.org/Warehouse1,http://example.org/Product1
+http://example.org/Warehouse2,http://example.org/Product2
+http://example.org/Warehouse3,http://example.org/Product3

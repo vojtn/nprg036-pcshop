@@ -1,4 +1,5 @@
 @prefix dpv: <https://w3c.github.io/dpv/2.0/> .
+@prefix ex: <http://example.org/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix iol: <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#> .
 @prefix km4c: <http://www.disit.org/km4city/schema#> .
@@ -10,112 +11,112 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<ex:Brand3> a schema:Brand;
+ex:Brand3 a schema:Brand;
   schema:email "<mailto:support@tsmc.com>";
   schema:name "TSMC"@en .
 
-<ex:Cust1> a dpv:Customer;
-  schema:address <ex:Addr1>;
+ex:Cust1 a dpv:Customer;
+  schema:address ex:Addr1;
   schema:identifier "VIP"@en;
-  schema:referencesOrder <ex:Ord1>,
-    <ex:Ord2>,
-    <ex:Ord3>;
+  schema:referencesOrder ex:Ord1,
+    ex:Ord2,
+    ex:Ord3;
   uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime;
   foaf:mbox "<mailto:jozko@gmail.com>";
   foaf:name "Jožko Mrkvička"@en .
 
-<ex:Brand1> a schema:Brand;
+ex:Brand1 a schema:Brand;
   schema:email "<mailto:support@logitech.com>";
   schema:name "Logitech"@en .
 
-<ex:Ord1> a schema:Order;
-  schema:billingAddress <ex:Addr1>;
+ex:Ord1 a schema:Order;
+  schema:billingAddress ex:Addr1;
   schema:orderNumber 0;
-  schema:orderedItem <ex:Product1>,
-    <ex:Product2>;
+  schema:orderedItem ex:Product1,
+    ex:Product2;
   schema:price 130;
-  iol:isAssignedTo <ex:Emp1> .
+  iol:isAssignedTo ex:Emp1 .
 
-<ex:Ord2> a schema:Order;
-  schema:billingAddress <ex:Addr1>;
+ex:Ord2 a schema:Order;
+  schema:billingAddress ex:Addr1;
   schema:orderNumber 1;
-  schema:orderedItem <ex:Product2>,
-    <ex:Product3>;
+  schema:orderedItem ex:Product2,
+    ex:Product3;
   schema:price 210;
-  iol:isAssignedTo <ex:Emp1> .
+  iol:isAssignedTo ex:Emp1 .
 
-<ex:Ord3> a schema:Order;
-  schema:billingAddress <ex:Addr1>;
+ex:Ord3 a schema:Order;
+  schema:billingAddress ex:Addr1;
   schema:orderNumber 2;
-  schema:orderedItem <ex:Product1>;
+  schema:orderedItem ex:Product1;
   schema:price 50;
-  iol:isAssignedTo <ex:Emp1> .
+  iol:isAssignedTo ex:Emp1 .
 
-<ex:Product3> a schema:Product;
-  schema:brand <ex:Brand2>;
+ex:Product3 a schema:Product;
+  schema:brand ex:Brand2;
   schema:discount 20;
-  schema:location <ex:Warehouse3>;
+  schema:location ex:Warehouse3;
   schema:name "AMD Ryzen 7 5700X3D"@en;
   schema:price 150;
   seasto:valueAddedTax 21 .
 
-<ex:Addr2> a vcard:Address;
+ex:Addr2 a vcard:Address;
   vcard:country-name "Slovakia"@en;
   vcard:locality "Nitra"@en;
   vcard:postal-code "49411"@en;
   vcard:street-address "Dunajska 14"@en .
 
-<ex:Addr3> a vcard:Address;
+ex:Addr3 a vcard:Address;
   vcard:country-name "Czech republic"@en;
   vcard:locality "Praha"@en;
   vcard:postal-code "16200"@en;
   vcard:street-address "Za zahradou 2"@en .
 
-<ex:Brand2> a schema:Brand;
+ex:Brand2 a schema:Brand;
   schema:email "<mailto:support@amd.com>";
   schema:name "AMD"@en .
 
-<ex:Product1> a schema:Product;
-  schema:brand <ex:Brand1>;
+ex:Product1 a schema:Product;
+  schema:brand ex:Brand1;
   schema:discount 0;
-  schema:location <ex:Warehouse1>;
+  schema:location ex:Warehouse1;
   schema:name "Logitech MX Keys"@en;
   schema:price 50;
   seasto:valueAddedTax 21 .
 
-<ex:Product2> a schema:Product;
-  schema:brand <ex:Brand2>;
+ex:Product2 a schema:Product;
+  schema:brand ex:Brand2;
   schema:discount 20;
-  schema:location <ex:Warehouse2>;
+  schema:location ex:Warehouse2;
   schema:name "AMD Ryzen 5 7600"@en;
   schema:price 100;
   seasto:valueAddedTax 21 .
 
-<ex:Warehouse1> a km4c:Warehouse_and_storage;
+ex:Warehouse1 a km4c:Warehouse_and_storage;
   oo:capacity 9;
-  schema:location <ex:Addr2>;
+  schema:location ex:Addr2;
   foaf:mbox <mailto:warehousesupport1@ppcshop.cz> .
 
-<ex:Warehouse2> a km4c:Warehouse_and_storage;
+ex:Warehouse2 a km4c:Warehouse_and_storage;
   oo:capacity 9;
-  schema:location <ex:Addr3> .
+  schema:location ex:Addr3 .
 
-<ex:Warehouse3> a km4c:Warehouse_and_storage;
+ex:Warehouse3 a km4c:Warehouse_and_storage;
   oo:capacity 9;
-  schema:location <ex:Addr3>;
+  schema:location ex:Addr3;
   foaf:mbox <mailto:dwad@ppcshop.cz>,
     <mailto:warehousesupport3@ppcshop.cz> .
 
-<ex:Emp1> a schema:EmployeeRole;
-  schema:address <ex:Addr2>;
-  schema:location <ex:Warehouse1>,
-    <ex:Warehouse2>,
-    <ex:Warehouse3>;
+ex:Emp1 a schema:EmployeeRole;
+  schema:address ex:Addr2;
+  schema:location ex:Warehouse1,
+    ex:Warehouse2,
+    ex:Warehouse3;
   schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime;
   foaf:mbox "gabor@szekeshfehervar.sk";
   foaf:name "Dano Drevo"@en .
 
-<ex:Addr1> a vcard:Address;
+ex:Addr1 a vcard:Address;
   vcard:country-name "Hungary"@en;
   vcard:locality "Komarom"@en;
   vcard:postal-code "16900"@en;

@@ -1,6 +1,6 @@
 orderURI,productURI
-ex:Ord1,ex:Product1
-ex:Ord1,ex:Product2
-ex:Ord2,ex:Product2
-ex:Ord2,ex:Product3
-ex:Ord3,ex:Product1
+http://example.org/Ord1,http://example.org/Product1
+http://example.org/Ord1,http://example.org/Product2
+http://example.org/Ord2,http://example.org/Product2
+http://example.org/Ord2,http://example.org/Product3
+http://example.org/Ord3,http://example.org/Product1
