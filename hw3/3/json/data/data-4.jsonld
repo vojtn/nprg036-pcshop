@@ -28,7 +28,8 @@
             "@type": "@id"
         },
         "email": {
-            "@id": "schema:email"
+            "@id": "schema:email",
+            "@type": "@id"
         },
         "price": {
             "@id": "schema:price"

@@ -25,11 +25,11 @@ ex:Addr3  rdf:type            vcard:Address;
         vcard:street-address  "Za zahradou 2"@en .
 
 ex:Brand1  rdf:type   schema:Brand;
-        schema:email  "mailto:support@logitech.com";
+        schema:email  <mailto:support@logitech.com>;
         schema:name   "Logitech"@en .
 
 ex:Brand2  rdf:type   schema:Brand;
-        schema:email  "mailto:support@amd.com";
+        schema:email  <mailto:support@amd.com>;
         schema:name   "AMD"@en .
 
 ex:Emp1  rdf:type         schema:EmployeeRole;

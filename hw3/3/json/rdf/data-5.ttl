@@ -13,15 +13,15 @@ PREFIX seasto: <https://w3id.org/seas/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ex:Brand1  rdf:type   schema:Brand;
-        schema:email  "mailto:support@logitech.com";
+        schema:email  <mailto:support@logitech.com>;
         schema:name   "Logitech"@en .
 
 ex:Brand2  rdf:type   schema:Brand;
-        schema:email  "mailto:support@amd.com";
+        schema:email  <mailto:support@amd.com>;
         schema:name   "AMD"@en .
 
 ex:Brand3  rdf:type   schema:Brand;
-        schema:email  "mailto:support@tsmc.com";
+        schema:email  <mailto:support@tsmc.com>;
         schema:name   "TSMC"@en .
 
 ex:Product1  rdf:type         schema:Product;
