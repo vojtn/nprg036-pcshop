@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<customer id="ex:Cust1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd" >
-    <name xml:lang="en">Jožko Mrkvička</name>
-    <email>jozko@gmail.com</email>
-    <registrationDate>1998-04-10T00:00:00Z</registrationDate>
-    <identifier xml:lang="en">VIP</identifier>
-    <address id="ex:Addr1">
-        <country xml:lang="en">Hungary</country>
-        <city xml:lang="en">Komarom</city>
-        <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
-        <postCode xml:lang="en">16900</postCode>
-    </address>
-</customer>
+<customers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd">
+    <customer id="ex:Cust1">
+        <name xml:lang="en">Jožko Mrkvička</name>
+        <email>jozko@gmail.com</email>
+        <registrationDate>1998-04-10T00:00:00Z</registrationDate>
+        <identifier xml:lang="en">VIP</identifier>
+        <address id="ex:Addr1">
+            <country xml:lang="en">Hungary</country>
+            <city xml:lang="en">Komarom</city>
+            <streetLine xml:lang="en">Cajkovskeho 2</streetLine>
+            <postCode xml:lang="en">16900</postCode>
+        </address>
+    </customer>
+</customers>

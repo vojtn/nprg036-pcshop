@@ -2,6 +2,12 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
-    <xs:include schemaLocation="schema-1.xsd"/>
-    <xs:element name="customer" type="customerType"/>
+    <xs:include schemaLocation="schema-1.xsd" />
+    <xs:element name="customers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customer" type="customerType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
