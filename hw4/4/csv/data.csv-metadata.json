@@ -123,7 +123,8 @@
                         "dc:description": "Customer e-mail",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "foaf:mbox"
+                        "propertyUrl": "foaf:mbox",
+                        "valueUrl": "mailto:{+email}"
                     },
                     {
                         "@type": "Column",
@@ -201,7 +202,8 @@
                         "dc:description": "Employee e-mail",
                         "required": true,
                         "datatype": "string",
-                        "propertyUrl": "foaf:mbox"
+                        "propertyUrl": "foaf:mbox",
+                        "valueUrl": "mailto:{+email}"
                     },
                     {
                         "@type": "Column",
@@ -444,7 +446,8 @@
                         "dc:description": "Company email address (e.g., <mailto:email@example.com>)",
                         "datatype": "string",
                         "required": true,
-                        "propertyUrl": "schema:email"
+                        "propertyUrl": "schema:email",
+                        "valueUrl": "mailto:{+companyEmail}"
                     }
                 ],
                 "primaryKey": "uri"

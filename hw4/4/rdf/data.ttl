@@ -12,7 +12,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:Brand3 a schema:Brand;
-  schema:email "<mailto:support@tsmc.com>";
+  schema:email <mailto:support@tsmc.com>;
   schema:name "TSMC"@en .
 
 ex:Cust1 a dpv:Customer;
@@ -22,11 +22,11 @@ ex:Cust1 a dpv:Customer;
     ex:Ord2,
     ex:Ord3;
   uiot:registrationDate "1998-04-10T00:00:00Z"^^xsd:dateTime;
-  foaf:mbox "<mailto:jozko@gmail.com>";
+  foaf:mbox <mailto:jozko@gmail.com>;
   foaf:name "Jožko Mrkvička"@en .
 
 ex:Brand1 a schema:Brand;
-  schema:email "<mailto:support@logitech.com>";
+  schema:email <mailto:support@logitech.com>;
   schema:name "Logitech"@en .
 
 ex:Ord1 a schema:Order;
@@ -73,7 +73,7 @@ ex:Addr3 a vcard:Address;
   vcard:street-address "Za zahradou 2"@en .
 
 ex:Brand2 a schema:Brand;
-  schema:email "<mailto:support@amd.com>";
+  schema:email <mailto:support@amd.com>;
   schema:name "AMD"@en .
 
 ex:Product1 a schema:Product;
@@ -113,7 +113,7 @@ ex:Emp1 a schema:EmployeeRole;
     ex:Warehouse2,
     ex:Warehouse3;
   schema:startDate "2014-02-17T00:00:00Z"^^xsd:dateTime;
-  foaf:mbox "gabor@szekeshfehervar.sk";
+  foaf:mbox <mailto:gabor@szekeshfehervar.sk>;
   foaf:name "Dano Drevo"@en .
 
 ex:Addr1 a vcard:Address;

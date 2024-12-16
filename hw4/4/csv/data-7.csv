@@ -1,4 +1,4 @@
 URI,name,companyEmail
-http://example.org/Brand1,Logitech,<mailto:support@logitech.com>
-http://example.org/Brand2,AMD,<mailto:support@amd.com>
-http://example.org/Brand3,TSMC,<mailto:support@tsmc.com>
+http://example.org/Brand1,Logitech,support@logitech.com
+http://example.org/Brand2,AMD,support@amd.com
+http://example.org/Brand3,TSMC,support@tsmc.com
