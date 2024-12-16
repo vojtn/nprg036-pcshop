@@ -61,7 +61,7 @@
 
     ex:Warehouse3 a km4c:Warehouse_and_storage ;
         
-        foaf:mbox <mailto:mailto:dwad@ppcshop.cz> ;
+        foaf:mbox <mailto:dwad@ppcshop.cz> ;
     
         foaf:mbox <mailto:warehousesupport3@ppcshop.cz> ;
     

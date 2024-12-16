@@ -52,7 +52,7 @@
         </warehouse>
         <warehouse id="ex:Warehouse3">
             <capacity>9</capacity>
-            <contact>mailto:dwad@ppcshop.cz</contact>
+            <contact>dwad@ppcshop.cz</contact>
             <contact>warehousesupport3@ppcshop.cz</contact>
             <address id="ex:Addr3">
                 <country xml:lang="en">Czech republic</country>
