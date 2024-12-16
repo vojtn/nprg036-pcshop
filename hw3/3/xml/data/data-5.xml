@@ -29,6 +29,6 @@
     </brand>
     <brand id="ex:Brand3">
         <name xml:lang="en">TSMC</name>
-        <companyEmail>mailto:support@tsmc.com</companyEmail>
+        <companyEmail>support@tsmc.com</companyEmail>
     </brand>
 </brands>

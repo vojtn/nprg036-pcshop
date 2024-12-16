@@ -24,9 +24,27 @@
 
     ex:Brand3 a schema:Brand ;
         schema:name "TSMC"@en ;
-        schema:email <mailto:mailto:support@tsmc.com> . 
+        schema:email <mailto:support@tsmc.com> . 
 
-    ex:Brand1 schema:brand ex:Product1.
-    ex:Brand2 schema:brand ex:Product2.
-    ex:Brand2 schema:brand ex:Product3.
+    ex:Product1 a schema:Product ;
+        schema:price 50 ;
+        schema:name "Logitech MX Keys"@en ;
+        schema:discount 0 ;
+        schema:brand ex:Brand1 ;
+        seasto:valueAddedTax 21 . 
+
+    ex:Product2 a schema:Product ;
+        schema:price 100 ;
+        schema:name "AMD Ryzen 5 7600"@en ;
+        schema:discount 20 ;
+        schema:brand ex:Brand2 ;
+        seasto:valueAddedTax 21 . 
+
+    ex:Product3 a schema:Product ;
+        schema:price 150 ;
+        schema:name "AMD Ryzen 7 5700X3D"@en ;
+        schema:discount 20 ;
+        schema:brand ex:Brand2 ;
+        seasto:valueAddedTax 21 . 
+
     
