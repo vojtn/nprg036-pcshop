@@ -2,8 +2,8 @@
   $graph |
   map(select(.["@type"] == "schema:Brand")) |
   map({
-    brandId: .["@id"],
-    brandName: .["schema:name"]["@value"],
-    productCount: (.["schema:Product"] | length)
+    brandURI: .["@id"],
+    brandName: .["name"]["@value"],
+    productCount: (.["products"] | length)
   }) |
   sort_by(-.productCount)
