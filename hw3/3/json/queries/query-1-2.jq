@@ -1,1 +1,1 @@
-.["@graph"] | map(select(.["@type"] == "schema:Product" and .["schema:price"] > 100) | .["schema:brand"].["@id"])
+{ brands: [ .["@graph"][].orderedItem[] | select(.price > 100) | .brand.name["@value"] ]}
