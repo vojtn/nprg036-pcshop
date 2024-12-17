@@ -1,9 +1,9 @@
 .["@graph"][] | select(."@type" == "schema:Order") | {
-  orderNumber: .["schema:orderNumber"],
-  price: .["schema:price"],
-  orderedItems: (if .["schema:orderedItem"] | type == "array" then 
-      [.["schema:orderedItem"][] | {product: .["@id"]}]
+  orderNumber: .["orderNumber"],
+  price: .["price"],
+  orderedItems: (if .["orderedItem"] | type == "array" then 
+      [.["orderedItem"][] | {product: .["@id"]}]
     else
-      [{product: .["schema:orderedItem"]["@id"]}]
+      [{product: .["orderedItem"]["@id"]}]
     end)
 }
