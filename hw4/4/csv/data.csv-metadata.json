@@ -636,9 +636,7 @@
                         "valueUrl": "mailto:{+contactInfo}"
                     }
                 ],
-                "primaryKey": [
-                    "warehouseURI"
-                ],
+                "primaryKey": "id",
                 "foreignKeys": [
                     {
                         "columnReference": "warehouseURI",
