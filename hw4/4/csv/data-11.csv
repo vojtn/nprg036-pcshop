@@ -1,4 +1,4 @@
-warehouseURI,contactInfo
-http://example.org/Warehouse1,warehousesupport1@ppcshop.cz
-http://example.org/Warehouse3,dwad@ppcshop.cz
-http://example.org/Warehouse3,warehousesupport3@ppcshop.cz
+ID,warehouseURI,contactInfo
+0,http://example.org/Warehouse1,warehousesupport1@ppcshop.cz
+1,http://example.org/Warehouse3,dwad@ppcshop.cz
+2,http://example.org/Warehouse3,warehousesupport3@ppcshop.cz
