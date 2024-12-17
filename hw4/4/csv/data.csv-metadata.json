@@ -608,6 +608,15 @@
                 "columns": [
                     {
                         "@type": "Column",
+                        "name": "id",
+                        "titles": "ID",
+                        "dc:description": "Contact ID",
+                        "datatype": "integer",
+                        "required": true,
+                        "suppressOutput": true
+                    },
+                    {
+                        "@type": "Column",
                         "name": "warehouseURI",
                         "titles": "warehouseURI",
                         "dc:description": "Warehouse foreign key",
@@ -627,9 +636,7 @@
                         "valueUrl": "mailto:{+contactInfo}"
                     }
                 ],
-                "primaryKey": [
-                    "warehouseURI"
-                ],
+                "primaryKey": "id",
                 "foreignKeys": [
                     {
                         "columnReference": "warehouseURI",
