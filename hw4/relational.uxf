@@ -4,7 +4,7 @@
 - name
 - email
 - startingDate
-- addressURI</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>340</y><w>120</w><h>130</h></coordinates><panel_attributes>Customer
+- addressURI</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>350</y><w>120</w><h>130</h></coordinates><panel_attributes>Customer
 --
 - URI [PK]
 - name
@@ -31,12 +31,13 @@
 </panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>330</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;
 </panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>470</y><w>140</w><h>180</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;
 
-</panel_attributes><additional_attributes>30;10;10;10;10;160;120;160</additional_attributes></element><element><id>Relation</id><coordinates><x>1100</x><y>350</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>30;10;10;10;10;160;120;160</additional_attributes></element><element><id>Relation</id><coordinates><x>1100</x><y>360</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>320</y><w>80</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes><additional_attributes>60;10;30;10;30;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>630</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
-</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>320</y><w>120</w><h>90</h></coordinates><panel_attributes>Order
+</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>320</y><w>120</w><h>110</h></coordinates><panel_attributes>Order
 --
 - URI [PK]
+- orderNumber
 - customerURI
 - totalPrice
 - addressURI
@@ -75,4 +76,4 @@
 - city
 - streetLine
 - postCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>320</y><w>270</w><h>90</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;</panel_attributes><additional_attributes>250;70;120;70;120;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>330</y><w>120</w><h>370</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;
-</panel_attributes><additional_attributes>100;350;30;350;30;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>280</y><w>910</w><h>140</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;</panel_attributes><additional_attributes>890;120;850;120;850;10;10;10;30;50</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>260</y><w>1100</w><h>210</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;</panel_attributes><additional_attributes>1080;190;1060;190;1060;10;10;10;10;90;40;80</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes>100;350;30;350;30;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>280</y><w>910</w><h>150</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;</panel_attributes><additional_attributes>890;130;850;130;850;10;10;10;30;50</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>260</y><w>1100</w><h>220</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;</panel_attributes><additional_attributes>1080;200;1060;200;1060;10;10;10;10;90;40;80</additional_attributes></element></diagram>
